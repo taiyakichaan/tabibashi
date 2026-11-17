@@ -1,0 +1,43 @@
+
+name: Extract ZIP files
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract ZIP files
+        run: |
+          python - <<'PY'
+          import zipfile
+
+          for filename in [
+              "travel_app_static_part1.zip",
+              "travel_app_static_part2.zip"
+          ]:
+              with zipfile.ZipFile(filename) as z:
+                  z.extractall(".")
+              print(f"Extracted {filename}")
+          PY
+
+      - name: Check website
+        run: test -f project/site/index.html
+
+      - name: Save extracted files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add project/
+          git diff --cached --quiet || (
+            git commit -m "Extract website files" &&
+            git push
+          )
