@@ -15,29 +15,58 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check ZIP files
+        run: |
+          echo "Checking uploaded ZIP files..."
+          ls -lh *.zip
+
       - name: Extract ZIP files
         run: |
           python - <<'PY'
           import zipfile
+          from pathlib import Path
 
-          for filename in [
-              "travel_app_static_part1.zip",
-              "travel_app_static_part2.zip"
-          ]:
-              with zipfile.ZipFile(filename) as z:
+          files = [
+              "travel_app_static_part1of2.zip",
+              "travel_app_static_part2of2.zip"
+          ]
+
+          for filename in files:
+              path = Path(filename)
+
+              if not path.exists():
+                  raise FileNotFoundError(
+                      f"ZIP file not found: {filename}"
+                  )
+
+              print(f"Extracting: {filename}")
+
+              with zipfile.ZipFile(path, "r") as z:
                   z.extractall(".")
-              print(f"Extracted {filename}")
+
+              print(f"Successfully extracted: {filename}")
+
+          print("All ZIP files extracted!")
           PY
 
-      - name: Check website
-        run: test -f project/site/index.html
+      - name: Check website files
+        run: |
+          echo "Checking project folder..."
+          ls -lah project/
+          echo "Checking website folder..."
+          ls -lah project/site/
+          test -f project/site/index.html
 
       - name: Save extracted files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add project/
-          git diff --cached --quiet || (
-            git commit -m "Extract website files" &&
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Extract and merge website files"
             git push
-          )
+          else
+            echo "No new files to commit."
+          fi
