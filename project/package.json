@@ -1,0 +1,8 @@
+{
+  "name": "travel-app-static",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/test_recommend.mjs && node tests/test_pyfixed.mjs"
+  }
+}

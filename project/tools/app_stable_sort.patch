@@ -1,0 +1,31 @@
+--- a/app.py	2026-11-17 14:21:26.000000000 +0900
++++ b/app.py	2026-11-17 14:57:30.388141914 +0900
+@@ -971,7 +971,7 @@
+     feats = d["feats"]; X = pd.DataFrame([row])[feats]; classes = list(d["model"].classes_)
+     pv = d["model"].predict_proba(X)[0]
+     if first: pv = pv * (1 + FIRST_W * np.array([POP[m].get(c, 0.0) for c in classes])); pv = pv / pv.sum()      # 初めての旅行: 定番スポットの多いエリアを優先
+-    p = pd.Series(pv, index=classes).sort_values(ascending=False)
++    p = pd.Series(pv, index=classes).sort_values(ascending=False, kind="stable")
+     alt = []                                   # 各条件を「平均的な値」に置き換えた入力（寄与度の計算用）
+     for f in feats: r2 = dict(row); r2[f] = d["base"][f]; alt.append(r2)
+     delta = pv[None, :] - d["model"].predict_proba(pd.DataFrame(alt)[feats])      # 行=条件, 列=エリア: 一致度がどれだけ下がるか
+@@ -980,8 +980,8 @@
+     for i, (reg, pr) in enumerate(p.head(5).items(), 1):
+         allr = d["spots"][d["spots"].region == reg].drop_duplicates("spot")
+         s = allr.copy(); s["match"] = s[SPOT_COLS].to_numpy() @ pref + s["tourism_value_score"].fillna(0).to_numpy() / 100
+-        rows = "".join(spot_row(m, lang, r, reg, i=j) for j, (_, r) in enumerate(s.sort_values("match", ascending=False).head(5).iterrows()))
+-        c = delta[:, classes.index(reg)]; top = [j for j in np.argsort(-c)[:3] if c[j] > 0.002]
++        rows = "".join(spot_row(m, lang, r, reg, i=j) for j, (_, r) in enumerate(s.sort_values("match", ascending=False, kind="stable").head(5).iterrows()))
++        c = delta[:, classes.index(reg)]; top = [j for j in np.argsort(-c, kind="stable")[:3] if c[j] > 0.002]
+         why = "".join(f'<li>{html.escape(feat_text(feats[j], row, t, lang, m, cu))}<b>+{c[j] * 100:.1f}pt</b></li>' for j in top) or f'<li class="none">{t["why_none"]}</li>'
+         bg = region_photo(reg); cover = f"background-image:url('{bg}');{bgpos(reg)}" if bg else f"background-image:url('{cover_svg(m, i)}')"
+         out.append(f'<div class="rw"><div class="region" role="link" tabindex="0" onclick="{jsgo("region", reg)}"><div class="cover" style="{cover}"><div class="rank">{i}</div><div><div class="name">{html.escape(rname(reg, lang))}</div>'
+@@ -991,7 +991,7 @@
+     out.append(f'<i id="tjq" hidden data-q="{html.escape(qs, quote=True)}"></i>')
+     out.append(f'<div class="share"><button type="button" data-ok="{html.escape(t["copied"], quote=True)}" onclick="{html.escape(f"tjCopy({json.dumps(qs)},this)", quote=True)}">{t["share"]}</button><small>{t["share_hint"]}</small></div>')
+     out.append(f'{model_note(m, lang)}{note_html(t)}')
+-    blk = p.groupby(p.index.map(BLOCKS[m])).sum().sort_values(ascending=False)
++    blk = p.groupby(p.index.map(BLOCKS[m])).sum().sort_values(ascending=False, kind="stable")
+     bars = "".join(f'<div class="bar"><span class="l">{html.escape(bname(m, k, lang))}</span><span class="t"><span class="f" style="width:{val / blk.max() * 100:.0f}%"></span></span><span class="v">{val:.0%}</span></div>' for k, val in blk.items())
+     side = compare_html(m, lang, list(p.index[:3]), list(p.values[:3])) + f'<div class="blk blk2"><h3>{t["blk"]}</h3>{bars}</div>'
+     return "".join(out), side      # 右の列(結果カード) / 左の列(条件の枠の下: 比較・ブロック別の相性)

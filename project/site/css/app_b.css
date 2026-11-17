@@ -1,0 +1,932 @@
+
+@media(max-width:900px){.regions .region{grid-template-columns:1fr}.region .cover{min-height:130px;padding:16px 20px}.region .rank{font-size:40px}.spots{padding:6px 16px 10px}}
+@media(max-width:700px){#topbar{padding:12px 16px !important;flex-wrap:wrap !important;gap:8px !important}.brand{font-size:14px;letter-spacing:.16em}.brand i{width:14px;margin:0 6px}#topbar .btns{flex:1 1 100% !important;width:100% !important;flex-wrap:nowrap !important}#topbar .btns>*{flex:1 1 0 !important;min-width:0 !important}#switch,#view{font-size:11px;padding:7px 8px !important}#hero{height:360px}#hero .txt{left:24px;bottom:36px;right:16px}#main{flex-direction:column !important;padding:16px !important}.regions .region{grid-template-columns:1fr}.region .cover{min-height:130px}.spot{flex-wrap:wrap}.region .name{font-size:24px}.region .pct{font-size:28px}.gradio-container{--hh:var(--tb,100px)}.bgfx .half{width:100% !important;height:50% !important;left:0 !important;right:auto !important;top:auto !important;bottom:auto !important}.bgfx .half.l{top:0 !important}.bgfx .half.r{top:50% !important}.bgfx .div{left:8% !important;right:8% !important;top:50% !important;bottom:auto !important;width:auto !important;height:1px !important}.bgfx .ttl{bottom:calc(50% + 66px) !important}#landing{flex-direction:column !important}#landing>*{flex:0 0 auto !important;width:min(330px,82%) !important}#pick-tw,#pick-jp{padding:16px 12px !important;min-height:70px}#topbar{height:auto !important;flex-wrap:wrap !important;padding:8px 12px !important;gap:6px 8px !important}#topbar>#home{order:1}#topbar>#menuhtml{order:2}#topbar>#hsearch{order:3;flex:1 1 100% !important;max-width:none !important;margin-left:0}#home,details.menu summary{font-size:12px !important;padding:8px 12px !important}.mlist{min-width:min(300px,86vw)}#main{flex-direction:column !important}#formcol,#rescol{max-width:none !important;flex:1 1 auto !important;width:100% !important}#formcol{border-right:0 !important;border-bottom:1px solid var(--gold) !important}#formcol::before{display:none}.cat .spots,.spots{padding:4px 14px 8px}.pgcover{padding:18px}.hgrid{grid-template-columns:1fr}html:has(#navmark[data-stage=landing]) gradio-app{background:transparent !important}.cchips{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important;padding:16px 12px 6px !important}.cchip .cn b{font-size:12.5px !important}.cchip .cn{padding:8px 8px !important}.cpanels{padding:6px 12px 24px !important}.csort{grid-template-columns:repeat(2,1fr) !important;justify-content:stretch !important}.cgrid{grid-template-columns:1fr !important}#formcol,#rescol{padding-left:12px !important;padding-right:12px !important}#formcol .numhead,#rescol .numhead{margin:-30px -12px 18px !important}.numhead{padding:14px 14px 12px !important}.numhead b{width:34px !important;height:34px !important;font-size:17px !important}.numhead h3{font-size:16px !important;letter-spacing:.08em !important}.numhead p{font-size:12px !important}.fsech{flex-wrap:nowrap !important}.fsech small{display:none !important}.fsech span{font-size:15px !important;white-space:normal !important}#tbar{padding:16px 12px 18px !important}#tbar textarea,#tbar input{font-size:15px !important;padding:0 12px !important}#pbtn,#pbtn button,button#pbtn{padding:0 12px !important;min-width:64px}#rescol .mapcard{max-width:100% !important}html:has(#navmark[data-stage=landing]),body:has(#navmark[data-stage=landing]){background:#0b1c1d !important}.hlang{gap:4px !important;margin-right:6px !important}.hlang a,.hlang a:visited{padding:9px 11px !important;font-size:14px !important;min-width:40px !important}.lglabel{font-size:11.5px !important;margin-right:4px !important;letter-spacing:.04em !important}details.menu summary{padding:9px 12px !important;font-size:13px !important}body:has(#navmark[data-stage=landing]) #topbar{display:flex !important}body:has(#navmark[data-stage=landing]) #topbar>#home,body:has(#navmark[data-stage=landing]) #topbar>#hsearch{display:none !important}body:has(#navmark[data-stage=landing]) .landbrand,body:has(#navmark[data-stage=landing]) .landlang{display:none !important}body:has(#navmark[data-stage=landing]) .bgfx:has(.half){top:var(--tb,112px) !important;bottom:auto !important;height:292px !important}body:has(#navmark[data-stage=landing]) .bgfx .half{width:100% !important;height:146px !important}body:has(#navmark[data-stage=landing]) .bgfx .half.l{top:0 !important}body:has(#navmark[data-stage=landing]) .bgfx .half.r{top:146px !important}body:has(#navmark[data-stage=landing]) .bgfx .div{top:146px !important}body:has(#navmark[data-stage=landing]) .bgfx .ttl{top:12px !important;bottom:auto !important}body:has(#navmark[data-stage=landing]) .bgfx .ttl b{font-size:26px !important;letter-spacing:.2em !important}body:has(#navmark[data-stage=landing]) .bgfx .ttl span{font-size:11.5px !important;margin-top:4px !important}body:has(#navmark[data-stage=landing]) #landing{position:fixed !important;inset:auto !important;top:var(--tb,112px) !important;left:50% !important;width:min(100vw,430px) !important;height:292px !important;transform:translateX(-50%);display:grid !important;grid-template-rows:146px 146px;justify-items:center !important;align-items:end !important;align-content:start !important;justify-content:center !important;padding:0 !important}body:has(#navmark[data-stage=landing]) #landing>*{width:min(300px,80%) !important;margin:0 0 14px !important}body:has(#navmark[data-stage=landing]) #pick-tw,body:has(#navmark[data-stage=landing]) #pick-jp{min-height:44px !important;padding:10px 8px !important;font-size:14px !important;letter-spacing:.04em !important;white-space:nowrap !important}body:has(#navmark[data-stage=landing]) .howto{position:fixed !important;top:calc(var(--tb,112px) + 304px) !important;bottom:auto !important;left:50% !important;transform:translateX(-50%) !important;width:calc(min(100vw,430px) - 24px) !important;margin:0 !important;max-height:calc(100vh - var(--tb,112px) - 316px) !important;overflow:auto !important;padding:10px 14px !important}body:has(#navmark[data-stage=landing]) .howto ul,body:has(#navmark[data-stage=landing]) .howto ol{font-size:12px !important;line-height:1.55 !important}body:has(#navmark[data-stage=landing]) .hwg{gap:6px !important;margin-top:6px !important}body:has(#navmark[data-stage=landing]) .howto h4{margin-bottom:2px !important}body:has(#navmark[data-stage=result]) #main{display:flex !important;flex-direction:column !important}body:has(#navmark[data-stage=result]) #rescol{order:1 !important}body:has(#navmark[data-stage=result]) #formcol{order:2 !important}#pagecol{padding-left:6px !important;padding-right:6px !important}#pagecol .html-container{padding-left:0 !important;padding-right:0 !important}.pg{padding-left:2px !important;padding-right:2px !important;margin-left:0 !important;margin-right:0 !important;max-width:none !important;box-sizing:border-box !important}.pg .pgcover,.pg .guidebox,.pg section.cat,.pg .hotelpg{margin-left:0 !important;margin-right:0 !important;width:auto !important;max-width:none !important;box-sizing:border-box !important}.pg .pgcover{margin:4px 3px 22px !important;outline-offset:3px !important;padding:22px 20px !important;min-height:200px !important}.pg .guidebox{padding-left:14px !important;padding-right:14px !important}.pg,.pg *{word-break:auto-phrase;line-break:strict}.pg h2,.pg h3,.pg p,.pg .sd{text-wrap:pretty}.pg .guidebox h3{font-size:15px !important;letter-spacing:.1em !important}.pg .catbox h3.big{font-size:17.5px !important;letter-spacing:.06em !important;white-space:nowrap}.pg .ic3 strong,.pg .ic3 .nm{font-size:15px !important}.pg .season li,.pg .season p,.pg .wx small,.pg .guidebox .sn{font-size:12.5px !important}.pg .ahbox .ahrow{padding:14px !important}.pg .ahbox .ahrow p{font-size:13px !important;flex-basis:100% !important}.pg .ahbox .areahotel{font-size:14px !important;letter-spacing:.06em !important;padding:0 10px !important;white-space:nowrap}.pg section.cat>h3{font-size:18px !important;letter-spacing:.06em !important;padding-left:14px !important;padding-right:14px !important;gap:10px !important;white-space:nowrap}.pg section.cat>h3 em{white-space:nowrap !important;font-size:12px !important;padding:3px 9px !important;flex:none !important}.pg section.cat .spots{padding-left:10px !important;padding-right:10px !important}.pg .spot .nm>b,.pg .spot .nm>strong,.pg .spot .nm>a{font-size:15px !important}.pg .spot .sd{font-size:12.5px !important;letter-spacing:0 !important;line-height:1.7 !important}.pg .spot .acts a,.pg .spot .acts button{font-size:12.5px !important;letter-spacing:.02em !important;white-space:nowrap !important;padding-left:2px !important;padding-right:2px !important}.cmpc dt{white-space:nowrap;font-size:10px !important;letter-spacing:0 !important}.cmpc dd{font-size:11.5px !important}.cmpc{padding:10px 4px 8px !important}.pg.lux{padding:0 0 24px !important}.luxframe{width:100% !important;margin:10px 0 20px !important;box-sizing:border-box}.lux .p2country span{font-size:clamp(20px,6.6vw,28px) !important;letter-spacing:.12em !important;padding-left:.12em !important;white-space:nowrap}.lux .p2country{gap:10px !important}.lux .p2ways li{width:100% !important}.lux .p2ways a.p2way{width:100% !important}.lux .luxt{background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.84) 22%,rgba(255,255,255,.84) 78%,rgba(255,255,255,.55)) !important;padding-bottom:26px !important}.lux .p2title h1{font-size:23px !important;letter-spacing:.08em !important}.lux .p2ways{flex-direction:column !important;align-items:stretch !important;gap:8px !important;padding:0 10px !important}.lux .p2ways a.p2way{height:auto !important;min-height:42px;padding:8px 14px !important;font-size:13px !important;letter-spacing:.04em !important;text-align:left}.luxbody{padding:16px 12px 22px !important}.lux .numhead .nhx{font-size:11px !important;padding:3px 9px !important}.infog{grid-template-columns:1fr !important}.ckgrid{grid-template-columns:1fr !important}.evgrid{grid-template-columns:1fr !important}.lux .hgrid{grid-template-columns:1fr !important;gap:9px !important}.lux .hitgrid{grid-template-columns:1fr !important}.hitx{min-height:170px !important}.lux .spots{padding:0 !important}.luxnote{margin:14px 14px 18px !important}#topbar{padding:6px 6px !important;gap:6px 5px !important}#topbar>#brand{order:0 !important;flex:0 0 auto !important}#topbar>#home{order:1 !important}#topbar>#menuhtml{order:2 !important;margin-left:auto !important}#topbar>#hsearch{order:3 !important;flex:1 1 100% !important;max-width:none !important;margin-left:0 !important}.brandlink b{font-size:17px !important;letter-spacing:.02em !important}.brandlink i{display:none !important}#home,button#home{font-size:11.5px !important;padding:6px 6px !important;min-height:0 !important;min-width:0 !important;line-height:1.2 !important;white-space:nowrap !important}.lglabel{display:none !important}.hlang{gap:3px !important;margin-right:5px !important}.hlang a,.hlang a:visited{padding:6px 5px !important;font-size:12px !important;min-width:26px !important;line-height:1.2 !important}#menuhtml .hm{flex-wrap:nowrap !important}#menuhtml .hm{padding:0 !important;margin:0 !important;gap:0 !important}#menuhtml .hm a.viewbtn svg{display:none !important}.brandlink{padding:0 !important;margin:0 !important}#menuhtml .hm a.viewbtn,#menuhtml .hm a.viewbtn:visited{padding:6px 7px !important;font-size:11.5px !important;margin-right:5px !important;gap:4px !important;letter-spacing:.02em !important;line-height:1.2 !important}#menuhtml .hm a.viewbtn svg{width:14px !important;height:14px !important;flex-basis:14px !important}details.menu summary{padding:6px 8px !important;font-size:11.5px !important;letter-spacing:.04em !important;line-height:1.2 !important}details.menu summary::before{width:11px !important;margin-right:5px !important}#hsearch textarea,#hsearch input{min-height:34px !important;height:34px !important;font-size:13px !important;padding:0 10px !important}#hbtn,button#hbtn{min-height:34px !important;height:34px !important;padding:0 12px !important;font-size:12px !important}.gradio-container .block:has(#navmark:not([data-stage=result])){position:absolute !important;height:0 !important;min-height:0 !important;padding:0 !important;margin:0 !important}.gradio-container .block:has(#navmark:not([data-stage=result]))>.html-container{padding:0 !important}.gradio-container .form:not(:has(>:not(.hidden-bridge))){position:absolute !important}#pagecol{padding-top:4px !important}.pg{padding-top:8px !important}.pg.lux{padding-top:0 !important}.luxframe{margin-top:8px !important}#p2t{margin-top:0 !important}#p2t .p2title,.lux .p2title.luxt{padding-top:20px !important}.trnav{flex-direction:column !important;align-items:stretch !important;padding:0 10px !important;gap:10px !important;width:100% !important;box-sizing:border-box}.trnav a.trnav-b{max-width:none !important;flex:0 0 auto !important;padding:11px 14px 11px 11px !important}.trnav-i{width:40px !important;height:40px !important}.trnav-t b{font-size:15px !important}.trgrid{grid-template-columns:1fr !important;gap:12px !important}.trc{padding:16px 15px 14px !important}.trnm{font-size:17px !important}.trpg .trtip{padding:10px 12px !important;font-size:12.5px !important}.tracts a.trb{height:40px !important}}
+/* ===== 旅程プランナー / 予算 / 準備ガイド（extra.css）===== */
+.plx{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:6px;font-weight:400}
+.plx select,.plx input[type=time]{padding:5px 8px;border:1px solid #cfd3cf;border-radius:2px;background:#fff;color:#1c2526;font-size:12.5px;min-width:0}
+.plx .tm{display:inline-flex;gap:6px;align-items:center;font-size:12px;color:#6c7778}
+.plantop{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;background:#fff;border:1px solid var(--line);border-top:2px solid var(--gold);padding:14px 18px;margin:0 0 14px}
+.plantop label{display:flex;flex-direction:column;gap:4px;font-size:11.5px;letter-spacing:.1em;color:#6c7778}
+.plantop input{padding:8px 10px;border:1px solid #cfd3cf;border-radius:2px;background:#fff;color:#1c2526;font-size:14px}.plantop input[type=number]{width:70px}
+.plantop button{padding:9px 14px;border:1px solid var(--ink);background:#fff;color:var(--ink);font-size:12.5px;letter-spacing:.05em;cursor:pointer;border-radius:2px}.plantop button:hover{background:var(--ink);color:#fff}
+.plantop button.pri{background:var(--ink);color:#fff;border-color:var(--ink)}.plantop button.pri:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#planmsg{flex:1 0 100%;font-size:12.5px;color:#b4533c;min-height:0}
+.planhint{margin:0 0 14px;font-size:13px;color:#586264;line-height:1.8}
+.planout{margin-top:22px}.schedhd{margin:20px 0 10px;font-family:var(--serif) !important;font-size:18px;font-weight:500;letter-spacing:.12em;color:#1c2526}
+.mcals{display:flex;flex-wrap:wrap;gap:14px}.mcal{background:#fff;border:1px solid var(--line);padding:12px 14px;min-width:230px;flex:0 1 260px}
+.mcal h5{margin:0 0 8px;font-family:var(--serif) !important;font-size:15px;font-weight:500;letter-spacing:.08em;color:#1c2526}
+.mcal .wk{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}.mcal .wk b{font-size:11px;color:#8a9394;font-weight:500;padding:2px 0}
+.mcal .wk i{font-style:normal;font-size:12.5px;padding:6px 0;border-radius:2px;color:#4a5556}.mcal .wk i.e{visibility:hidden}.mcal .wk i.in{background:#f1e6c8;color:#1c2526}.mcal .wk i.has{background:var(--gold);color:#fff;font-weight:600}
+.days{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.dcard{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:14px 16px}.dcard h5{margin:0 0 8px;font-family:var(--serif) !important;font-size:16px;font-weight:500;letter-spacing:.08em;color:#1c2526}.dcard h5 small{font-size:12px;color:#7a8586;letter-spacing:.04em;margin-left:6px}
+.dcard ol,.dcard ul{margin:0;padding:0;list-style:none}.dcard li{display:flex;gap:10px;align-items:baseline;padding:5px 0;border-bottom:1px dashed #ece9e2;font-size:13.5px;color:#1c2526}.dcard li:last-child{border-bottom:0}
+.dcard time{flex:0 0 46px;font-variant-numeric:tabular-nums;color:#8a7a52;font-size:12.5px}.dcard time sup{color:#b9b09a}.dcard li span{display:flex;flex-direction:column;min-width:0}.dcard li small{color:#8a9394;font-size:11.5px}
+.dcard .none{margin:0;color:#8a9394;font-size:12.5px}.dcard .route{display:inline-block;margin-top:10px;padding:7px 12px;border:1px solid var(--gold);color:#7a5d22 !important;text-decoration:none !important;font-size:12.5px;border-radius:2px}.dcard .route:hover{background:var(--gold);color:var(--ink) !important}
+.dcard.un{margin-top:12px;border-left-color:#c3c7c4}.pn{margin:12px 0 0;font-size:12px;color:#8a9394}
+@media print{.planner .cat,.planner .plantop,.planner .planhint,.planner .hd,.planner .sum,.planner .favtools,.planner .note{display:none !important}.planner .planout{margin:0}.dcard,.mcal{break-inside:avoid;box-shadow:none}.planner,.planner *{color:#000 !important}}
+/* --- 予算の概算 --- */
+.budget{background:#fff;border:1px solid var(--line);border-top:2px solid var(--gold);padding:20px clamp(16px,3vw,30px);margin:0 6px 24px}
+.budget h3{margin:0 0 4px;font-family:var(--serif) !important;font-size:18px;font-weight:500;letter-spacing:.12em;color:#1c2526}.budget .bs{margin:0 0 12px;font-size:12.5px;color:#6c7778}
+.budget .bbar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:12px}.budget .bbar i{display:block;height:100%}
+.budget table{width:100%;border-collapse:collapse;margin-bottom:12px}.budget td{padding:6px 4px;font-size:13.5px;color:#1c2526;border-bottom:1px solid #f0eee8;background:transparent !important}.budget td.p{text-align:right;color:#8a9394;width:60px}.budget td.v{text-align:right;width:130px;font-variant-numeric:tabular-nums}
+.budget .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.budget .btot{display:flex;flex-wrap:wrap;gap:10px 28px;background:#f7f5ee;padding:12px 16px;border-radius:2px}.budget .btot div{display:flex;flex-direction:column}.budget .btot small{font-size:11px;letter-spacing:.1em;color:#8a7a52}.budget .btot b{font-family:var(--serif) !important;font-size:20px;font-weight:500;color:#1c2526}
+.budget .bn{margin:12px 0 0;font-size:11.5px;color:#8a9394;line-height:1.7}
+/* --- エリアページ: このエリアの行事 --- */
+.season .evl{margin:10px 0 0;padding:10px 0 0;border-top:1px solid #ece9e2;font-size:13px;color:#3d4a4b;line-height:1.9;list-style:none}.season .evl b{font-size:11.5px;letter-spacing:.12em;color:#8a7a52;display:block;margin-bottom:2px;font-weight:500}.season .evl li{margin:0;padding:0}
+/* --- 準備ガイド --- */
+.infot{width:100%;border-collapse:collapse;margin:4px 0 6px}.infot th{width:30%;text-align:left;vertical-align:top;padding:10px 24px;font-size:13px;font-weight:500;color:#8a7a52;letter-spacing:.06em;background:transparent !important;border-bottom:1px solid #f0eee8}.infot td{padding:10px 24px 10px 0;font-size:13.5px;color:#1c2526;border-bottom:1px solid #f0eee8;background:transparent !important}
+.ckbar{padding:10px 24px 0;font-size:13px;color:#586264}.ckbar select{margin-left:8px;padding:6px 10px;border:1px solid #cfd3cf;border-radius:2px;background:#fff;color:#1c2526}
+.ckg{padding:6px 24px 8px}.ckg h4{margin:10px 0 4px;font-size:12px;letter-spacing:.16em;color:#8a7a52;font-weight:500}.ckg.hide,.ck.hide{display:none !important}
+.ck{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:13.5px;color:#1c2526;cursor:pointer;line-height:1.6}.ck input{margin-top:4px;accent-color:#c7a15a}.ck input:checked+span{color:#9aa3a4;text-decoration:line-through}
+.ckprog{font-style:normal;margin-left:auto;font-size:12.5px;color:#8a7a52}
+.evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding:12px 24px 6px}
+.evm{border:1px solid #ece9e2;border-top:2px solid #e6dfcc;padding:10px 14px;background:#fff}.evm.now{border-top-color:var(--gold);background:#fbf9f1}.evm h5{margin:0 0 6px;font-family:var(--serif) !important;font-size:15px;font-weight:500;color:#1c2526}
+.evm ul{margin:0;padding:0;list-style:none}.evm li{font-size:12.5px;color:#3d4a4b;line-height:1.7;padding:3px 0}.evm li b{display:block;font-size:11px;letter-spacing:.1em;color:#8a7a52;font-weight:500}.evm li.none{color:#b4babb}
+.evn{margin:0;padding:0 24px 14px;font-size:11.5px;color:#8a9394}
+/* --- 仕上げ: Gradio標準スタイルの上書き --- */
+.budget table,.budget td,.infot,.infot th,.infot td,.infot tr{border:0 !important}.budget td{border-bottom:1px solid #f0eee8 !important}.infot th,.infot td{border-bottom:1px solid #f0eee8 !important}
+.budget table{border:0 !important}.infot{border:0 !important}
+.pg.planner>.sum,.pg.planner>.planhint,.pg.prep>.sum{background:rgba(255,255,255,.94);padding:10px 16px;border-left:3px solid var(--gold);text-shadow:none !important}
+.pg.planner>.hd,.pg.prep>.hd{background:rgba(255,255,255,.94);padding:10px 16px;display:inline-block;text-shadow:none !important}
+.evm ul,.evm li,.dcard ol,.dcard ul,.dcard li{list-style:none !important}.evm ul,.dcard ol,.dcard ul{padding:0 !important;margin:0 !important}
+.cmp h3{color:var(--gold) !important}.cmp>p{color:#b9c4c3 !important}
+
+/* --- アイコン / New / 天気 / メニュー --- */
+.ci{width:1.15em;height:1.15em;vertical-align:-.2em;flex:none}.spot .ic{color:var(--deep);display:inline-flex;align-items:center;justify-content:center}.spot .ic .ci{width:20px;height:20px}
+.newb{display:inline-block;margin-right:6px;padding:1px 7px;background:var(--gold);color:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:.08em;border-radius:2px;vertical-align:1px;line-height:1.5;font-family:var(--sans)}
+details.menu summary::before{content:"";display:inline-block;width:14px;height:10px;margin-right:8px;vertical-align:-1px;background:linear-gradient(currentColor,currentColor) 0 0/100% 1.5px no-repeat,linear-gradient(currentColor,currentColor) 0 50%/100% 1.5px no-repeat,linear-gradient(currentColor,currentColor) 0 100%/100% 1.5px no-repeat}
+.wx{background:#fff;border:1px solid var(--line);border-top:2px solid var(--gold);padding:18px clamp(14px,3vw,26px);margin:0 6px 18px;color:#1c2526}
+.wx h3{margin:0 0 10px;font-family:var(--serif) !important;font-size:18px;font-weight:500;letter-spacing:.12em;color:#1c2526}
+.wx .wxload{margin:0;font-size:13px;color:#8a9394}.wx .wxcr{margin:10px 0 0;font-size:11px;color:#8a9394}.wx .wxcr a{color:#7a5d22}
+.wxnow{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}.wxnow>.wi{width:54px;height:54px;color:var(--deep)}
+.wxnow>div:nth-child(2){display:flex;flex-direction:column}.wxt{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.1}.wxs{font-size:13px;color:#586264}
+.wxm{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:18px;font-size:12.5px;color:#6c7778}.wxm li{margin:0}.wxm b{color:#1c2526;font-weight:600}
+.wxdays{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
+.wxd{flex:0 0 74px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px;border:1px solid #ece9e2;background:#fbfaf6;font-size:12px;color:#3d4a4b}
+.wxd.today{border-color:var(--gold);background:#f7f0dc}.wxd small{font-size:11px;color:#6c7778}.wxd .wi{width:26px;height:26px;color:var(--deep)}.wxd b{font-size:14px;color:#1c2526}.wxd span{color:#8a9394}.wxd em{font-style:normal;font-size:10.5px;color:#4f7f93}
+/* --- サイト名 / Languages / 使い方 / 予算 --- */
+#brand,#brand>*{background:transparent !important;border:0 !important;box-shadow:none !important;padding:0 !important;min-width:0 !important}
+.brandlink,.brandlink:visited{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none !important;color:#fff !important;white-space:nowrap}
+.brandlink b{font-family:var(--serif) !important;font-size:21px;font-weight:600;letter-spacing:.14em;color:var(--gold) !important}.brandlink i{font-style:normal;font-family:var(--serif);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#e9e4d6}
+.brandlink:hover b{color:#fff !important}
+.landbrand,.landbrand *{color:#fff !important}.lglabel{color:#fff !important}.landbrand{position:fixed;top:12px;left:20px;z-index:20;display:flex;align-items:baseline;gap:10px;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+.landbrand b{font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:.14em}.landbrand i{font-style:normal;font-family:var(--serif);font-size:13px;letter-spacing:.32em;text-transform:uppercase}.landbrand span{font-size:12px;letter-spacing:.12em;opacity:.9}
+.lglabel{display:inline-block;margin-right:8px;font-size:12px;letter-spacing:.1em;color:#fff;align-self:center;white-space:nowrap}
+.landlang{align-items:center}.hlang{align-items:center}
+.howto{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:15;width:min(980px,92vw);background:rgba(11,28,29,.82);color:#fff;border:1px solid var(--gold);border-radius:2px;padding:12px 20px;max-height:40vh;overflow:auto;backdrop-filter:blur(4px)}
+.howto summary{cursor:pointer;list-style:none;font-family:var(--serif);font-size:15px;letter-spacing:.14em;color:var(--gold)}.howto summary::-webkit-details-marker{display:none}
+.hwg{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;margin-top:10px}.howto h4{margin:0 0 4px;font-size:12px;letter-spacing:.16em;color:var(--gold);font-weight:500}
+.howto ul,.howto ol{margin:0;padding-left:18px;font-size:12.5px;line-height:1.75;color:#f3efe3}.howto li{margin:2px 0;color:#f3efe3}
+@media(max-width:720px){.hwg{grid-template-columns:1fr}.landbrand{top:10px;left:12px}.landbrand b{font-size:20px}.landbrand span{display:none}.landlang{top:44px;left:12px;right:auto}.howto{bottom:8px;max-height:38vh;padding:10px 14px}.brandlink i{display:none}#topbar>#brand{order:0}}
+.bctl{display:flex;flex-wrap:wrap;gap:10px 16px;margin:0 0 12px}.bctl label{display:flex;flex-direction:column;gap:4px;font-size:11.5px;letter-spacing:.1em;color:#6c7778}
+.bctl input,.bctl select{padding:7px 10px;border:1px solid #cfd3cf;border-radius:2px;background:#fff;color:#1c2526;font-size:14px;min-width:84px}.bctl input[type=number]{width:84px}
+.budget .bn.bgnote{margin-top:6px;padding:10px 12px;background:#faf7ec;border-left:3px solid var(--gold);color:#586264;font-size:12px}
+
+#howtoc,#howtoc>*{background:transparent !important;border:0 !important;box-shadow:none !important;padding:0 !important}
+.howto,.howto *{color:#f3efe3 !important}.howto summary,.howto h4{color:var(--gold) !important}
+@media(max-width:720px){.howto{position:static !important;transform:none !important;width:auto !important;max-height:none !important;margin:14px 12px 20px;overflow:visible}.howto{background:rgba(11,28,29,.92)}}
+.brandlink i{color:#e9e4d6 !important}.brandlink b{color:var(--gold) !important}
+
+/* --- 使い方（簡潔版）/ 条件フォームの区切り / 結果画面の左マップ --- */
+.howto{bottom:30px !important;width:min(860px,90vw) !important;padding:14px 24px !important;max-height:none !important}
+.howto summary{font-size:14px}.hwg{margin-top:8px !important;gap:6px 36px !important}.howto ul,.howto ol{line-height:1.7 !important}
+@media(max-height:780px){.howto{position:static !important;transform:none !important;margin:56px auto 28px !important}}
+.fsec,.fsec>*{grid-column:1/-1;background:transparent !important;border:0 !important;box-shadow:none !important;padding:0 !important}
+#condbox>.fsec{margin:18px 0 -2px}
+.fsech{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--gold);margin-top:6px}
+.fsech b{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;border-radius:50%;background:var(--ink);color:var(--gold) !important;font-size:12px;font-weight:600}
+.fsech span{font-family:var(--serif);font-size:15px;letter-spacing:.1em;color:#1c2526 !important}
+#condbox>.form{margin-top:6px !important;margin-bottom:6px}
+#sidemap{margin-top:18px}#sidemap .mapcard{padding:0}
+.cattable td a{display:flex !important;align-items:center;gap:10px}.cattable .ci{display:inline-block !important;width:18px !important;height:18px !important;flex:none;color:var(--gold) !important;stroke:var(--gold) !important;vertical-align:middle}
+section.cat h3 .ci,.cat h3 .ci{display:inline-block;width:20px;height:20px;vertical-align:-4px;margin-right:6px;color:var(--deep)}
+/* --- エリアページ: 旅の目安を1つの枠にまとめる --- */
+.guidebox{background:#fff;border:1px solid var(--line);border-top:2px solid var(--gold);margin:0 6px 24px;padding:6px clamp(16px,3vw,30px) 10px}
+.guidebox .wx,.guidebox .season,.guidebox .budget,.guidebox .iconic{background:transparent !important;border:0 !important;box-shadow:none !important;margin:0 !important;padding:20px 0 !important}
+.guidebox>*+*{border-top:1px solid #ece9e2 !important}
+.guidebox h3{font-size:16px !important}
+.iconic h3{margin:0 0 10px;font-family:var(--serif) !important;font-size:17px;font-weight:500;letter-spacing:.12em;color:#1c2526}
+.ic3g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ic3,.ic3:visited{position:relative;display:flex;flex-direction:column;gap:3px;padding:12px 14px 12px 44px;border:1px solid #e6dfcc;background:#fbf9f1;text-decoration:none !important;color:#1c2526 !important;min-width:0}
+.ic3:hover{border-color:var(--gold);background:#f7f0dc}
+.ic3 b{position:absolute;left:12px;top:12px;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
+.ic3 .n{font-size:14.5px;font-weight:600;line-height:1.4;overflow-wrap:anywhere}.ic3 small{display:flex;align-items:center;gap:5px;font-size:11.5px;color:#7a8586}.ic3 small .ci{width:14px;height:14px;color:var(--deep)}
+.iconic .sn{margin:8px 0 0;font-size:11.5px;color:#8a9394}
+@media(max-width:700px){.ic3g{grid-template-columns:1fr}}
+/* --- ブランド / 「もっと細かく」/ 1ページ目の説明 --- */
+.brandlink b{font-size:30px !important;letter-spacing:.18em !important;text-shadow:0 0 14px rgba(199,161,90,.45)}.brandlink i{font-size:13px !important;letter-spacing:.34em !important;font-weight:600}
+#topbar .brandlink{padding-right:6px}
+.landbrand b{font-size:38px !important;letter-spacing:.18em;text-shadow:0 2px 12px rgba(0,0,0,.6)}.landbrand i{font-size:15px !important;font-weight:600}.landbrand span{font-size:13px !important}
+#formcol .label-wrap{border:1px solid var(--gold) !important;background:rgba(199,161,90,.14) !important;padding:14px 18px !important;border-radius:2px;font-size:15.5px !important;font-weight:600 !important;letter-spacing:.08em;color:#0b1c1d !important}
+#formcol .label-wrap:hover{background:var(--gold) !important}#formcol .label-wrap span,#formcol .label-wrap .icon{color:#0b1c1d !important}
+@media(min-height:720px) and (min-width:721px){.howto{position:fixed !important}}
+@media(max-height:719px){
+ html body{overflow:auto !important}
+ #landing{position:relative !important;inset:auto !important;height:100vh !important}
+ .howto{position:static !important;transform:none !important;width:min(860px,90vw) !important;margin:56px auto 44px !important;max-height:none !important}
+}
+.guidebox .wx,.guidebox .season,.guidebox .budget{border-top:1px solid #e3dccb !important;padding:16px 0 !important}.guidebox .iconic{padding:16px 0 !important}
+.ic3{text-align:left !important;align-items:flex-start !important}.ic3 .n,.ic3 small{text-align:left !important;width:100%}
+.ic3 b{color:var(--gold) !important;background:var(--ink) !important}
+.budget table,.budget tr,.budget td{border-left:0 !important;border-right:0 !important;outline:0 !important}
+.guidebox .budget tr td:first-child{padding-left:0}.guidebox .budget td:last-child{padding-right:0}
+.ic3,.ic3:visited,.pg .ic3{padding:12px 14px 12px 48px !important;min-height:58px;justify-content:center;line-height:1.35}
+.ic3 .n{display:block;margin:0 !important}.ic3 small{margin:0 !important}
+.brandlink b{color:#e8c27a !important;text-shadow:none !important;opacity:1 !important;font-weight:700 !important}
+/* 英語名（英語表示のみ）・分類表の行全体クリック・結果画面の左地図 */
+.spot .nm .en,.ic3 .n .en{display:block;font-size:.82em;font-weight:400;color:#9a9aa3;letter-spacing:.01em;line-height:1.3;margin-top:1px}
+.cattable tbody tr.row{cursor:pointer;transition:background .15s}.cattable tbody tr.row:hover{background:rgba(201,162,74,.16) !important}
+.cattable tbody tr.row td{padding-top:0 !important;padding-bottom:0 !important}.cattable tbody tr.row td a{padding:9px 0;width:100%}.cattable tbody tr.row td.n{padding:9px 12px !important}
+#sidemap{margin:12px 0 4px !important}#sidemap .mapcard{padding:0}#sidemap .mapcard h3{font-size:.95rem}#sidemap .mapcard p{font-size:.78rem}
+#sidemap svg.jmap{max-width:330px;max-height:420px;width:100%;height:auto;display:block;margin:0 auto}
+#sidemap .legend{font-size:.7rem}
+.jmap path.hit{cursor:pointer}
+#sidemap svg.jmap{overflow:visible}
+/* ===== 1ページ目: ボタン・タイトル・使い方を上端からの固定位置に（画面の高さで動かない） ===== */
+@media(min-width:721px){
+ #landing{align-items:flex-start !important;padding-top:302px !important}
+ .bgfx .ttl{top:138px !important;bottom:auto !important}
+ .bgfx .ttl b{font-size:clamp(34px,5vw,68px) !important}.bgfx .ttl span{font-size:clamp(13px,1.4vw,18px) !important}
+ .howto{position:fixed !important;top:424px !important;bottom:auto !important;left:50% !important;transform:translateX(-50%) !important;width:min(860px,90vw) !important;margin:0 !important;max-height:none !important}
+}
+@media(min-width:721px) and (max-height:700px){
+ html body{overflow:auto !important}
+ .bgfx:has(.half){position:absolute !important;bottom:auto !important;height:700px !important}
+ #landing{position:absolute !important;inset:0 0 auto 0 !important;height:700px !important}
+ .howto{position:absolute !important;margin-top:-72px !important}
+}
+/* ===== 2ページ目: 3つの探し方 / 同行者 / 訪問経験 ===== */
+.p2lead{margin:16px 0 8px !important;font-size:14px;letter-spacing:.1em;color:#0b1c1d !important;text-shadow:0 0 12px rgba(255,255,255,.95),0 0 4px rgba(255,255,255,.9)}
+.p2ways{list-style:none;margin:0 !important;padding:0 !important;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.p2ways li{display:flex;align-items:center;gap:9px;background:rgba(11,28,29,.82);color:#f3efe3 !important;border:1px solid #c7a15a;padding:8px 18px;font-size:13.5px;letter-spacing:.1em}
+.p2ways li b{display:inline-flex;width:22px;height:22px;border-radius:50%;background:#c7a15a;color:#0b1c1d;align-items:center;justify-content:center;font-size:12px}
+#firstr .wrap,#firstr fieldset>div:last-child{display:flex !important;flex-wrap:wrap;gap:8px !important}
+#firstr label{flex:1 1 150px;justify-content:center}
+#firstr .info,#firstr span[data-testid="block-info"]+span,#firstr .block-info+*{font-size:12px}
+/* 結果画面左の地図: 見出しと説明を地図の真上・中央に */
+#sidemap .mapcard h3,#sidemap .mapcard p{text-align:center !important}
+/* ===== カテゴリ枠: 分類ごとの色で高級感のある見出し帯 ===== */
+.cat{--ca:#c7a15a;border:1px solid color-mix(in srgb,var(--ca) 45%,#fff) !important;border-left:6px solid var(--ca) !important;border-radius:2px;background:color-mix(in srgb,var(--ca) 6%,#fff) !important;box-shadow:0 10px 28px rgba(11,28,29,.14) !important;overflow:hidden}
+#cat-themepark{--ca:#b04a78}#cat-activity{--ca:#1f8a9e}#cat-zoo{--ca:#5d8f2f}#cat-nightclub{--ca:#7a2f8f}#cat-museum{--ca:#6657a8}#cat-onsen{--ca:#c2683a}#cat-nightmkt{--ca:#b8402f}#cat-shrine{--ca:#a2342b}#cat-shotengai{--ca:#b5651d}#cat-oldstreet{--ca:#9c3d2a}
+#cat-food{--ca:#c68a14}#cat-history{--ca:#80613a}#cat-nature{--ca:#3a8856}#cat-city{--ca:#356a9f}#cat-landmark{--ca:#9a6b1f}#cat-other{--ca:#5f7480}
+.cat h3{background:linear-gradient(100deg,color-mix(in srgb,var(--ca) 70%,#0b1c1d),color-mix(in srgb,var(--ca) 42%,#0b1c1d)) !important;color:#fff !important;border-bottom:2px solid #c7a15a !important;padding:15px 24px !important}
+.cat h3 .ci,.cat h3 span svg{color:#e8cf94 !important;width:22px;height:22px}
+.cat h3 em{color:#f3efe3 !important;background:rgba(0,0,0,.22);padding:2px 12px;border-radius:12px;letter-spacing:.06em}
+.cat .spot{border-bottom-color:color-mix(in srgb,var(--ca) 18%,#e6e2d8) !important}
+.cat .spot .ic{border-color:var(--ca) !important;color:var(--ca) !important}
+/* 分類表の行にも同じ色を */
+/* ===== メニュー: 太めのバー + アイコン ===== */
+.mlist{min-width:340px !important;padding:10px !important;background:linear-gradient(180deg,#112325,#0b1819) !important;border-radius:2px;display:flex;flex-direction:column;gap:8px}
+.mlist a.mi,.mlist a.mi:visited{display:flex !important;align-items:center;gap:14px;padding:0 16px !important;min-height:58px;border:1px solid rgba(199,161,90,.45) !important;background:rgba(255,255,255,.04);font-family:var(--serif);font-size:14.5px !important;letter-spacing:.08em;transition:background .15s,border-color .15s,padding-left .15s}
+.mlist a.mi:last-child{border-bottom:1px solid rgba(199,161,90,.45) !important}
+.mlist .mic{display:inline-flex;width:34px;height:34px;flex:0 0 34px;align-items:center;justify-content:center;border:1px solid #c7a15a;border-radius:50%;color:#e8cf94}.mlist .mic svg{width:18px;height:18px}
+.mlist .mtx{flex:1}.mlist .mch{color:#c7a15a;font-size:22px;line-height:1}
+.mlist a.mi:hover{background:#c7a15a !important;border-color:#c7a15a !important;color:#0b1c1d !important;padding-left:22px !important}
+.mlist a.mi:hover .mic{border-color:#0b1c1d;color:#0b1c1d}.mlist a.mi:hover .mch{color:#0b1c1d}
+.mlist a.mi .mtx{color:#fff !important;font-size:14.5px !important;opacity:1 !important}.mlist a.mi .mic{color:#e8cf94 !important}.mlist a.mi .mic svg{stroke:currentColor !important;fill:none !important;opacity:1 !important}.mlist a.mi .mch{color:#c7a15a !important}
+.mlist a.mi:hover .mtx,.mlist a.mi:hover .mic,.mlist a.mi:hover .mch{color:#0b1c1d !important}
+#firstr label{white-space:nowrap !important;flex:1 1 auto !important}#firstr .info,#firstr [data-testid="block-info"]~*,#firstr span.info{color:#586264 !important}
+.p2ways{align-items:center !important}.p2ways li{margin:0 !important;line-height:1.4 !important;height:38px;box-sizing:border-box}
+.mlist a.mi .mic svg{color:#e8cf94 !important;stroke:#e8cf94 !important}.mlist a.mi:hover .mic svg{color:#0b1c1d !important;stroke:#0b1c1d !important}.mlist a.mi .mtx{text-align:left !important}
+@media(max-width:720px){.howto{position:static !important;transform:none !important;width:auto !important;margin:14px 12px 24px !important;top:auto !important;max-height:none !important}.landlang{top:58px !important}.cat{padding:0 !important}}
+.cat{padding:0 !important}
+@media(max-width:720px){html body{overflow:auto !important}#landing{position:relative !important;inset:auto !important;height:100vh !important}}
+@media(max-width:720px){.bgfx .ttl{bottom:calc(50% + 28px) !important}.bgfx .ttl b{font-size:34px !important}}
+
+/* カテゴリ見出しバー: 写真 + 暗いグラデーションで文字を常に読めるように */
+.cat h3{background:linear-gradient(90deg,rgba(7,15,17,.86) 0%,rgba(7,15,17,.62) 45%,rgba(7,15,17,.30) 100%),var(--bn,none),color-mix(in srgb,var(--ca) 55%,#0b1c1d) !important;background-size:cover !important;background-position:center !important;min-height:74px;display:flex !important;align-items:center;gap:12px;text-shadow:0 1px 6px rgba(0,0,0,.75);font-size:19px !important}
+.cat h3 em{background:rgba(7,15,17,.7) !important;border:1px solid rgba(232,207,148,.7);color:#f6ecd0 !important;margin-left:auto}
+.cat h3 .ci,.cat h3 span svg{color:#f1d99b !important;filter:drop-shadow(0 1px 3px rgba(0,0,0,.7))}
+/* 3つの探し方: 枠全体がリンク */
+.p2ways li{padding:0 !important;height:auto !important;background:none !important;border:0 !important}
+.p2ways a.p2way,.p2ways a.p2way:visited{display:flex;align-items:center;gap:9px;height:42px;box-sizing:border-box;background:rgba(11,28,29,.84);color:#f3efe3 !important;border:1px solid #c7a15a;padding:0 20px;font-size:13.5px;letter-spacing:.1em;text-decoration:none !important;cursor:pointer;transition:background .15s,transform .15s}
+.p2ways a.p2way:hover{background:#c7a15a;color:#0b1c1d !important;transform:translateY(-2px)}.p2ways a.p2way:hover b{background:#0b1c1d;color:#c7a15a}
+#tbar,#formcol,#rescol,#mapbox{scroll-margin-top:calc(var(--hh,60px) + 14px)}
+.bgfx.rbg .slide{background-size:cover !important}.bgfx.rbg .veil{background:rgba(246,247,245,.66)}
+/* ===== 旅の条件を選ぶ: 見出し + 3枚のカード(濃色の見出し帯 + 白い本体) ===== */
+#formcol .chead{text-align:center;padding:6px 0 18px !important}
+#formcol .chead h2{font-size:28px !important;letter-spacing:.2em !important;margin:10px 0 8px !important}
+#formcol .chead p{font-size:13.5px !important;letter-spacing:.08em;color:#5a6667 !important}
+.chead .orn{display:flex;align-items:center;justify-content:center;gap:10px}.chead .orn i{display:block;width:70px;height:1px;background:#c7a15a}.chead .orn u{display:block;width:9px;height:9px;background:#c7a15a;transform:rotate(45deg)}
+#condbox>.fsec{margin:26px 0 0 !important;padding:0 !important}
+#formcol .fsech{display:flex !important;align-items:center;gap:14px;margin:0 !important;padding:13px 22px !important;border:0 !important;background:linear-gradient(100deg,#0b1c1d,#17383a) !important;border-top:3px solid #c7a15a !important;box-shadow:0 6px 18px rgba(11,28,29,.18)}
+#formcol .fsech b{width:34px !important;height:34px !important;font-size:16px !important;background:#c7a15a !important;color:#0b1c1d !important;font-family:var(--serif);box-shadow:0 0 0 3px rgba(199,161,90,.3)}
+#formcol .fsech span{font-size:17px !important;letter-spacing:.14em !important;color:#fff !important}
+#formcol .fsech small{margin-left:auto;font-size:12px;letter-spacing:.08em;color:#d9c48f}
+#condbox>.fsec+.form{background:#fff !important;border:1px solid #d9cfb4 !important;border-top:0 !important;padding:24px 26px 26px !important;margin:0 !important;box-shadow:0 12px 28px rgba(11,28,29,.10)}
+#condbox>.fsec+.form .block{background:transparent !important}
+#formcol label>span,#formcol .block-title,#formcol [data-testid="block-info"]{font-family:var(--serif);letter-spacing:.08em}
+#formcol input[type=range]{accent-color:#c7a15a;height:6px}
+#formcol .block label span:first-child{font-weight:600;color:#1c2526}
+#firstr label{border:1px solid #d9cfb4 !important;background:#fbf8ef !important;min-height:42px}#firstr label:has(input:checked){background:#0b1c1d !important;color:#fff !important;border-color:#c7a15a !important}#firstr label:has(input:checked) span{color:#fff !important}
+#go{margin-top:28px !important;letter-spacing:.2em;font-size:17px !important;padding:16px !important;box-shadow:0 10px 26px rgba(11,28,29,.28)}
+@media(max-width:720px){#formcol .fsech small{display:none}}
+.cat h3{margin:0 !important}.cat h3 .ci,.cat h3 span svg{stroke:#f1d99b !important;width:24px !important;height:24px !important}.cat h3>span{display:inline-flex}
+#formcol .fsech small{display:none}.gradio-container:has(#navmark[data-stage=cond]) #formcol .fsech small{display:inline}
+
+/* ===== 2ページ目: 4つの探し方（番号見出し・検索バー・地図・カテゴリ検索） ===== */
+.numhead{display:flex;align-items:center;gap:16px;margin:0 !important;padding:22px clamp(20px,3vw,48px) 16px;background:linear-gradient(100deg,#0b1c1d 0%,#16393a 100%) !important;border-top:3px solid #c7a15a;color:#f3efe3 !important}
+.numhead b{flex:none;display:inline-flex;width:40px;height:40px;border-radius:50%;background:#c7a15a;color:#0b1c1d !important;align-items:center;justify-content:center;font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:20px;font-weight:700;box-shadow:0 0 0 4px rgba(199,161,90,.28)}
+.numhead h3{margin:0 !important;font-family:'Noto Serif JP','Noto Serif TC',serif !important;font-size:20px !important;font-weight:600;letter-spacing:.14em;color:#f3efe3 !important;text-align:left !important}
+.numhead p{margin:3px 0 0 !important;font-size:.82rem;letter-spacing:.06em;color:#d9c590 !important;text-align:left !important}
+#kwhead,#catbox{padding:0 !important;border:0 !important;background:transparent !important;scroll-margin-top:calc(var(--hh,60px) + 14px)}
+#kwhead .numhead{border-top:0}
+#tbar{background:linear-gradient(180deg,#fbf6ea,#f3ead4) !important;padding:26px clamp(20px,3vw,48px) 30px !important;border-bottom:1px solid #c7a15a !important;gap:0 !important;align-items:stretch !important}
+#tbar::before{display:none !important}
+#tbar>*{background:transparent !important}
+#tbar textarea,#tbar input{height:56px !important;border:1px solid #c7a15a !important;border-right:0 !important;border-radius:0 !important;background:#fffdf7 !important;padding:0 22px !important;font-size:1.05rem !important;letter-spacing:.06em;box-shadow:inset 0 2px 6px rgba(11,28,29,.08) !important}
+#pbtn,#pbtn button,button#pbtn{height:56px !important;min-height:56px !important;border-radius:0 !important;background:linear-gradient(135deg,#d8b66c,#b88d3f) !important;color:#0b1c1d !important;font-weight:700 !important;letter-spacing:.3em;border:1px solid #b88d3f !important;box-shadow:0 4px 14px rgba(184,141,63,.35) !important}
+#pbtn:hover{filter:brightness(1.06)}
+#rescol #mapbox{background:linear-gradient(180deg,#fbf6ea,#f1e7cf) !important;padding:10px 12px 22px !important;border:1px solid #c7a15a !important;box-shadow:inset 0 0 0 5px #fffdf7,inset 0 0 0 6px rgba(199,161,90,.55)}
+#rescol .mapcard h3{font-family:'Noto Serif JP','Noto Serif TC',serif !important;letter-spacing:.2em;text-align:center !important}
+#rescol .mapcard p{text-align:center !important}
+#rescol .mapcard svg.jmap{filter:drop-shadow(0 10px 18px rgba(11,28,29,.28))}
+#rescol .mapcard .legend{justify-content:center;border-top:1px solid rgba(199,161,90,.6);padding-top:12px;margin-top:10px}
+.cchips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;padding:24px clamp(20px,3vw,48px) 10px;background:linear-gradient(180deg,#fbf6ea,#f3ead4)}
+.cchip{position:relative;aspect-ratio:1/1;border:1px solid #c7a15a !important;border-radius:0 !important;padding:0 !important;background:linear-gradient(180deg,rgba(7,15,17,.05) 35%,rgba(7,15,17,.86)),var(--ci) center/cover no-repeat !important;color:#f3efe3 !important;cursor:pointer;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.cchip .cn{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:8px;padding:10px 12px;text-align:left;color:#f6ecd0 !important}
+.cchip .cn b{font-family:'Noto Serif JP','Noto Serif TC',serif;font-weight:600;font-size:.95rem;letter-spacing:.08em;color:#fff !important;text-shadow:0 1px 5px rgba(0,0,0,.8)}
+.cchip .ci{flex:none;width:20px;height:20px;color:#f1d99b !important;stroke:#f1d99b !important}
+.cchip:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(11,28,29,.35)}
+.cchip.on{outline:3px solid #c7a15a;outline-offset:-3px;box-shadow:0 0 0 2px #0b1c1d,0 10px 22px rgba(11,28,29,.4)}
+.cchip.on .cn{background:rgba(199,161,90,.92)}.cchip.on .cn b,.cchip.on .ci{color:#0b1c1d !important;stroke:#0b1c1d !important;text-shadow:none}
+.cpanels{padding:6px clamp(20px,3vw,48px) 30px;background:linear-gradient(180deg,#f3ead4,#fbf6ea);border-bottom:1px solid #c7a15a}
+.csort{display:flex;justify-content:flex-end;gap:0;margin:10px 0 0}
+.csort button{padding:8px 18px;border:1px solid #c7a15a !important;background:#fffdf7 !important;color:#0b1c1d !important;font-size:.85rem;letter-spacing:.1em;cursor:pointer;border-radius:0 !important}
+.csort button.on{background:#0b1c1d !important;color:#f3efe3 !important;border-color:#0b1c1d !important}
+.cph{display:flex;align-items:center;gap:10px;margin:8px 0 14px;font-family:'Noto Serif JP','Noto Serif TC',serif;font-size:1.1rem;letter-spacing:.12em;color:#0b1c1d;font-weight:600}
+.cph em{font-style:normal;font-size:.8rem;background:#c7a15a;color:#0b1c1d;padding:2px 10px;border-radius:99px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+a.ccard,a.ccard:visited{position:relative;display:block;min-height:170px;background:linear-gradient(180deg,#16393a,#0b1c1d) center/cover no-repeat;border:1px solid #c7a15a;padding:14px 16px 28px;text-decoration:none !important;color:#fff !important;transition:.2s;text-align:left}
+a.ccard:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(11,28,29,.35);border-color:#f1d99b}
+.ccard .chd{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(241,217,155,.6)}
+.ccard .chd b{font-family:'Noto Serif JP','Noto Serif TC',serif;font-size:1.1rem;letter-spacing:.1em;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+.ccard .chd em{font-style:normal;font-size:.75rem;background:#c7a15a;color:#0b1c1d;padding:1px 9px;border-radius:99px}
+.ccard ul{margin:0;padding:0 0 0 1.1em;list-style:disc;font-size:.85rem;line-height:1.7;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.9)}
+.ccard li{display:list-item;padding-right:18px}.ccard .en{display:block;font-size:.72rem;color:#e8dcc0}
+.ccard .cgo{position:absolute;right:12px;bottom:8px;color:#f1d99b;font-size:1.05rem}
+#mapbox .mapcard h3,#mapbox .mapcard>p{display:none}
+.cat h3{min-height:110px !important}
+#formcol .numhead,#rescol .numhead{margin:-30px calc(-1*clamp(20px,3vw,48px)) 22px !important}
+.gradio-container:has(#navmark[data-stage=result]) #condbox{background:rgba(255,255,255,.96);border:1px solid #c7a15a;box-shadow:0 10px 26px rgba(11,28,29,.18);padding:6px 20px 24px}
+.gradio-container:has(#navmark[data-stage=result]) #condbox .chead{padding-top:20px !important}
+@media(max-width:700px){.numhead{padding:16px 16px 12px;gap:12px}.numhead h3{font-size:1rem !important}.cchips,.cpanels{padding-left:14px;padding-right:14px}.cchips{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:1fr}}
+.form:has(.hidden-bridge),.form:has(#bridge),.form:has(#bridge2){background:transparent !important;border:0 !important;box-shadow:none !important;height:0 !important;min-height:0 !important;padding:0 !important;margin:0 !important;overflow:hidden !important}
+.hidden-bridge,.hidden-bridge *{background:transparent !important;border:0 !important}
+#condbox .chead{border:0 !important;box-shadow:none !important;background:transparent !important}
+#condbox .chead{border-top:0 !important;padding:18px 0 10px !important}
+#condbox>.fsec:first-of-type{margin-top:6px !important}
+#rescol .mapcard>h3,#rescol .mapcard>p{display:none !important}
+
+/* ===== 言語選択を大きく ===== */
+.hlang{gap:6px !important;margin-right:14px !important}
+.hlang a,.hlang a:visited,.landlang a,.landlang a:visited{padding:11px 17px !important;font-size:15.5px !important;letter-spacing:.08em !important;min-width:48px;text-align:center;line-height:1.1 !important}
+.lglabel{font-size:14px !important;letter-spacing:.12em !important}
+
+/* ===== エリアページ: 4つのボタンを同じ大きさに・色分け ===== */
+.spot{grid-template-columns:40px minmax(120px,1fr) repeat(4,92px) 34px !important}
+.spot .s-map,.spot .s-img,.spot .s-site,.spot .ph,.spot .s-hotel{grid-column:auto !important}
+.spot .acts>a{display:inline-flex !important;align-items:center;justify-content:center;height:36px;padding:0 4px !important;font-size:12.5px !important;font-weight:600;letter-spacing:.05em !important;border:1px solid transparent !important;border-radius:2px;text-overflow:clip !important;overflow:hidden;box-shadow:0 2px 6px rgba(11,28,29,.22),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .15s,box-shadow .15s,filter .15s}
+.spot .acts>a:hover{transform:translateY(-1px);filter:brightness(1.1);box-shadow:0 5px 12px rgba(11,28,29,.3),inset 0 1px 0 rgba(255,255,255,.2)}
+.spot .acts>a,.spot .acts>a:visited{color:#fff !important}
+.spot a.s-map,.spot a.s-map:visited{background:linear-gradient(135deg,#1d6a6c,#0e3d3f) !important;border-color:#0b2d2f !important}
+.spot a.s-img,.spot a.s-img:visited{background:linear-gradient(135deg,#a2485a,#6a2133) !important;border-color:#561a29 !important;color:#fff !important}
+.spot a.s-site,.spot a.s-site:visited{background:linear-gradient(135deg,#2b3f6b,#141f3f) !important;border-color:#0e1730 !important}
+.spot a.s-hotel,.spot a.s-hotel:visited{background:linear-gradient(135deg,#e2c277,#b48a3a) !important;border-color:#8f6c28 !important;color:#2a1d04 !important}
+.spot a.s-hotel:hover{color:#2a1d04 !important}
+@container (max-width:700px){
+ .spot{grid-template-columns:40px minmax(0,1fr) 34px !important}
+ .spot .ic{grid-row:1;grid-column:1}.spot .nm{grid-column:2;grid-row:1}.spot .star{grid-column:3;grid-row:1}
+ .spot .acts{display:grid !important;grid-column:1/-1;grid-row:2;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+ .spot .acts>a{font-size:11.5px !important;padding:0 1px !important;letter-spacing:0 !important;white-space:nowrap}
+ .spot .acts>.ph{display:block;height:1px;visibility:hidden}
+}
+
+/* ===== 「このエリアといえば」3スポット ===== */
+.ic3,.ic3:visited,.pg .ic3{background:linear-gradient(135deg,#0b1c1d 0%,#173d3f 100%) !important;border:1px solid #c7a15a !important;border-radius:2px;box-shadow:0 6px 16px rgba(11,28,29,.28),inset 0 0 0 3px rgba(11,28,29,.9),inset 0 0 0 4px rgba(199,161,90,.45);color:#f3efe3 !important;transition:transform .18s,box-shadow .18s}
+.ic3:hover{background:linear-gradient(135deg,#12292b 0%,#1f4f52 100%) !important;transform:translateY(-3px);box-shadow:0 12px 24px rgba(11,28,29,.38),inset 0 0 0 3px rgba(11,28,29,.9),inset 0 0 0 4px #e6c77f}
+.ic3 b{background:linear-gradient(135deg,#e2c277,#b48a3a) !important;color:#1a1405 !important;box-shadow:0 0 0 3px rgba(199,161,90,.3)}
+.ic3 .n,.ic3 .n *{color:#fff !important;font-family:'Noto Serif JP','Noto Serif TC',serif;letter-spacing:.06em}.ic3 .n .en{color:#d9c9a0 !important}
+.ic3 small,.ic3 small *{color:#e6c77f !important}.ic3 small .ci{color:#e6c77f !important}
+.ic3{padding-left:54px !important;padding-right:14px !important}.ic3 b{left:15px !important;top:calc(50% - 11px) !important}
+
+/* ===== 2ページ目: カテゴリカード(文字1行・同じ大きさ)・並び替え ===== */
+.cchips{grid-template-columns:repeat(auto-fill,minmax(176px,1fr)) !important}
+.cchip .cn{flex-wrap:nowrap;white-space:nowrap;gap:6px !important;padding:10px 10px !important}
+.cchip .cn b{white-space:nowrap;font-size:13.5px !important;letter-spacing:.04em !important;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.cchip .ci{width:18px !important;height:18px !important}
+.csort{display:grid !important;grid-template-columns:repeat(2,132px);justify-content:end;margin:10px 0 14px !important}
+.csort button{height:40px;padding:0 !important;text-align:center}
+.cph{margin-top:0 !important}
+.ccard,.ccard *{color:#fff !important}
+.ccard li,.ccard ul,.ccard .chd b,.ccard .en{color:#fff !important}
+.ccard .chd em{color:#0b1c1d !important}
+#rescol .mapcard{max-width:960px !important}
+.cpanels .csort{display:none !important}
+.cchips:has(.cchip.on)+.cpanels .csort{display:grid !important}
+.cpanels{min-height:0 !important}
+.cchips:not(:has(.cchip.on))+.cpanels{padding-bottom:6px !important}
+
+@media(max-width:700px){
+ .hlang{gap:4px !important;margin-right:6px !important}
+ .hlang a,.hlang a:visited{padding:9px 11px !important;font-size:14px !important;min-width:40px !important}
+ .lglabel{font-size:11.5px !important;margin-right:4px !important;letter-spacing:.04em !important}
+ details.menu summary{padding:9px 12px !important;font-size:13px !important}
+}
+a.ccard,a.ccard *,.ccard ul,.ccard li,.ccard .en{text-align:left !important}
+.ccard li{padding-right:22px}
+
+/* ===== 1ページ目にも共通ヘッダー ===== */
+body:has(#navmark[data-stage=landing]) #topbar>#home,body:has(#navmark[data-stage=landing]) #topbar>#hsearch{display:none !important}
+.landbrand,.landlang{display:none !important}
+
+/* ===== 2ページ目の国名 ===== */
+.p2country{display:flex;align-items:center;justify-content:center;gap:clamp(14px,3vw,36px);margin:0 0 clamp(22px,3.6vh,38px)}
+.p2country i{display:block !important;flex:0 1 clamp(40px,12vw,160px);height:1px !important;margin:0 !important;background:linear-gradient(90deg,transparent,#c7a15a) !important;width:auto !important}
+.p2country i:last-child{background:linear-gradient(270deg,transparent,#c7a15a) !important}
+.p2country span{font-family:"Times New Roman",Times,"Cormorant Garamond",serif !important;font-size:clamp(38px,6vw,76px);font-weight:600;font-style:normal;letter-spacing:.24em;padding-left:.24em;line-height:1;color:#0b1c1d;text-shadow:0 0 26px rgba(255,255,255,.95),0 0 8px rgba(255,255,255,.9),0 2px 0 rgba(199,161,90,.55)}
+@media(max-width:700px){.p2country span{font-size:36px}}
+
+/* ===== 結果・エリアページ: 4つのボタンを落ち着いた色に ===== */
+.spot a.s-map,.spot a.s-map:visited{background:linear-gradient(135deg,#3d6264,#2b4849) !important;border-color:#233c3d !important}
+.spot a.s-img,.spot a.s-img:visited{background:linear-gradient(135deg,#7d5a60,#5f4349) !important;border-color:#4c353a !important}
+.spot a.s-site,.spot a.s-site:visited{background:linear-gradient(135deg,#4a566f,#363f55) !important;border-color:#2b3347 !important}
+.spot a.s-hotel,.spot a.s-hotel:visited{background:linear-gradient(135deg,#cdb27a,#a98f56) !important;border-color:#8c7443 !important;color:#2b2208 !important}
+.spot .acts>a{box-shadow:0 1px 3px rgba(11,28,29,.18),inset 0 1px 0 rgba(255,255,255,.12) !important;font-weight:500 !important}
+/* ===== 結果ページ: 写真を少し目立たせる ===== */
+.region .cover{min-height:230px !important}
+.region .cover::before{background:linear-gradient(0deg,rgba(8,16,17,.68),rgba(8,16,17,.04) 58%,rgba(8,16,17,.12)) !important}
+.region .cover::after{content:"";position:absolute;inset:9px;border:1px solid rgba(226,194,119,.7);pointer-events:none}
+.region .cover .name,.region .cover .rank,.region .cover .pct,.region .cover small{text-shadow:0 2px 12px rgba(0,0,0,.65)}
+.region{box-shadow:0 12px 30px rgba(11,28,29,.18) !important}
+#hero .shade{background:linear-gradient(90deg,rgba(0,0,0,.5),rgba(0,0,0,.14) 55%,rgba(0,0,0,0)),linear-gradient(0deg,rgba(0,0,0,.4),rgba(0,0,0,0) 50%) !important}
+
+/* ===== 「このエリアといえば」: ページに馴染ませる ===== */
+.ic3,.ic3:visited,.pg .ic3{background:linear-gradient(180deg,#fbf8ee,#f4eedc) !important;border:1px solid rgba(199,161,90,.7) !important;box-shadow:none !important;color:#1c2526 !important}
+.ic3:hover{background:linear-gradient(180deg,#fffdf6,#f7f0dc) !important;border-color:#b48a3a !important;transform:none !important;box-shadow:0 3px 10px rgba(11,28,29,.1) !important}
+.ic3 b{background:#c7a15a !important;color:#fff !important;box-shadow:none !important}
+.ic3 .n,.ic3 .n *{color:#1c2526 !important}.ic3 .n .en{color:#8a8470 !important}
+.ic3 small,.ic3 small *,.ic3 small .ci{color:#8a6d2e !important}
+
+/* ===== お気に入り・旅程ページ ===== */
+.pg.planner>.hd{display:block !important;background:linear-gradient(100deg,#0b1c1d,#16393a) !important;color:#f3efe3 !important;border:0 !important;border-top:3px solid #c7a15a !important;padding:26px clamp(18px,3vw,40px) !important;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif !important;font-size:clamp(22px,3vw,32px) !important;letter-spacing:.16em !important;margin:0 !important}
+.pg.planner>.sum,.pg.planner>.planhint{background:#fbf8ee !important;border:0 !important;border-left:3px solid #c7a15a !important;margin:0 !important;padding:14px clamp(18px,3vw,40px) !important;font-size:13.5px !important;line-height:1.9 !important;color:#3a4647 !important;border-bottom:1px solid rgba(199,161,90,.25) !important}
+.plantop{display:flex !important;flex-wrap:wrap;gap:12px 14px !important;align-items:flex-end !important;background:linear-gradient(180deg,#f7f1df,#efe6cc) !important;border:0 !important;border-top:1px solid #c7a15a !important;border-bottom:1px solid #c7a15a !important;padding:20px clamp(18px,3vw,40px) !important;margin:0 0 22px !important}
+.plantop label{font-size:11.5px !important;letter-spacing:.14em !important;color:#7a5d22 !important;font-weight:600}
+.plantop input{height:42px;border:1px solid #c7a15a !important;border-radius:0 !important;background:#fffdf7 !important;font-size:14px !important;padding:0 12px !important}
+.plantop button{height:42px;padding:0 18px !important;border:1px solid #0b1c1d !important;border-radius:0 !important;background:#fffdf7 !important;color:#0b1c1d !important;font-size:13px !important;letter-spacing:.08em !important;font-weight:600;transition:.15s}
+.plantop button:hover{background:#0b1c1d !important;color:#f3efe3 !important}
+.plantop button.pri{background:linear-gradient(135deg,#e2c277,#b48a3a) !important;border-color:#8f6c28 !important;color:#2b2208 !important;box-shadow:0 3px 10px rgba(180,138,58,.35)}
+.plantop button.pri:hover{filter:brightness(1.07);background:linear-gradient(135deg,#e2c277,#b48a3a) !important;color:#2b2208 !important}
+.plantop button:last-of-type{border-color:#8a4a52 !important;color:#8a4a52 !important}.plantop button:last-of-type:hover{background:#8a4a52 !important;color:#fff !important}
+#planmsg{font-size:12.5px;color:#7a5d22}
+.planner .cat{margin-bottom:18px}
+.plx{margin-top:8px !important;padding:6px 10px;background:#f6f1e1;border:1px solid rgba(199,161,90,.45);width:fit-content}
+.plx select,.plx input[type=time]{height:32px;border:1px solid #c7a15a !important;border-radius:0 !important;background:#fffdf7 !important;font-size:13px !important}
+.plx .tm{color:#7a5d22 !important;font-weight:600}
+.planout{margin-top:26px !important}
+.schedhd{margin:26px 0 14px !important;padding-bottom:10px;border-bottom:1px solid #c7a15a;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif !important;font-size:20px !important;letter-spacing:.16em !important;color:#0b1c1d !important;display:flex;align-items:center;gap:12px}
+.schedhd::before{content:"";width:34px;height:3px;background:#c7a15a}
+.mcals{gap:16px !important}
+.mcal{background:#fffdf7 !important;border:1px solid #c7a15a !important;padding:0 0 12px !important;flex:0 1 270px !important;box-shadow:0 6px 16px rgba(11,28,29,.1)}
+.mcal h5{margin:0 0 10px !important;padding:11px 14px;background:linear-gradient(100deg,#0b1c1d,#16393a);color:#f3efe3 !important;font-size:15px !important;letter-spacing:.14em !important}
+.mcal .wk{padding:0 12px}.mcal .wk b{color:#9a7a38 !important;font-weight:600 !important}
+.mcal .wk i{border-radius:50% !important;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:0 !important}
+.mcal .wk i.in{background:#f1e6c8 !important;color:#0b1c1d !important}.mcal .wk i.has{background:linear-gradient(135deg,#d8b66c,#b48a3a) !important;color:#fff !important}
+.days{grid-template-columns:repeat(auto-fill,minmax(270px,1fr)) !important;gap:16px !important}
+.dcard{background:#fffdf7 !important;border:1px solid rgba(199,161,90,.7) !important;border-left:1px solid rgba(199,161,90,.7) !important;padding:0 0 14px !important;box-shadow:0 6px 16px rgba(11,28,29,.1)}
+.dcard h5{margin:0 !important;padding:12px 16px;background:linear-gradient(100deg,#0b1c1d,#16393a);color:#e6c77f !important;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif !important;font-size:16px !important;letter-spacing:.14em !important}
+.dcard h5 small{color:#d9c9a0 !important;font-size:12px;margin-left:8px;letter-spacing:.06em}
+.dcard ol,.dcard ul,.dcard .none{padding:10px 16px 0 !important;margin:0 !important}
+.dcard .none{padding-top:14px !important;color:#8a8470 !important}
+.dcard li{border-bottom:1px dashed rgba(199,161,90,.5) !important}
+.dcard time{color:#9a7a38 !important;font-weight:600}
+.dcard .route{margin:12px 16px 0 !important;background:#fffdf7;border:1px solid #c7a15a !important;color:#7a5d22 !important}
+.dcard .route:hover{background:#c7a15a;color:#fff !important}
+.dcard.un{margin-top:16px !important;border-color:rgba(199,161,90,.7) !important}
+.dcard.un h5{background:linear-gradient(100deg,#3a4647,#4b5859)}
+.pn{padding:0 2px;color:#586264 !important}
+@media(max-width:700px){
+ .plantop{display:grid !important;grid-template-columns:1fr 1fr;gap:10px !important}.plantop label{grid-column:span 1}.plantop button{grid-column:span 2;width:100%}
+ .plx{width:100%}.mcal{flex:1 1 100% !important}
+}
+
+/* ===== エリアページの絞り込みバー（幅が変わっても同じ大きさで整列） ===== */
+.tools{display:grid !important;grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) !important;gap:10px 14px !important;align-items:center !important;padding:14px 18px !important}
+.tools>input,.tools>select{width:100% !important;height:42px !important;box-sizing:border-box;border:1px solid #c7a15a !important;border-radius:0 !important;background:#fffdf7 !important;padding:0 12px !important;font-size:14px !important}
+.tools .chk{display:flex;align-items:center;gap:8px;font-size:13.5px;min-height:42px}
+.tools>span,.tools>.cnt{justify-self:end;font-size:12.5px;color:#7a8586;white-space:nowrap}
+.tools>.f-n{justify-self:end;white-space:nowrap;font-size:12.5px;color:#7a8586}.tools>.f-none{display:none}
+.tools{grid-template-columns:1.1fr 1.2fr 1.2fr 1.2fr !important}
+.tools>.f-n{grid-column:1/-1;justify-self:end}
+@media(max-width:700px){.tools{grid-template-columns:1fr !important}}
+
+/* ---- hotel page (luxury, calm) ---- */
+.hotelpg{max-width:980px;margin:0 auto !important;padding:0 0 18px !important;background:rgba(255,253,247,.96) !important;border:1px solid rgba(199,161,90,.7) !important;border-top:3px solid #c7a15a !important}
+.hotelpg .hhead{text-align:center;padding:34px 24px 26px;background:linear-gradient(135deg,#0b1c1d,#12302f);color:#f4ecd9;position:relative}
+.hotelpg .hhead::after{content:"";position:absolute;inset:8px;border:1px solid rgba(199,161,90,.45);pointer-events:none}
+.hotelpg .hk{font-size:11.5px;letter-spacing:.34em;color:#d9bd83;text-transform:uppercase}
+.hotelpg h2{margin:10px 0 4px;font-family:'Noto Serif JP','Noto Serif TC','Times New Roman',serif !important;font-weight:500;font-size:clamp(22px,3vw,32px);letter-spacing:.1em;color:#fff !important}
+.hotelpg .hreg{font-size:12.5px;letter-spacing:.2em;color:#d9bd83}
+.hotelpg .hhead p{margin:14px auto 0 !important;max-width:640px;font-size:13px;line-height:1.9 !important;color:#d8e0de;opacity:.92}
+.hotelpg .hsec{margin:26px 24px 4px;text-align:center;font-weight:500;font-size:13px;letter-spacing:.3em;color:#7d6633;display:flex;align-items:center;gap:16px}
+.hotelpg .hsec::before,.hotelpg .hsec::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,#c7a15a)}.hotelpg .hsec::after{transform:scaleX(-1)}
+.hotelpg .hgrid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;margin:14px 24px 6px}
+.hotelpg .hsite,.hotelpg .hsite:visited{display:flex;align-items:center;gap:14px;background:#fffdf7;border:1px solid #e2d3b0;border-left:1px solid #e2d3b0;padding:14px 16px;transition:background .2s,border-color .2s}
+.hotelpg .hsite:hover{background:#f6ecd3;border-color:#c7a15a}
+.hotelpg .hn{font-family:'Times New Roman',serif;font-size:20px;color:#b48a3a;min-width:28px}
+.hotelpg .ht{flex:1}.hotelpg .ht b{display:block;font-weight:500;font-size:15px;letter-spacing:.06em;color:#14272a}.hotelpg .ht small{display:block;margin-top:2px;font-size:11.5px;color:#8a8f8c}
+.hotelpg .ha{color:#b48a3a;font-size:17px}
+.hotelpg .note{margin:12px 24px 0}
+#tjtoast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:#0b1c1d;color:#f4ecd9;border:1px solid #c7a15a;padding:11px 20px;font-size:13px;letter-spacing:.05em;opacity:0;pointer-events:none;transition:.3s;z-index:99999;max-width:90vw;text-align:center}
+#tjtoast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.hotelpg .hgrid{grid-template-columns:1fr;margin:12px 14px}.hotelpg .hhead{padding:26px 16px 20px}}
+.hotelpg .hsite{text-align:left}.hotelpg .ht{text-align:left}
+
+/* ===== エリアページ(2026-11-14): 白枠の高級感・ツール統合・ボタン色統一・件数表のコンパクト化 ===== */
+.guidebox{background:linear-gradient(180deg,#fffdf8,#faf4e4) !important;border:1px solid #d6c18a !important;border-top:3px solid #c7a15a !important;box-shadow:inset 0 0 0 5px #fffdf8,inset 0 0 0 6px rgba(199,161,90,.42),0 10px 26px rgba(11,28,29,.14) !important;padding:10px clamp(22px,3.4vw,40px) 14px !important}
+.guidebox>*+*{border-top:0 !important;position:relative}
+.guidebox>*+*::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,#c7a15a 18%,#c7a15a 82%,transparent);opacity:.7}
+.guidebox .wx,.guidebox .season,.guidebox .iconic{padding:22px 0 !important}
+.guidebox h3,.iconic h3{display:flex;align-items:center;gap:10px;font-family:var(--serif) !important;font-weight:500 !important;letter-spacing:.14em !important;color:#14272a !important}
+.guidebox h3::before,.iconic h3::before{content:"";width:7px;height:7px;background:#c7a15a;transform:rotate(45deg);flex:none}
+.guidebox .sn,.iconic .sn{color:#8b8f86 !important}
+.guidebox .tools{background:transparent !important;border:0 !important;box-shadow:none !important;margin:0 !important;padding:22px 0 8px !important;display:grid !important;grid-template-columns:1.5fr 1fr 1fr !important;grid-template-areas:"q c s" "h h n" !important;gap:12px 14px !important;align-items:center !important}
+.guidebox .tools .f-q{grid-area:q}.guidebox .tools .f-cat{grid-area:c}.guidebox .tools .f-sort{grid-area:s}
+.guidebox .tools .f-n{grid-area:n !important;grid-column:auto !important;justify-self:end;font-size:12.5px;color:#7a8586}
+.guidebox .tools .f-none{grid-column:1/-1;font-size:13px;color:#8a7a52;display:none}.guidebox .tools .f-none.on{display:block}
+.areahotel,.areahotel:visited{grid-area:h;justify-self:start;display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 24px;background:linear-gradient(135deg,#17393b,#0d2425);border:1px solid #c7a15a;color:#f1e3bd !important;text-decoration:none !important;font-size:14px;font-weight:500;letter-spacing:.1em;box-shadow:0 3px 10px rgba(11,28,29,.22),inset 0 1px 0 rgba(255,255,255,.1);transition:filter .15s,transform .15s}
+.areahotel::after{content:"\2192";color:#d9bd83}
+.areahotel:hover{filter:brightness(1.12);transform:translateY(-1px)}
+@media(max-width:700px){.guidebox .tools{grid-template-columns:1fr 1fr !important;grid-template-areas:"q q" "c s" "h h" "n n" !important}.areahotel{justify-self:stretch;justify-content:center}.guidebox .tools .f-n{justify-self:start}}
+@container (max-width:700px){.guidebox .tools{grid-template-columns:1fr 1fr !important;grid-template-areas:"q q" "c s" "h h" "n n" !important}}
+
+/* 分類別の件数: コンパクト・落ち着いた配色 */
+.pg .cattable{max-width:640px !important;margin:6px auto 22px !important;padding:14px 22px 10px !important;background:rgba(255,253,247,.95) !important;border:1px solid #d6c18a !important;border-top:2px solid #c7a15a !important;box-shadow:0 6px 18px rgba(11,28,29,.12) !important;color:#1c2526 !important}
+.pg .cattable::before,.pg .cattable::after{display:none !important}
+.pg .cattable h3{margin:0 !important;font-size:15px !important;letter-spacing:.14em !important;color:#14272a !important;text-align:left !important;font-family:var(--serif) !important}
+.pg .cattable p{margin:2px 0 8px !important;font-size:11.5px !important;color:#8b8f86 !important;text-align:left !important}
+.pg .cattable table{font-size:13px !important;width:100%}
+.pg .cattable thead th{color:#8a7a52 !important;border-bottom:1px solid #d6c18a !important;font-size:11px !important;padding:4px 6px !important;background:transparent !important}
+.pg .cattable tbody tr{border-bottom:1px solid #eee5cf !important}
+.pg .cattable tbody tr.row td,.pg .cattable td{color:#1c2526 !important;padding-top:0 !important;padding-bottom:0 !important}
+.pg .cattable tbody tr.row td a{padding:6px 0 !important;color:#1c2526 !important;font-size:13px !important;letter-spacing:.04em !important}
+.pg .cattable tbody tr.row td.n,.pg .cattable td.n{padding:6px 8px !important;font-size:13.5px !important;color:#7d6633 !important;font-family:var(--serif) !important}
+.pg .cattable tbody tr.row:hover{background:rgba(199,161,90,.14) !important}
+.pg .cattable tfoot td{color:#7d6633 !important;border-top:1px solid #d6c18a !important;padding:6px 8px !important;font-size:12.5px !important}
+.pg .cattable tfoot td.n{font-size:15px !important}
+.pg .cattable .ci{width:16px;height:16px;color:#a98f56 !important}
+
+.pg .cattable td a::after{display:none !important}.pg .cattable td a,.pg .cattable td a:visited{padding:6px 0 !important}.pg .cattable td a:hover{padding-left:6px !important;color:#7d6633 !important}.pg .cattable th.n,.pg .cattable td.n{width:60px !important}
+.pg .cattable tr.row:hover td{background:rgba(199,161,90,.14) !important}
+/* スポット行: 説明文・ボタン3つ(地図/写真/公式)を同じ塗り・枠色だけ変える */
+.spot{grid-template-columns:40px minmax(120px,1fr) repeat(3,92px) 34px !important}
+.spot .nm .sd{display:block;margin-top:3px;font-size:12px;font-weight:400;line-height:1.55;color:#7a8586;letter-spacing:.02em}
+.spot .acts>a,.spot .acts>a:visited{background:linear-gradient(135deg,#1c3335,#10272a) !important;color:#f1e3bd !important;box-shadow:0 1px 3px rgba(11,28,29,.2),inset 0 1px 0 rgba(255,255,255,.08) !important;border-width:1px !important;border-style:solid !important}
+.spot a.s-map,.spot a.s-map:visited{border-color:#6aa9ab !important}
+.spot a.s-img,.spot a.s-img:visited{border-color:#c9929c !important;color:#f1e3bd !important}
+.spot a.s-site,.spot a.s-site:visited{border-color:#98a6d8 !important}
+.spot .acts>a:hover{filter:brightness(1.25) !important}
+@container (max-width:700px){.spot .acts{grid-template-columns:repeat(3,minmax(0,1fr)) !important}}
+.pg .cattable tfoot td.n{color:#7d6633 !important;font-size:15px !important}.pg .cattable tfoot td{color:#7d6633 !important}
+@container (max-width:700px){.spot{grid-template-columns:40px minmax(0,1fr) 34px !important}}
+
+/* ---- 11/15: 分類別の件数(白枠と同じ幅・同じ雰囲気) + 絞り込みを枠の下部へ ---- */
+.guidebox.catbox{margin-top:0 !important}
+.catbox .catsec{padding:22px 0 18px !important}
+.catbox .catsec .sn{margin:6px 0 14px !important;font-size:12px !important}
+.catgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0 28px}
+.catgrid a,.catgrid a:visited{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 4px;border-bottom:1px solid #eadfc4;color:#1c2526 !important;text-decoration:none !important;font-size:14px;letter-spacing:.04em;transition:background .15s,padding .15s}
+.catgrid a:hover{background:rgba(199,161,90,.12);padding-left:10px}
+.catgrid .cn{display:flex;align-items:center;gap:10px;min-width:0}
+.catgrid .ci{width:17px !important;height:17px !important;flex:none;color:#a98f56 !important;stroke:#a98f56 !important}
+.catgrid b{font-family:var(--serif);font-weight:500;font-size:17px;color:#7d6633;font-variant-numeric:tabular-nums}
+.cattot{display:flex;justify-content:flex-end;align-items:baseline;gap:14px;margin:12px 4px 0 !important;font-size:12.5px;letter-spacing:.16em;color:#8a7a52}
+.cattot b{font-family:var(--serif);font-weight:500;font-size:22px;color:#14272a;letter-spacing:0}
+.guidebox.catbox .tools{grid-template-areas:"q c s" "n n n" !important;padding:20px 0 10px !important}
+@media(max-width:700px){.guidebox.catbox .tools{grid-template-columns:1fr 1fr !important;grid-template-areas:"q q" "c s" "n n" !important}.catgrid{grid-template-columns:1fr}}
+@container (max-width:700px){.guidebox.catbox .tools{grid-template-columns:1fr 1fr !important;grid-template-areas:"q q" "c s" "n n" !important}.catgrid{grid-template-columns:1fr}}
+/* ---- このエリアに泊まる(ベストシーズンと同じ見出し付きの区画) ---- */
+.guidebox .ahbox{padding:22px 0 16px !important}
+.ahbox .ahrow{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;margin-top:12px;padding:16px 20px;background:linear-gradient(135deg,rgba(199,161,90,.16),rgba(199,161,90,.05));border:1px solid rgba(199,161,90,.55);box-shadow:inset 0 0 0 3px #fffdf8,inset 0 0 0 4px rgba(199,161,90,.28)}
+.ahbox .ahrow p{margin:0 !important;font-size:13.5px;color:#3d4a4b;line-height:1.8;flex:1 1 260px}
+.ahbox .areahotel{grid-area:auto;height:48px;padding:0 30px;font-family:var(--serif);font-size:15px;letter-spacing:.14em;flex:none}
+@media(max-width:700px){.ahbox .areahotel{width:100%;justify-content:center;box-sizing:border-box}}
+/* ---- ページ遷移中のぐるぐるマーク ---- */
+#tjspin{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:rgba(11,28,29,.28);backdrop-filter:blur(1.5px)}
+#tjspin.on{display:flex}
+#tjspin i{width:54px;height:54px;border-radius:50%;border:3px solid rgba(255,255,255,.35);border-top-color:#c7a15a;border-right-color:#c7a15a;animation:tjspin .8s linear infinite;box-shadow:0 0 0 8px rgba(11,28,29,.35);background:rgba(11,28,29,.35)}
+@keyframes tjspin{to{transform:rotate(360deg)}}
+
+/* ================= 11/15 第2回 ================= */
+/* ---- 地図をひと回り大きく ---- */
+#rescol .mapcard{max-width:1060px !important}
+#rescol .mapcard svg.jmap{max-height:min(94vh,960px) !important}
+#sidemap svg.jmap{max-width:100% !important;max-height:520px !important}
+/* ---- 結果ページ左列: 「旅の条件を選ぶ」と「地図から探す」の見出しを統一 ---- */
+#formcol .chead,#sidemap .mapcard{text-align:center !important}
+#formcol .chead h2,#sidemap .mapcard h3{font-family:var(--serif) !important;font-size:22px !important;font-weight:500 !important;letter-spacing:.2em !important;color:#14272a !important;margin:10px 0 8px !important;line-height:1.5 !important;text-align:center !important}
+#formcol .chead p,#sidemap .mapcard p{font-size:12.5px !important;letter-spacing:.06em !important;color:#6c7778 !important;line-height:1.8 !important;margin:0 0 8px !important;text-align:center !important}
+.mapcard .orn{display:none}
+#sidemap .mapcard .orn{display:flex;align-items:center;justify-content:center;gap:10px;padding-top:20px}.mapcard .orn i{display:block;width:70px;height:1px;background:#c7a15a}.mapcard .orn u{display:block;width:9px;height:9px;background:#c7a15a;transform:rotate(45deg)}
+.gradio-container:has(#navmark[data-stage=result]) #sidemap .mapcard{background:rgba(255,255,255,.96) !important;border:1px solid #c7a15a !important;box-shadow:0 10px 26px rgba(11,28,29,.18) !important;padding:6px 20px 18px !important}
+.gradio-container:has(#navmark[data-stage=result]) #sidemap{margin:0 0 18px !important}
+.gradio-container:has(#navmark[data-stage=result]) #condbox .chead{padding:20px 0 10px !important}
+.gradio-container:has(#navmark[data-stage=result]) #sidecmp .cmp2,.gradio-container:has(#navmark[data-stage=result]) #sidecmp .blk2{border:1px solid #c7a15a !important;box-shadow:0 10px 26px rgba(11,28,29,.14) !important}
+#sidemap .mapcard .legend{justify-content:center;font-size:11.5px;color:#6c7778}
+/* ---- 結果ページ左列: 上位3エリアの比較 / 地方ブロック別の相性(白っぽく・必要な項目だけ) ---- */
+#sidecmp{margin-top:16px !important}
+.cmp2,.blk.blk2{background:rgba(255,255,255,.96) !important;border:1px solid #e3dccb !important;border-top:2px solid #c7a15a !important;padding:18px 18px 14px !important;margin:0 0 16px !important;color:#1c2526 !important;box-shadow:0 6px 18px rgba(11,28,29,.08) !important}
+.cmp2 h3,.blk.blk2 h3{margin:0 0 12px !important;font-family:var(--serif) !important;font-size:16px !important;font-weight:500 !important;letter-spacing:.16em !important;color:#14272a !important;text-align:center !important}
+.cmpg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.cmpc{border:1px solid #ece5d2;background:#fdfbf5;padding:10px 8px 8px;text-align:center;min-width:0}
+.cmpc>b{display:block;font-family:var(--serif);font-weight:500;font-size:14px;letter-spacing:.06em;color:#14272a;overflow-wrap:anywhere;line-height:1.4}
+.cmpc .p{display:block;font-family:var(--serif);font-size:24px;color:#8a6d2e;line-height:1.3;margin:2px 0 6px}
+.cmpc dl{margin:0;border-top:1px solid #ece5d2;padding-top:6px}
+.cmpc dt{font-size:10.5px;letter-spacing:.06em;color:#8b8f86;margin-top:4px}.cmpc dd{margin:0;font-size:12.5px;color:#1c2526;line-height:1.5}
+.blk.blk2 .bar{display:grid !important;grid-template-columns:minmax(64px,auto) 1fr 40px;gap:8px;align-items:center;margin:7px 0 !important;font-size:12.5px !important;color:#3d4a4b !important}
+.blk.blk2 .bar .t{height:5px !important;background:#efe9d9 !important;border-radius:3px;overflow:hidden;display:block}.blk.blk2 .bar .f{display:block;height:100%;background:linear-gradient(90deg,#d9bd83,#b48a3a) !important}
+.blk.blk2 .bar .v{text-align:right;font-family:var(--serif);color:#8a6d2e !important}
+/* ---- エリアページ: 枠を左右に約1cmずつ広げる ---- */
+.pg{max-width:1196px !important}
+/* ---- エリア名の写真: 金の二重枠 ---- */
+.pgcover{border:1px solid #c7a15a !important;outline:1px solid rgba(199,161,90,.55);outline-offset:5px;box-shadow:inset 0 0 0 5px rgba(11,28,29,.35),inset 0 0 0 6px rgba(226,194,119,.85),0 18px 44px rgba(0,0,0,.38) !important;margin:6px 6px 30px !important;padding:34px 40px !important;min-height:clamp(240px,27vw,360px) !important}
+.pgcover>div{padding-left:18px;border-left:2px solid #e2c277}
+.pgcover::after{content:"";position:absolute;right:18px;top:18px;width:38px;height:38px;border-top:1px solid #e2c277;border-right:1px solid #e2c277;pointer-events:none}
+.pgcover h2{letter-spacing:.16em !important}
+/* ---- 差し色(寒色: 青磁がかった藍)を1色だけ ---- */
+.pg .guidebox{border-top-color:#2f6f8f !important;background:linear-gradient(180deg,#fffdf8,#faf4e4) padding-box !important;position:relative}
+.pg .guidebox::after{content:"";position:absolute;left:-1px;right:-1px;top:-3px;height:3px;background:linear-gradient(90deg,#2f6f8f 0,#2f6f8f 96px,#c7a15a 96px,#c7a15a 100%);pointer-events:none}
+.pg .guidebox .iconic h3::before,.pg .catbox h3::before{background:#2f6f8f !important}
+.pg .ic3 b{background:#2f6f8f !important;color:#fff !important}
+.pg .ic3,.pg .ic3:visited{border-left:3px solid #2f6f8f !important}
+.pg .ic3:hover{border-color:#2f6f8f !important}
+.pg .catgrid b{color:#2f6f8f !important}.pg .catgrid a:hover{background:rgba(47,111,143,.08) !important}.pg .catgrid a:hover .ci{color:#2f6f8f !important;stroke:#2f6f8f !important}
+.pg .cattot b{color:#2f6f8f !important}
+/* ---- 「このエリアといえば…」を少し低く ---- */
+.pg .guidebox .iconic{padding:14px 0 12px !important}
+.pg .iconic h3{margin:0 0 8px !important}
+.pg .ic3,.pg .ic3:visited{min-height:44px !important;padding-top:7px !important;padding-bottom:7px !important}
+.pg .iconic .sn{margin:6px 0 0 !important;font-size:11px !important}
+/* ---- 見出し: このエリアの観光スポットを見る(タイトル級) / 観光スポットを絞り込む ---- */
+.catbox h3.big{font-size:clamp(20px,2.2vw,26px) !important;letter-spacing:.16em !important;line-height:1.5 !important}
+.catbox h3.big::before{width:10px !important;height:10px !important}
+.catbox .fltsec{padding:20px 0 6px !important}
+.catbox .fltsec h3{margin:0 0 4px !important;font-size:16px !important}
+.guidebox.catbox .fltsec .tools{padding:12px 0 8px !important}
+.guidebox.catbox .fltsec .tools::before{display:none !important}
+/* ---- 分類は見出しバーだけ表示し、クリックで開く ---- */
+section.cat.fold>h3{cursor:pointer;user-select:none;transition:filter .15s}
+section.cat.fold>h3:hover{filter:brightness(1.15)}
+section.cat.fold>h3:focus-visible{outline:2px solid #e2c277;outline-offset:-4px}
+section.cat.fold>h3 .chev{flex:none;width:11px;height:11px;margin-left:16px;border-right:2px solid #f1d99b;border-bottom:2px solid #f1d99b;transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+section.cat.fold.open>h3 .chev{transform:rotate(225deg) translate(-3px,-3px)}
+section.cat.fold>.spots{display:none}
+section.cat.fold.open>.spots{display:block}
+section.cat.fold{margin-bottom:12px !important}
+/* ---- 紹介文: 句点で改行 ---- */
+.spot .sd{line-height:1.75 !important}
+/* ---- 軽量化: 画面外の一覧は描画を後回しにする ---- */
+.regions .rw{content-visibility:auto;contain-intrinsic-size:auto 700px}
+.gradio-container:has(#navmark[data-stage=result]) #sidemap,.gradio-container:has(#navmark[data-stage=result]) #sidecmp{margin-left:-12px !important;margin-right:-12px !important;width:calc(100% + 24px) !important;max-width:none !important}
+
+/* ---- レンタカー: エリアページの枠（「このエリアに泊まる」と同じデザイン）と予約サイト一覧 ---- */
+.guidebox .ahbox.ahcar{padding-top:6px !important}
+.carpg .ht b{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.carpg .hsite .isl{font-style:normal;font-size:10.5px;letter-spacing:.12em;color:#7d6633;border:1px solid #c7a15a;padding:1px 7px;background:#fbf4e2;white-space:nowrap}
+.carpg .hsite.island{background:#fbf8ee}
+.carpg .hsec span{white-space:normal}
+@media(max-width:700px){.carpg .hsec{margin:22px 14px 2px;letter-spacing:.12em;font-size:12.5px}}
+
+/* ==== 旅の準備ガイド・レンタカー・ホテル・検索結果: 2ページ目と同じ意匠（大見出し + 金枠 + 番号つき見出し帯） ==== */
+.pg.lux{max-width:none !important;padding:0 0 40px !important}
+.lux .luxt{padding-top:clamp(22px,4vh,44px) !important}
+.lux .p2country{margin-bottom:clamp(12px,2vh,20px)}
+.lux .p2country span{font-size:clamp(30px,4.6vw,60px)}
+.lux .luxk{margin:0 0 10px;font-size:12.5px;letter-spacing:.34em;padding-left:.34em;color:#6b5521;font-weight:500;text-transform:uppercase;text-shadow:0 0 12px rgba(255,255,255,.95),0 0 4px rgba(255,255,255,.9)}
+.lux .luxk .luxreg{margin-left:14px;padding-left:14px;border-left:1px solid #c7a15a;letter-spacing:.16em}
+.lux .p2title h1{line-height:1.45}
+.lux .p2title h1 .luxq{margin-left:.5em;color:#6b5521}
+.lux .p2lead{max-width:820px;margin-left:auto !important;margin-right:auto !important;line-height:1.9;letter-spacing:.06em}
+.lux .p2ways{margin-top:14px !important}
+.luxframe{width:min(1340px,94vw);margin:clamp(14px,2.6vh,30px) auto 40px;background:rgba(255,255,255,.95);border:1px solid #c7a15a;box-shadow:0 0 0 6px rgba(255,255,255,.2),0 0 0 7px rgba(199,161,90,.55),0 36px 90px rgba(0,0,0,.3)}
+.luxsec{position:relative;border-bottom:1px solid #c7a15a;scroll-margin-top:calc(var(--hh,60px) + 10px)}
+.luxsec:last-of-type{border-bottom:0}
+.luxsec:not(:last-of-type)::after{content:"";position:absolute;left:50%;bottom:-6px;width:11px;height:11px;background:#c7a15a;transform:translateX(-50%) rotate(45deg);z-index:2}
+.luxsec:first-child>.numhead{border-top:0}
+.lux .numhead .nhx{margin-left:auto;flex:none;font-size:12px;letter-spacing:.14em;color:#f1d99b;border:1px solid rgba(199,161,90,.7);padding:4px 14px;border-radius:999px;white-space:nowrap;font-style:normal}
+.lux .numhead .nhx em{font-style:normal;margin:0;color:inherit;font-size:inherit}
+.luxbody{padding:28px clamp(20px,3vw,48px) 36px;background:linear-gradient(180deg,rgba(255,253,247,.0),rgba(251,246,233,.55))}
+.luxnote{margin:0 !important;padding:16px clamp(20px,3vw,48px) 18px;border-top:1px solid #e2d3b0;background:#fbf6e9;text-align:center;font-size:12px;line-height:1.9;color:#6c6a5e;letter-spacing:.04em}
+.lux .res-empty{border:1px solid #e2d3b0;background:#fffdf7}
+
+/* ---- 準備ガイド: 基本情報 ---- */
+.infog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;margin:0 !important;padding:0 !important}
+.infoc{display:flex;flex-direction:column;gap:5px;padding:15px 18px 15px 20px;background:#fffdf7;border:1px solid #e2d3b0;position:relative;margin:0 !important}
+.infoc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(#c7a15a,#e6d3a3)}
+.infoc dt{margin:0 !important;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif;font-size:13px;font-weight:600;letter-spacing:.2em;color:#8a6a24}
+.infoc dd{margin:0 !important;font-size:14px;line-height:1.75;color:#1c2526}
+/* ---- 準備ガイド: チェックリスト ---- */
+.lux .ckbar{padding:0 0 18px;font-size:13.5px;color:#3d4a4b;letter-spacing:.06em}
+.lux .ckbar select{margin-left:10px;padding:8px 14px;border:1px solid #c7a15a;border-radius:0;background:#fffdf7;color:#0b1c1d;font-size:14px}
+.ckgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.lux .ckg{padding:0 0 10px;background:#fffdf7;border:1px solid #e2d3b0}
+.lux .ckg h4{margin:0 0 6px !important;padding:11px 18px;background:#f4ead0;border-bottom:1px solid #e2d3b0;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif;font-size:14px;font-weight:600;letter-spacing:.2em;color:#5d4a1c}
+.lux .ck{padding:8px 18px;font-size:14px;border-bottom:1px dashed #efe6cf}
+.lux .ck:last-child{border-bottom:0}
+.lux .ck:hover{background:#fbf4e2}
+.lux .ck input{width:17px;height:17px;flex:none;margin-top:3px}
+/* ---- 準備ガイド: 季節の行事カレンダー ---- */
+.lux .evgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:0}
+.lux .evm{padding:0;background:#fffdf7;border:1px solid #e2d3b0;border-top:1px solid #e2d3b0;display:flex;flex-direction:column}
+.lux .evm h5{margin:0 !important;display:flex;align-items:baseline;gap:6px;padding:10px 18px 9px;background:linear-gradient(100deg,#f7efd9,#fbf6e9);border-bottom:1px solid #c7a15a;font-weight:500;color:#0b1c1d}
+.lux .evm h5 b{font-family:"Times New Roman",Times,'Cormorant Garamond',serif;font-size:34px;line-height:1;font-weight:500;color:#8a6a24}
+.lux .evm h5 span{font-family:'Noto Serif JP','Noto Serif TC',serif;font-size:15px;display:flex;align-items:baseline;gap:10px}
+.lux .evm h5 small{font-family:"Times New Roman",Times,serif;font-size:11px;letter-spacing:.28em;color:#9b8a5e;text-transform:uppercase}
+.lux .evm h5 em{margin-left:auto;align-self:center;font-style:normal;font-size:11px;letter-spacing:.16em;background:#c7a15a;color:#0b1c1d;padding:3px 10px}
+.lux .evm.now{border-color:#c7a15a;box-shadow:0 0 0 1px #c7a15a,0 10px 26px rgba(11,28,29,.16)}
+.lux .evm.now h5{background:linear-gradient(100deg,#0b1c1d,#16393a);color:#f3efe3}
+.lux .evm.now h5 b{color:#f1d99b}.lux .evm.now h5 small{color:#d9c590}
+.lux .evm ul{padding:6px 18px 8px !important}
+.lux .evm li{display:block;padding:9px 0 !important;font-size:13.5px;line-height:1.7;color:#243133;border-bottom:1px solid #f1e9d3}
+.lux .evm li:last-child{border-bottom:0}
+.lux .evm li b{display:block;margin-bottom:1px;font-size:11.5px;letter-spacing:.12em;font-weight:600;color:#8a6a24}
+.lux .evm li b a,.lux .evm li b a:visited{color:#8a6a24 !important;text-decoration:none !important;border-bottom:1px solid rgba(199,161,90,.6)}
+.lux .evm li b a:hover{color:#0b1c1d !important;border-bottom-color:#0b1c1d}
+.lux .evm li b .all{display:inline-block;background:#0b1c1d;color:#f1d99b;padding:1px 8px;letter-spacing:.14em;font-weight:500}
+.lux .evm li.none{color:#b4babb;border:0}
+.lux .evmore{margin-top:auto;border-top:1px solid #e2d3b0}
+.lux .evmore summary{list-style:none;cursor:pointer;padding:10px 18px;font-size:12.5px;letter-spacing:.1em;color:#6b5521;background:#fbf6e9;display:flex;align-items:center;justify-content:space-between}
+.lux .evmore summary::-webkit-details-marker{display:none}
+.lux .evmore summary::after{content:"";width:7px;height:7px;border-right:1.5px solid #8a6a24;border-bottom:1.5px solid #8a6a24;transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+.lux .evmore[open] summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.lux .evmore summary:hover{background:#f4ead0}
+.lux .evmore ul{border-top:1px solid #f1e9d3}
+.lux .evn{margin:16px 0 0 !important;padding:0;font-size:12px;color:#7a7f78;text-align:center}
+/* ---- レンタカー・ホテル: 予約サイトのカード ---- */
+.lux .hgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:0}
+.lux .hsite,.lux .hsite:visited{display:flex;align-items:center;gap:14px;background:#fffdf7;border:1px solid #e2d3b0;padding:14px 16px;text-decoration:none !important;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s;position:relative}
+.lux .hsite::before{content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:3px;background:#c7a15a;opacity:0;transition:opacity .2s}
+.lux .hsite:hover{background:#fff;border-color:#c7a15a;transform:translateY(-2px);box-shadow:0 10px 22px rgba(11,28,29,.12)}
+.lux .hsite:hover::before{opacity:1}
+.lux .hn{font-family:"Times New Roman",Times,serif;font-size:22px;color:#b48a3a;min-width:30px}
+.lux .ht{flex:1;min-width:0;text-align:left}
+.lux .ht b{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:500;font-size:15px;letter-spacing:.05em;color:#14272a}
+.lux .ht small{display:block;margin-top:3px;font-size:11.5px;line-height:1.5;color:#8a8f8c;font-weight:400}
+.lux .ha{flex:none;width:28px;height:28px;border:1px solid #d9c590;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#b48a3a;font-size:14px;transition:background .2s,color .2s}
+.lux .hsite:hover .ha{background:#0b1c1d;color:#f1d99b;border-color:#0b1c1d}
+.lux .hsite.island{background:#fbf8ee}
+/* ---- 検索結果: エリアカード（エリアの写真を背景に、文字は白） ---- */
+.lux .hitgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin:0}
+.lux .hit.hitx{position:relative;display:flex;align-items:flex-end;min-height:212px;padding:0 !important;overflow:hidden;background:#0b1c1d !important;border:1px solid #c7a15a !important;cursor:pointer;color:#fff !important;transition:transform .25s,box-shadow .25s}
+.lux .hitx>img{position:absolute !important;inset:0;width:100% !important;height:100% !important;max-width:none !important;object-fit:cover;margin:0 !important;border-radius:0 !important;transition:transform .6s}
+.lux .hitx::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,15,17,.30) 0%,rgba(7,15,17,.50) 38%,rgba(7,15,17,.88) 100%);pointer-events:none}
+.lux .hitx::before{content:"";position:absolute;inset:6px;border:1px solid rgba(241,217,155,.45);z-index:2;pointer-events:none}
+.lux .hitx .hitin{position:relative;z-index:3;width:100%;padding:20px 22px 18px;box-sizing:border-box}
+.lux .hitx .cn{font-family:"Times New Roman",Times,serif;font-size:11.5px;letter-spacing:.3em;color:#f1d99b !important;text-shadow:0 1px 4px rgba(0,0,0,.8)}
+.lux .hitx h4{margin:4px 0 8px !important;padding-bottom:8px;border-bottom:1px solid rgba(241,217,155,.55);font-size:24px !important;font-weight:500;letter-spacing:.12em;color:#fff !important;text-shadow:0 2px 10px rgba(0,0,0,.85)}
+.lux .hitx .why{margin:0 !important;font-size:12.5px;line-height:1.75;color:#fff !important;text-shadow:0 1px 5px rgba(0,0,0,.9)}
+.lux .hitx .why p{margin:0 !important;color:#fff !important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lux .hitx .why b{display:inline-block;margin-right:8px;padding:0 7px;border:1px solid rgba(241,217,155,.7);font-size:10.5px;letter-spacing:.1em;font-weight:500;color:#f1d99b !important;line-height:1.6}
+.lux .hitx .hgo{position:absolute;z-index:3;top:16px;right:18px;width:30px;height:30px;border:1px solid rgba(255,255,255,.75);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;transition:background .2s,color .2s,border-color .2s}
+.lux .hitx:hover,.lux .hitx:focus-visible{transform:translateY(-3px);box-shadow:0 16px 34px rgba(11,28,29,.32);outline:none}
+.lux .hitx:hover>img{transform:scale(1.06)}
+.lux .hitx:hover .hgo{background:#c7a15a;border-color:#c7a15a;color:#0b1c1d}
+.lux .luxbody>.spots{display:block;padding:0;background:#fffdf7;border:1px solid #e2d3b0}
+@media(max-width:1000px){.lux .evgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media print{.luxframe{box-shadow:none;width:100%}.lux .p2ways{display:none}.lux .evmore>ul{display:block}}
+.lux .luxt{background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(255,255,255,.86) 0%,rgba(255,255,255,.66) 50%,rgba(255,255,255,.2) 82%,rgba(255,255,255,0) 100%)}
+
+/* ---- ヘッダーの「スマホ表示 / PC表示」ボタン（11/16 夜: メニューから移動） ---- */
+.viewbtn,.viewbtn:visited{display:inline-flex;align-items:center;gap:7px;margin-right:12px;padding:9px 14px;border:1px solid #c7a15a;border-radius:2px;color:#c7a15a !important;text-decoration:none !important;font-size:13px;letter-spacing:.08em;white-space:nowrap;line-height:1.1;transition:background .15s,color .15s}
+.viewbtn svg{width:17px;height:17px;flex:0 0 17px;stroke:currentColor}
+.viewbtn:hover{background:#c7a15a;color:#0b1c1d !important}
+
+/* ---- イベントカレンダー（独立ページ）: 上旬・中旬・下旬 / 今月の色 / 月ジャンプ ---- */
+.lux .evjump{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 0 18px}
+.lux .evjump a,.lux .evjump a:visited{min-width:52px;text-align:center;padding:7px 10px;border:1px solid #d9c590;background:#fffdf7;color:#6b5521 !important;text-decoration:none !important;font-size:13px;letter-spacing:.06em}
+.lux .evjump a:hover{background:#f4ead0}
+.lux .evjump a.on{background:#7a2e2a;border-color:#7a2e2a;color:#fff6e6 !important}
+.lux .evm .evp{padding:2px 18px 4px}
+.lux .evm .evp+.evp{border-top:1px dashed #e6d9b8}
+.lux .evm .evp h6{margin:10px 0 0 !important;display:flex;align-items:baseline;gap:8px;font-family:'Noto Serif JP','Noto Serif TC',serif;font-size:13px;font-weight:600;letter-spacing:.18em;color:#0b1c1d}
+.lux .evm .evp h6 span{display:inline-block;padding:2px 10px;border:1px solid #c7a15a;background:#fbf3dc}
+.lux .evm .evp h6 small{font-size:11px;letter-spacing:.06em;color:#9b8a5e;font-weight:400}
+.lux .evm .evp ul{padding:2px 0 4px !important}
+.lux .evm .evp li{padding:8px 0 !important}
+/* 今月のカード: 臙脂（えんじ）色の見出し + 淡い金色の本文で、他の月とはっきり区別する */
+.lux .evm.now{border:2px solid #7a2e2a !important;background:#fff6e3;box-shadow:0 12px 30px rgba(122,46,42,.22)}
+.lux .evm.now h5{background:linear-gradient(100deg,#6e2622,#9a3b33) !important;border-bottom-color:#e2c277 !important;color:#fff6e6 !important}
+.lux .evm.now h5 b{color:#f6dfa4 !important}.lux .evm.now h5 small{color:#efd3a0 !important}
+.lux .evm.now h5 em{background:#f6dfa4 !important;color:#6e2622 !important;font-weight:600}
+.lux .evm.now .evp h6 span{background:#7a2e2a;border-color:#7a2e2a;color:#fff6e6}
+.lux .evm.now li{border-bottom-color:#efd9b0 !important}
+.lux .evm.now li b,.lux .evm.now li b a,.lux .evm.now li b a:visited{color:#7a2e2a !important}
+#menuhtml .hm a.viewbtn,#menuhtml .hm a.viewbtn:visited{padding:9px 14px !important;color:#c7a15a !important;font-size:13px !important;background:transparent !important;border:1px solid #c7a15a !important}
+#menuhtml .hm a.viewbtn span{color:inherit !important;font-size:inherit !important}
+#menuhtml .hm a.viewbtn:hover{background:#c7a15a !important;color:#0b1c1d !important}
+#menuhtml .hm a.viewbtn svg{stroke:currentColor !important;fill:none !important;color:inherit !important;opacity:1 !important}
+
+/* ---- 11/16 夕: 紹介文の1行目（ナイトクラブ=音楽ジャンル / アクティビティ=できること） ---- */
+.spot .sd .sdx{display:block;font-weight:500;color:#2c4a52;margin-bottom:1px}
+
+/* ---- 11/16 夕: 種類タグ（イベント / 自然 / その他）。色は控えめに、形（左の印）でも区別する ---- */
+.evt{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;line-height:1;letter-spacing:.08em;font-weight:500;padding:4px 8px 4px 7px;border:1px solid;border-radius:2px;white-space:nowrap;background:#fff;font-style:normal}
+.evt::before{content:"";width:6px;height:6px;flex:none;background:currentColor}
+.evt-event{color:#7a2e2a !important;border-color:#d9b9b3;background:#fbf3f1}.evt-event::before{transform:rotate(45deg)}
+.evt-nature{color:#2f6347 !important;border-color:#b9d1c2;background:#f2f8f4}.evt-nature::before{border-radius:50%}
+.evt-other{color:#4d5a66 !important;border-color:#c9d0d6;background:#f4f6f7}.evt-other::before{height:2px}
+
+/* ---- エリアページ: 行事の表（周囲の白枠・金の罫線に合わせた控えめな表） ---- */
+.season .evtw{margin:14px 0 0;padding:12px 0 0;border-top:1px solid #ece9e2}
+.season .evtw h4{margin:0 0 8px !important;font-size:12px !important;letter-spacing:.14em;color:#8a7a52 !important;font-weight:500 !important}
+.season table.evtbl{width:100%;border-collapse:collapse;border:0 !important;border-top:1px solid #d6c18a !important;border-bottom:1px solid #d6c18a !important;background:rgba(255,255,255,.6);font-size:13px;table-layout:auto;margin:0 !important}
+.season .evtbl th,.season .evtbl td{border:0 !important;border-bottom:1px solid #efe7d2 !important;padding:8px 12px !important;text-align:left;vertical-align:top;line-height:1.6;background:transparent !important;color:#243133}
+.season .evtbl tbody tr:last-child th,.season .evtbl tbody tr:last-child td{border-bottom:0 !important}
+.season .evtbl thead th{font-size:11px;letter-spacing:.14em;font-weight:500;color:#8a7a52;background:#f8f1de !important;padding:6px 12px !important;white-space:nowrap}
+.season .evtbl tbody th{font-weight:500;white-space:nowrap;color:#14272a;font-variant-numeric:tabular-nums;width:1%}
+.season .evtbl td.tg{width:1%;white-space:nowrap;padding-top:9px !important}
+.season .evtbl .evname{display:block;color:#14272a}.season .evtbl td small{display:block;font-size:11.5px;color:#7a8586;line-height:1.55;margin-top:1px}
+.season .evtbl tbody tr:nth-child(even) td,.season .evtbl tbody tr:nth-child(even) th{background:rgba(248,241,222,.35) !important}
+@media(max-width:700px){.season .evtbl th,.season .evtbl td{padding:7px 7px !important;font-size:12.5px}.season .evtbl thead th{padding:5px 7px !important}}
+
+/* ---- イベントカレンダーのページ: タグ・絞り込み・項目の体裁 ---- */
+.lux .evtools{margin:0 0 16px;padding:14px 18px;background:#fffdf7;border:1px solid #e2d3b0}
+.lux .evfilter{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.lux .evfl{font-size:11.5px;letter-spacing:.14em;color:#8a7a52;margin-right:6px;white-space:nowrap}
+.lux button.evf{display:inline-flex !important;align-items:center;gap:7px;min-height:36px;padding:0 14px !important;font-family:inherit !important;font-size:13px !important;font-weight:400 !important;letter-spacing:.06em;color:#243133 !important;background:#fff !important;border:1px solid #d9cfb4 !important;border-radius:2px !important;cursor:pointer;box-shadow:none !important;margin:0 !important}
+.lux .evf i{width:7px;height:7px;flex:none;background:currentColor}.lux .evf-event i{color:#7a2e2a;transform:rotate(45deg)}.lux .evf-nature i{color:#2f6347;border-radius:50%}.lux .evf-other i{color:#4d5a66;height:2px}
+.lux .evf em{font-style:normal;font-size:11px;color:#8a7a52;font-variant-numeric:tabular-nums}
+.lux button.evf:hover{border-color:#c7a15a !important;background:#fbf6e9 !important}.lux .evf:focus-visible{outline:2px solid #0b1c1d;outline-offset:2px}
+.lux button.evf.on{background:#0b1c1d !important;border-color:#0b1c1d !important;color:#f3efe3 !important}.lux .evf.on em{color:#d9c590}.lux .evf.on i{color:#f1d99b}
+.lux .evlegend{display:flex;flex-wrap:wrap;gap:6px 22px;margin:12px 0 0 !important;padding:10px 0 0 !important;border-top:1px dashed #e6d9b8;list-style:none !important}
+.lux .evlegend li{display:flex;align-items:center;gap:8px;font-size:12px;color:#5d6869;list-style:none !important;margin:0;padding:0}
+.lux .evjump{align-items:center}
+.lux .evm li .evh{display:flex;align-items:center;gap:8px;margin-bottom:3px}
+.lux .evm li .evh b{display:inline !important;margin:0 !important}
+.lux .evm li .evname{margin:0 !important;font-size:14px;line-height:1.6;color:#14272a}
+.lux .evm li .evdet{margin:1px 0 0 !important;font-size:12px;line-height:1.6;color:#7a8586}
+.lux .evnone{display:none;margin:0 !important;padding:14px 18px;font-size:12.5px;color:#a5abac}
+.evpage[data-f=event] .evm li:not([data-t=event]),.evpage[data-f=nature] .evm li:not([data-t=nature]),.evpage[data-f=other] .evm li:not([data-t=other]){display:none !important}
+.evpage[data-f=event] .evp:not(:has(li[data-t=event])),.evpage[data-f=nature] .evp:not(:has(li[data-t=nature])),.evpage[data-f=other] .evp:not(:has(li[data-t=other])){display:none !important}
+.evpage[data-f=event] .evm:not(:has(li[data-t=event])) .evnone,.evpage[data-f=nature] .evm:not(:has(li[data-t=nature])) .evnone,.evpage[data-f=other] .evm:not(:has(li[data-t=other])) .evnone{display:block}
+.lux .evm .evp li:last-child{border-bottom:0 !important}
+@media(max-width:700px){.lux .evtools{padding:12px 12px}.lux .evf{padding:0 10px;font-size:12.5px;min-height:38px}.lux .evfl{flex:1 0 100%}}
+
+/* ---- 文章の折り返し: 文節の途中で切らない（句点での改行は brk.py が <br> を入れる） ---- */
+.gradio-container p,.gradio-container li,.gradio-container h1,.gradio-container h2,.gradio-container h3,.gradio-container h4,.gradio-container dd,.gradio-container .sd,.gradio-container .note,.gradio-container td{word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere}
+.gradio-container p,.gradio-container .sd,.gradio-container .note{text-wrap:pretty}
+#firstr [data-testid=block-info],#firstr .info,#firstr span[class*=info]{white-space:pre-line !important}
+.season table.evtbl,.season .evtbl thead,.season .evtbl tbody,.season .evtbl tr{border-left:0 !important;border-right:0 !important;outline:0 !important;box-shadow:none !important;border-radius:0 !important}.season .evtbl tr{border:0 !important}.season .evtbl thead th{border-bottom:1px solid #e2d3b0 !important}
+.lux .evm li p.evname,.lux .evm li p.evdet{display:block !important}.lux .evm li p.evname{font-weight:500}
+
+/* ---- エリアページ「ベストシーズンの目安」: おすすめの月と季節の注意を、行事の表と同じアイボリー×金の枠に（文言は従来のまま） ---- */
+.season .sinfo{margin:14px 0 20px;border:1px solid #e2d3b0;background:#fffdf7}
+.season .sinfo .best{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;margin:0 !important;padding:12px 18px;background:linear-gradient(100deg,#f7efd9,#fbf6e9);border-bottom:1px solid #c7a15a;font-size:14px;color:#0b1c1d}
+.season .sinfo .best span{margin:0 !important;flex:none;background:#c7a15a;color:#0b1c1d !important;font-size:11.5px !important;letter-spacing:.16em;padding:4px 12px;font-weight:500}
+.season .sinfo .best .rng{font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif;font-size:18px;font-weight:600;letter-spacing:.08em;color:#0b1c1d}
+.season .sinfo .best em{margin-left:auto !important;font-size:11.5px !important;letter-spacing:.08em;color:#8a7a55 !important;border:1px solid #e2d3b0;background:#fffdf7;padding:3px 10px}
+.season .sinfo ul{list-style:none;margin:0 !important;padding:14px 18px 16px !important;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:13.5px;line-height:1.7;color:#243133}
+.season .sinfo li{position:relative;margin:0;padding:10px 14px 10px 30px;background:#fff;border:1px solid #efe6cf;border-left:3px solid #c7a15a}
+.season .sinfo li::before{content:"";position:absolute;left:12px;top:calc(10px + .62em);width:7px;height:7px;background:#c7a15a;transform:rotate(45deg)}
+@media(max-width:700px){.season .sinfo .best{padding:10px 12px}.season .sinfo .best .rng{font-size:16px}.season .sinfo .best em{margin-left:0 !important}.season .sinfo ul{grid-template-columns:1fr;padding:10px 12px 12px !important;gap:8px}}
+
+/* ---- 2ページ目「キーワードで見つける」: ホテル・旅の準備ページ（.luxsec）と同じ見せ方に統一 ----
+   見出し帯は枠の端まで（Gradio の HTML 部品の内側余白を消す）、本文は淡いアイボリー、区切りは金線＋中央の菱形 */
+#frame .html-container:has(>.prose>.numhead),#frame .html-container:has(>.prose .numhead:first-child){padding-left:0 !important;padding-right:0 !important;padding-top:0 !important}
+#kwhead .numhead{border-top:0 !important}
+#tbar{background:linear-gradient(180deg,rgba(255,253,247,0),rgba(251,246,233,.55)) !important;padding:28px clamp(20px,3vw,48px) 36px !important;border-bottom:1px solid #c7a15a !important;overflow:visible !important}
+#tbar::after{content:"";position:absolute;left:50%;bottom:-6px;width:11px;height:11px;background:#c7a15a;transform:translateX(-50%) rotate(45deg);z-index:2}
+#tbar textarea,#tbar input{background:#fffdf7 !important}
+
+/* ---- お気に入り・旅程ページ: ホテル・旅の準備ページと同じ意匠（.lux）に統一 ---- */
+.lux.planner .plantop{background:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;box-shadow:none !important}
+.lux.planner section.cat.favg{margin:0 0 18px !important;border:1px solid #e2d3b0;background:#fffdf7;box-shadow:0 6px 16px rgba(11,28,29,.06)}
+.lux.planner section.cat.favg:last-child{margin-bottom:0 !important}
+.lux.planner section.cat.favg>h3{min-height:0 !important;background:linear-gradient(100deg,#f7efd9,#fbf6e9) !important;color:#0b1c1d !important;border-bottom:1px solid #c7a15a !important;padding:10px 18px !important;gap:14px !important;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif !important;font-size:17px !important;letter-spacing:.14em !important;text-shadow:none !important}
+.lux.planner section.cat.favg>h3::before,.lux.planner section.cat.favg>h3::after{display:none !important}
+.lux.planner .favth{flex:none;width:58px;height:58px;object-fit:cover;border:1px solid #c7a15a;outline:1px solid rgba(199,161,90,.45);outline-offset:2px}
+.lux.planner .favrn{display:flex;flex-direction:column;gap:2px;line-height:1.3}
+.lux.planner .favrn small{font-family:"Times New Roman",Times,serif;font-size:10.5px;letter-spacing:.28em;color:#8a6a24;text-transform:uppercase}
+.lux.planner section.cat.favg>h3 em{background:#c7a15a !important;color:#0b1c1d !important;border:0 !important;border-radius:0 !important;font-size:11.5px !important;letter-spacing:.16em;padding:3px 12px !important}
+.lux.planner .planout{margin-top:0 !important}
+.lux.planner .schedhd{display:none !important}
+.lux.planner .luxsec>.numhead p{max-width:760px}
+@media(max-width:700px){.lux.planner section.cat.favg>h3{padding:9px 12px !important;font-size:15.5px !important}.lux.planner .favth{width:46px;height:46px}}
+@media print{.lux.planner .luxt,.lux.planner #fav-plan,.lux.planner #fav-spots,.lux.planner #fav-sched>.numhead{display:none !important}.lux.planner .luxframe{border:0;box-shadow:none}.lux.planner .luxbody{padding:0}}
+
+/* ---- ジャンルを選択する（自然: 海/山/その他・博物館/美術館・動物園/水族館・アクティビティ: 体験/海/山/その他） ---- */
+.ngsel{position:relative;margin:12px 0 16px;padding:18px 22px 20px;background:radial-gradient(120% 140% at 50% 0%,rgba(199,161,90,.16),rgba(199,161,90,0) 60%),linear-gradient(160deg,var(--deep),var(--ink) 78%);border:1px solid #b8955a;box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 5px rgba(212,180,118,.55),0 10px 24px -14px rgba(11,28,29,.55)}
+.ngsel::before,.ngsel::after{content:"";position:absolute;width:14px;height:14px;border:1px solid #d4b476;pointer-events:none}
+.ngsel::before{top:9px;left:9px;border-right:0;border-bottom:0}.ngsel::after{right:9px;bottom:9px;border-left:0;border-top:0}
+.ngsel h4{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 14px !important;font-family:var(--serif) !important;font-size:13.5px !important;font-weight:500 !important;letter-spacing:.32em;color:#e6cf98 !important;text-indent:.32em}
+.ngsel h4 i{flex:0 1 72px;height:1px;background:linear-gradient(90deg,rgba(212,180,118,0),#d4b476)}.ngsel h4 i:last-child{background:linear-gradient(90deg,#d4b476,rgba(212,180,118,0))}
+.ngbs{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,128px));justify-content:center;gap:10px}
+button.ngb{display:flex !important;flex-direction:column;align-items:center;justify-content:center;gap:3px;width:100%;min-width:0;height:60px;padding:0 6px !important;font-family:var(--serif) !important;font-size:15px !important;font-weight:500 !important;letter-spacing:.14em;line-height:1.2;color:#f4ecd8 !important;background:rgba(255,255,255,.035) !important;border:1px solid rgba(212,180,118,.45) !important;border-radius:0 !important;cursor:pointer;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25) !important;transition:background .2s,border-color .2s,color .2s}
+button.ngb span{display:block;max-width:100%;overflow-wrap:normal;word-break:keep-all;text-indent:.14em}
+.ngsel h4 span,.ngsel button.ngb span{color:inherit !important}
+.ngsel button.ngb em{font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.08em;color:#cdb37c !important;font-variant-numeric:tabular-nums}
+.ngsel button.ngb:hover{border-color:#e2c483 !important;background:rgba(212,180,118,.12) !important;color:#fff !important}
+button.ngb:focus-visible{outline:2px solid #e2c483;outline-offset:2px}
+.ngsel button.ngb.on,.ngsel button.ngb.on:hover{background:linear-gradient(180deg,#e9d39d,#c9a35e) !important;border-color:#f0dcae !important;color:var(--ink) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 4px 12px -4px rgba(0,0,0,.6) !important}
+.ngsel button.ngb.on em{color:rgba(11,28,29,.72) !important}
+.ngsel button.ngb:disabled{opacity:.35 !important;filter:none !important;cursor:default !important}.ngsel button.ngb:disabled:hover{border-color:rgba(212,180,118,.45) !important;background:rgba(255,255,255,.035) !important;color:#f4ecd8 !important}
+@media(max-width:700px){.ngsel{padding:16px 12px 14px}.ngsel h4{font-size:12.5px !important;letter-spacing:.24em;margin-bottom:12px !important}.ngsel h4 i{flex-basis:36px}.ngbs{grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:6px}button.ngb{height:56px;padding:0 3px !important;font-size:14px !important;letter-spacing:.06em}button.ngb span{text-indent:0}.ngbs[style*="--n:5"] button.ngb{font-size:12.5px !important;letter-spacing:0}}
+
+/* ---- 交通手段を探す（11/17）: 電車・バス・タクシーの検索サイト / 配車アプリ ---- */
+.trnav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;width:min(1100px,92vw);margin:clamp(6px,1.4vh,14px) auto 0}
+.trnav a.trnav-b,.trnav a.trnav-b:visited{flex:1 1 280px;max-width:350px;display:flex;align-items:center;gap:14px;padding:14px 18px 14px 14px;background:linear-gradient(135deg,#0b1c1d 0%,#16393a 100%);border:1px solid #c7a15a;box-shadow:0 0 0 4px rgba(255,255,255,.35),0 0 0 5px rgba(199,161,90,.45),0 14px 30px rgba(11,28,29,.28);color:#f3efe3 !important;text-decoration:none !important;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;position:relative}
+.trnav-i{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid #c7a15a;display:flex;align-items:center;justify-content:center;color:#f1d99b !important;background:rgba(199,161,90,.08);transition:background .2s,color .2s}
+.trnav-i svg{width:26px;height:26px}
+.trnav-t{flex:1;min-width:0;text-align:left;display:flex;flex-direction:column;gap:2px}
+.trnav-t b{font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif;font-weight:600;font-size:16.5px;letter-spacing:.12em;color:#fff !important}
+.trnav-t small{font-size:11.5px;letter-spacing:.14em;color:#d9c590 !important}
+.trnav-a{flex:none;font-size:15px;color:#c7a15a !important;transition:transform .2s}
+.trnav a.trnav-b:hover,.trnav a.trnav-b:focus-visible{transform:translateY(-3px);background:linear-gradient(135deg,#c7a15a,#e2c77f);outline:none}
+.trnav a.trnav-b:hover .trnav-t b,.trnav a.trnav-b:hover .trnav-t small,.trnav a.trnav-b:hover .trnav-a{color:#0b1c1d !important}
+.trnav a.trnav-b:hover .trnav-i{background:#0b1c1d;color:#f1d99b !important;border-color:#0b1c1d}
+.trnav a.trnav-b:hover .trnav-a{transform:translateY(3px)}
+.trpg .trtip{display:flex;align-items:flex-start;gap:12px;margin:0 0 20px !important;padding:12px 18px;background:linear-gradient(100deg,#f7efd9,#fbf6e9 70%);border:1px solid #e2d3b0;border-left:3px solid #c7a15a;font-size:13px;line-height:1.85;color:#3d4a4b !important;letter-spacing:.03em}
+.trpg .trtip-i{flex:none;width:22px;height:22px;margin-top:1px;color:#8a6a24 !important}.trpg .trtip-i svg{width:22px;height:22px}
+.trgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+.trc{position:relative;display:flex;flex-direction:column;padding:20px 22px 18px;background:#fffdf7;border:1px solid #e2d3b0;transition:transform .25s,box-shadow .25s,border-color .25s}
+.trc::before{content:"";position:absolute;inset:5px;border:1px solid rgba(199,161,90,.28);pointer-events:none;transition:border-color .25s}
+.trc::after{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:3px;background:linear-gradient(90deg,#c7a15a,#f1d99b,#c7a15a);opacity:0;transition:opacity .25s}
+.trc:hover{transform:translateY(-3px);border-color:#c7a15a;box-shadow:0 18px 36px rgba(11,28,29,.14)}
+.trc:hover::before{border-color:rgba(199,161,90,.6)}.trc:hover::after{opacity:1}
+.trtop{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;position:relative;z-index:1}
+.trno{font-family:"Times New Roman",Times,serif;font-size:24px;line-height:1;color:#b48a3a !important}
+.trkind{font-size:10.5px;letter-spacing:.18em;padding:3px 10px;background:#0b1c1d;color:#f1d99b !important;line-height:1.5}
+.trc.k-intl .trkind{background:#c7a15a;color:#0b1c1d !important}
+.trc.k-official .trkind{background:#5d4a1c;color:#fbf4e2 !important}
+.trlg{margin-left:auto;font-size:10.5px;letter-spacing:.04em;color:#7d6633 !important;border:1px solid #d9c590;padding:2px 9px;background:#fbf6e9;line-height:1.5}
+.trnm{margin:0 0 8px !important;padding-bottom:9px;border-bottom:1px solid #eadfc3;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif;font-size:19px !important;font-weight:600;letter-spacing:.06em;line-height:1.45;color:#14272a !important;position:relative;z-index:1}
+.trnm small{display:block;margin-top:2px;font-family:"Times New Roman",Times,serif;font-style:italic;font-weight:400;font-size:12.5px;letter-spacing:.04em;color:#8a8f8c !important}
+.trd{margin:0 0 16px !important;font-size:13px;line-height:1.85;color:#3d4a4b !important;letter-spacing:.02em;position:relative;z-index:1}
+.tracts{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1}
+.tracts a.trb,.tracts a.trb:visited{display:inline-flex;align-items:center;gap:8px;height:42px;box-sizing:border-box;padding:0 14px;text-decoration:none !important;white-space:nowrap;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.tracts a.trweb,.tracts a.trweb:visited{background:linear-gradient(135deg,#0b1c1d,#16393a);border:1px solid #c7a15a;color:#f1d99b !important;font-size:13px;letter-spacing:.12em}
+.tracts a.trweb i{font-style:normal;font-size:13px}
+.tracts a.trweb:hover{background:#c7a15a;color:#0b1c1d !important;transform:translateY(-1px)}
+.tracts a.trst,.tracts a.trst:visited{background:#111;border:1px solid #3b3b3b;border-radius:7px;color:#fff !important;padding:0 12px 0 10px}
+.tracts a.trst svg{width:20px;height:20px;flex:none}
+.tracts a.trst span{display:flex;flex-direction:column;line-height:1.05;font-size:14px;font-weight:500;letter-spacing:.01em;text-align:left}
+.tracts a.trst small{font-size:8.5px;font-weight:400;letter-spacing:.04em;opacity:.85;text-transform:none}
+.tracts a.trst:hover{border-color:#c7a15a;box-shadow:0 0 0 1px #c7a15a;transform:translateY(-1px)}
+@media(max-width:700px){.trnav{flex-direction:column;align-items:stretch;padding:0 10px;gap:10px}.trnav a.trnav-b{max-width:none;flex:0 0 auto}.trgrid{grid-template-columns:1fr;gap:12px}.trc{padding:16px 16px 14px}.trnm{font-size:17px !important}}
+.trpg .trnav-i svg,.trpg .trtip-i svg,.trpg .tracts a.trst svg{color:inherit !important}
+.trpg .trnav{margin-bottom:clamp(22px,3.4vh,38px)}
+.trpg svg *{color:inherit !important}
+.trpg .tracts a.trb span,.trpg .tracts a.trb small,.trpg .tracts a.trb i{color:inherit !important}
+.trpg .tracts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.trpg .tracts a.trb{justify-content:center;min-width:0}
+.trpg .tracts a.trweb{grid-column:1/-1}
+
+/* ===== 2026-11-17: エリアページ「◯◯の行事・イベント」をベストシーズンの目安と同格の見出しに ===== */
+.guidebox .season .evtw{margin:22px 0 0 !important;padding:22px 0 0 !important;border-top:0 !important;position:relative}
+.guidebox .season .evtw::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,#c7a15a 18%,#c7a15a 82%,transparent);opacity:.7}
+.season .evtw h3.evh{margin:0 0 12px !important}
+
+/* ===== 2026-11-17: 観光スポットを絞り込む — 4項目を1行ずつ（ラベル＋入力）、アイボリー×金の枠 ===== */
+.guidebox.catbox .fltsec .tools.frows{display:block !important;margin:10px 0 0 !important;padding:0 !important;border:1px solid #e2d3b0 !important;border-top:2px solid #c7a15a !important;background:#fffdf7 !important;box-shadow:inset 0 0 0 4px #fffdf7,inset 0 0 0 5px rgba(199,161,90,.22) !important}
+.frows .frow{display:grid;grid-template-columns:minmax(9.5em,13em) 1fr;align-items:center;gap:14px;margin:0;padding:11px 20px;border-bottom:1px solid #efe6cf;cursor:default}
+.frows .frow:nth-child(even){background:rgba(248,241,222,.38)}
+.frows .fl{display:flex;align-items:center;gap:10px;font-family:'Noto Serif JP','Noto Serif TC','Cormorant Garamond',serif;font-size:13.5px;font-weight:500;letter-spacing:.14em;color:#6f5520;white-space:nowrap}
+.frows .fl::before{content:"";width:6px;height:6px;background:#c7a15a;transform:rotate(45deg);flex:none}
+.frows .fl::after{content:"：";margin-left:-9px;color:#a98f56}
+.frows .fc{display:block;min-width:0}
+.frows .fc>input,.frows .fc>select{display:block;width:100% !important;max-width:none !important;height:42px !important;box-sizing:border-box;margin:0 !important;border:1px solid #c7a15a !important;border-radius:0 !important;background:#fff !important;color:#14272a !important;padding:0 12px !important;font-size:14px !important;letter-spacing:.04em}
+.frows .fc>select{appearance:none;-webkit-appearance:none;padding-right:36px !important;background-image:linear-gradient(45deg,transparent 50%,#a98f56 50%),linear-gradient(135deg,#a98f56 50%,transparent 50%) !important;background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50% !important;background-size:5px 5px,5px 5px !important;background-repeat:no-repeat !important;cursor:pointer}
+.frows .fc>input:focus,.frows .fc>select:focus{outline:none;border-color:#8a6a24 !important;box-shadow:0 0 0 3px rgba(199,161,90,.22)}
+.frows .f-new option[value="new"]{color:#8a6a24}
+.guidebox.catbox .frows>.f-n{display:block;text-align:right;padding:9px 20px !important;font-size:12.5px;letter-spacing:.08em;color:#8a7a52}
+.guidebox.catbox .frows>.f-none{padding:0 20px 12px;text-align:right}
+@media(max-width:700px){.frows .frow{grid-template-columns:1fr;gap:6px;padding:10px 14px}.guidebox.catbox .frows>.f-n{padding:8px 14px !important}}
+@container (max-width:700px){.frows .frow{grid-template-columns:1fr;gap:6px;padding:10px 14px}}
+
+/* ==== エリアページ: 「○○内で移動する」の枠（「○○に泊まる」の上。同じデザイン） ==== */
+.guidebox .ahbox+.ahbox{padding-top:6px !important}
+
+/* ==== 交通手段: おすすめカード（各国・各移動手段で最も使われているもの）・地域タグ・エリア版 ==== */
+.trc.rec{background:linear-gradient(165deg,#fff6df 0%,#fffdf7 58%);border:1.5px solid #c7a15a;box-shadow:0 0 0 3px rgba(199,161,90,.20),0 12px 28px rgba(11,28,29,.10)}
+.trc.rec::before{border-color:rgba(199,161,90,.6)}
+.trc.rec::after{opacity:1;height:4px}
+.trc.rec .trnm{color:#0b1c1d !important}
+.trrec{position:absolute;top:-12px;left:18px;z-index:2;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 13px;background:linear-gradient(180deg,#8f2330,#6d1520);border:1px solid #c7a15a;color:#fbefd5 !important;font-size:11.5px;font-weight:600;letter-spacing:.22em;line-height:1;box-shadow:0 4px 12px rgba(109,21,32,.28)}
+.trrec::before{content:"";width:5px;height:5px;background:#f1d99b;transform:rotate(45deg)}
+.trarea{display:flex;align-items:center;gap:6px;margin:-2px 0 10px !important;font-size:12px;letter-spacing:.06em;color:#24476b !important;position:relative;z-index:1}
+.trarea svg{width:14px;height:14px;flex:none}
+.trki{width:26px;height:26px;border-radius:50%;border:1px solid #c7a15a;display:inline-flex;align-items:center;justify-content:center;color:#8a6a24 !important;background:#fbf6e9}
+.trki svg{width:16px;height:16px}
+.trnav.trnav4 a.trnav-b{flex-basis:230px;max-width:290px}
+.trnav a.trnav-b.trnav-loc{background:linear-gradient(135deg,#17283f 0%,#24476b 100%)}
+.trlocal .luxbody{background:linear-gradient(180deg,rgba(36,71,107,.05),transparent 240px)}
+@media(max-width:700px){.trrec{left:12px;font-size:11px;letter-spacing:.16em}.trnav.trnav4 a.trnav-b{max-width:none}}
+
+/* ==== 天気: 古いデータの注記・再読み込みボタン ==== */
+.wx .wxold{margin:0 0 8px !important;font-size:11.5px !important;letter-spacing:.04em;color:#8a6a24 !important}
+.wx .wxre{margin:8px 0 0 !important;text-align:center}
+.wx button.wxretry{height:36px;padding:0 20px;background:linear-gradient(135deg,#0b1c1d,#16393a);border:1px solid #c7a15a;color:#f1d99b;font-size:13px;letter-spacing:.12em;cursor:pointer}
+.wx button.wxretry:hover{background:#c7a15a;color:#0b1c1d}
+.trnav.trnav4 .trnav-t b{font-size:15px;letter-spacing:.08em}.trnav.trnav4 a.trnav-b{gap:11px;padding-right:14px}

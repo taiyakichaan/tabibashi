@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 旅橋（TABIBASHI）のアイコン: 深い緑の地に、金の太鼓橋と水面のさざ波、右上に昇る日。サイトの配色（#0b1c1d / #c7a15a / #f1d99b）に合わせたオリジナルの図案 -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4a4c"/><stop offset="1" stop-color="#0b1c1d"/></linearGradient>
+    <linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e3ad"/><stop offset="1" stop-color="#c7a15a"/></linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <circle cx="47" cy="16.5" r="4" fill="#f1d99b"/>
+  <path d="M7 42 Q32 13 57 42" fill="none" stroke="url(#gd)" stroke-width="5.4" stroke-linecap="round"/>
+  <path d="M19.5 31.5V42M32 28V42M44.5 31.5V42" stroke="#d9b876" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M6 43H58" stroke="#c7a15a" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M13 49.5H27M35 49.5H51" stroke="#c7a15a" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".55"/>
+  <path d="M20 55H44" stroke="#c7a15a" stroke-width="2.2" stroke-linecap="round" stroke-opacity=".32"/>
+</svg>

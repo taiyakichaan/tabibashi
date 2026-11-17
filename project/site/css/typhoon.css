@@ -1,0 +1,31 @@
+/* 天気欄の台風情報（js/typhoon.js）。天気欄（.wx）の配色・書体に合わせる:
+   白地・金の線（--gold）・明朝の見出し・日別カード（#fbfaf6 / #ece9e2）・小さな文字は #586264 / #8a9394 */
+/* 見出しの余白（ほかの指定で上16px・下8pxなど）はそのまま残し、札は見出しの文字のベースラインに揃える（行の高さを変えない） */
+.wx .wxhd { display: flex; align-items: baseline; flex-wrap: wrap; column-gap: 14px; row-gap: 0; margin: 0; padding: 0; }
+.wx .tychip { display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border: 1px solid var(--gold); background: #f7f0dc;
+  color: #7a5d22 !important; font-size: 12px; letter-spacing: .08em; text-decoration: none !important; white-space: nowrap; }
+.wx .tychip svg { width: 15px; height: 15px; flex: none; }
+.wx .tychip:hover { background: var(--gold); color: #0b1c1d !important; }
+.wx .tychip.near { border-color: #9b3b2f; background: #f8e9e5; color: #8a2f24 !important; }
+.wx .tychip.near:hover { background: #9b3b2f; color: #fff !important; }
+
+.wx .typh { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin: 0 0 14px; }
+.wx .tyc { border: 1px solid #ece9e2; border-left: 3px solid var(--gold); background: #fbfaf6; padding: 10px 12px; font-size: 12.5px; color: #3d4a4b; line-height: 1.6; }
+.wx .tyc.near { border-left-color: #9b3b2f; background: #fcf6f3; }
+.wx .tyh { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; margin-bottom: 4px; }
+.wx .tyh b { font-family: var(--serif); font-size: 15px; font-weight: 500; letter-spacing: .06em; color: #1c2526; }
+.wx .tyh small { font-size: 11.5px; color: #6c7778; }
+.wx .tyh em { margin-left: auto; font-style: normal; font-size: 11px; letter-spacing: .08em; color: #fff; background: #9b3b2f; padding: 1px 7px; }
+.wx .typ { margin: 0 0 4px !important; font-size: 12.5px !important; color: #1c2526; }
+/* ページ全体の ul/li の指定（記号・字下げ）より優先させる */
+.pg .wx ul.tyf, .wx ul.tyf { list-style: none !important; margin: 0 !important; padding: 0 !important; display: flex !important; flex-wrap: wrap; gap: 2px 14px; font-size: 12px; color: #586264; }
+.pg .wx ul.tyf li, .wx ul.tyf li { list-style: none !important; margin: 0 !important; padding: 0 !important; font-size: 12px !important; }
+.wx ul.tyf li::before, .wx ul.tyf li::marker { content: none !important; }
+.wx .tyf b { color: #1c2526; font-weight: 600; }
+.wx .tyn { margin: 6px 0 0 !important; font-size: 12px !important; color: #8a2f24; }
+.wx .tycr { grid-column: 1 / -1; margin: 0 !important; font-size: 11px !important; color: #8a9394; }
+.wx .tycr a { color: #7a5d22; }
+/* 台風情報なし・取得できない: 控えめな札（天気欄の淡い枠の色） */
+.wx .tychip.none, .wx .tychip.fail { border-color: #ddd3bd; background: #fbfaf6; color: #6c7778 !important; }
+.wx .tychip.none:hover, .wx .tychip.fail:hover { border-color: var(--gold); background: #f7f0dc; color: #7a5d22 !important; }
+.wx .tychip.fail { border-style: dashed; }
