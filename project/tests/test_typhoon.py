@@ -39,7 +39,7 @@ with sync_playwright() as p:
             pg.add_style_tag(content=".wx .wxbody{min-height:40px}")
             el.screenshot(path=f"{OUT}/typhoon_{mode}_{lang}_{name}.png")
             want = 2 if mode=="data" else 0
-            ok = title=="旅橋" and n==want and len(chip)==1 and not errs
+            ok = title=="旅橋-TABIBASHI-" and n==want and len(chip)==1 and not errs
             if mode!="data": ok = ok and pg.locator(f".wx .tychip.{mode}").count()==1        # 台風なし→「台風情報なし」/ 取得失敗→「取得できません」
             if mode=="data":
                 ok = ok and pg.locator(".wx .tyc.near").count()==1 and pg.locator(".wx .tyn").count()==1 and pg.locator(".wx .tycr").count()==1

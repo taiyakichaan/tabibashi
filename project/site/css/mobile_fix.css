@@ -1,0 +1,58 @@
+/* スマホ表示の調整（静的サイト版で追加。css/mobile.css と同じく、スマホ表示のときだけ有効） */
+
+/* ---- ヘッダー: 「戻る」を左端に、「旅橋」は「戻る」（なければ画面左端）と「繁」の真ん中に ---- */
+#topbar>#home{order:-1 !important}
+#topbar>#brand{order:0 !important;flex:1 1 0 !important;min-width:0 !important;display:flex !important;justify-content:center !important;
+  margin:0 -17px 0 -6px !important}  /* 左は余白6px分、右は隙間5px＋言語ボタンまでの12px分を広げて、中心をそろえる */
+#topbar>#brand>*{display:flex !important;justify-content:center !important;width:auto !important}
+#topbar>#menuhtml{order:2 !important;margin-left:0 !important;position:relative;z-index:1}
+#topbar>#hsearch{order:3 !important}
+.brandlink b{font-size:22px !important;letter-spacing:.08em !important}
+/* 「旅橋」の下にひと回り小さく「-TABIBASHI-」 */
+.brandlink{flex-direction:column !important;align-items:center !important;gap:1px !important;line-height:1 !important}
+.brandlink b{line-height:1.05 !important}
+.brandlink i{display:block !important;font-size:8.5px !important;letter-spacing:.08em !important;font-weight:600 !important;text-transform:uppercase !important;line-height:1 !important;margin-right:-.08em}
+.brandlink i::before,.brandlink i::after{content:"-"}
+
+/* ---- 1ページ目: 「使い方」の下の余りをなくし、TAIWAN / JAPAN の写真を大きく ---- */
+html{--ph:max(146px,calc((100vh - var(--tb,60px) - var(--howh,290px) - 24px) / 2))}
+@supports (height:100dvh){html{--ph:max(146px,calc((100dvh - var(--tb,60px) - var(--howh,290px) - 24px) / 2))}}
+body:has(#navmark[data-stage=landing]) #landing{height:calc(var(--ph) * 2) !important;grid-template-rows:var(--ph) var(--ph) !important}
+body:has(#navmark[data-stage=landing]) #landing>*{margin:0 0 calc((var(--ph) - 146px) * .4 + 14px) !important}
+body:has(#navmark[data-stage=landing]) .bgfx:has(.half){height:calc(var(--ph) * 2) !important}
+body:has(#navmark[data-stage=landing]) .bgfx .half{height:var(--ph) !important}
+body:has(#navmark[data-stage=landing]) .bgfx .half.r,
+body:has(#navmark[data-stage=landing]) .bgfx .div{top:var(--ph) !important}
+body:has(#navmark[data-stage=landing]) .bgfx .ttl{top:calc((var(--ph) - 146px) * .4 + 12px) !important}
+body:has(#navmark[data-stage=landing]) .howto{top:calc(var(--tb,60px) + var(--ph) * 2 + 12px) !important;
+  max-height:max(120px,calc(100vh - var(--tb,60px) - var(--ph) * 2 - 24px)) !important}
+@supports (height:100dvh){body:has(#navmark[data-stage=landing]) .howto{max-height:max(120px,calc(100dvh - var(--tb,60px) - var(--ph) * 2 - 24px)) !important}}
+
+/* ---- 「使い方」の見出しを少し大きく ---- */
+.howto summary{font-size:18px !important;letter-spacing:.16em !important}
+
+/* 幅の狭いスマホ（〜374px）で「戻る」があるときは、詰まらないよう「旅橋」を少し小さくし、間を空ける */
+@media (max-width:374px){
+  body:not(:has(#navmark[data-stage=landing])) #topbar>#brand{margin:0 -10px 0 0 !important}
+  body:not(:has(#navmark[data-stage=landing])) .brandlink b{font-size:18px !important;letter-spacing:.02em !important}
+  body:not(:has(#navmark[data-stage=landing])) .brandlink i{font-size:7.5px !important;letter-spacing:0 !important;margin-right:0 !important}
+  body:not(:has(#navmark[data-stage=landing])) #home{padding:6px 4px !important}
+}
+body:has(#navmark[data-stage=landing]) .howto{padding-top:8px !important;padding-bottom:8px !important}
+body:has(#navmark[data-stage=landing]) .howto ul,body:has(#navmark[data-stage=landing]) .howto ol{line-height:1.4 !important}
+body:has(#navmark[data-stage=landing]) .howto h4{margin:5px 0 2px !important}
+
+/* スポット行（エリアページ・検索結果・お気に入り共通）: スマホ表示では画面の幅によらず、
+   1行目にアイコン・名前と説明・★、2行目にボタン3つを並べる（PC用の横一列の並びにならないように） */
+.spot{display:grid !important;grid-template-columns:40px minmax(0,1fr) 34px !important;column-gap:10px !important;row-gap:10px !important}
+.spot .ic{grid-row:1 !important;grid-column:1 !important}
+.spot .nm{grid-row:1 !important;grid-column:2 !important;min-width:0 !important}
+.spot .star{grid-row:1 !important;grid-column:3 !important}
+.spot .acts{display:grid !important;grid-row:2 !important;grid-column:1/-1 !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:6px !important;max-width:none !important;width:auto !important}
+.spot .acts>*{grid-column:auto !important;grid-row:auto !important;min-width:0 !important}
+
+/* 説明文: 読点・句点までのまとまり（js/app.js clauses）。収まらなければ次の行へ。1行より長いときはその中で文節ごとに改行 */
+.cl{all:unset !important;display:inline-block !important;max-width:100% !important}   /* 文字の色・大きさは親のまま（他の span 用の指定を受けない） */
+/* 検索結果の「該当スポット」: エリアページのカテゴリ内と同じく、枠の内側に余白を取って並べる */
+.pg.srch .spots{padding:4px 12px 8px !important}
+.pg.srch .spot:last-child{border-bottom:0 !important}

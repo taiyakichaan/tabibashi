@@ -1,0 +1,12 @@
+// Cloudflare Workers（tabibashi2）用の設定。
+// サイトのファイルは project/site にあるので、そこを静的ファイルとして配信する（プログラムは使わない）。
+// Cloudflare Pages（tabibashi-web）の公開には影響しません。
+{
+  "name": "tabibashi2",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./project/site"
+  },
+  // main 以外のブランチ（プルリクエスト）は npx wrangler preview でプレビュー版を作る。そのために必要な設定
+  "previews": {}
+}

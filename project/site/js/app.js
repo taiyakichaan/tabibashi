@@ -40,7 +40,7 @@ const FAIL = { ja: "ページを読み込めませんでした。通信状態を
 // ---------- 入力欄の初期値（app.py ui() の reset=True と同じ） ----------
 function defaultForm(m, l, cur = "USD") {
   const t = LANGS[l].m[m].tx;
-  return { days: 4, party: "couple", first: "first", budget: t.bval, cur, scores: COMMON.all.map(() => 3), acc: false };
+  return { days: 4, party: "solo", first: "first", budget: t.bval, cur, scores: COMMON.all.map(() => 3), acc: false };
 }
 
 // ---------- Gradio と同じ構造の部品 ----------
@@ -141,7 +141,7 @@ async function render() {
   // 元アプリ（Gradio）は表示言語によらず <html lang="en">。lang を変えると日本語・繁体字の字形（フォントの選ばれ方）が変わるため、同じ表示になるよう合わせる
   document.documentElement.lang = "en";
   $("#cssS").textContent = COMMON.tokens[`${S.m}|${st === "landing" ? 1 : 0}|${S.lang}`] + COMMON.stage[st];
-  $("#cssM").disabled = S.v !== "mobile";
+  $("#cssM").disabled = $("#cssM2").disabled = S.v !== "mobile";
   let h = topbar();
   if (st === "landing") {
     h += html("theme", navmark(Lm.theme.landing)) + bridgeForm();
@@ -187,9 +187,97 @@ async function render() {
   }
   if (st === "list") fixMonth($("#root"), monthNow());    // エリアページの「今月」の印
   if (st === "list") attachTyphoons($("#root"), S.lang);  // 天気欄に活動中の台風の情報（静的サイト版で追加。台風がなければ何も出さない）
+  breakTitles();                                           // 見出しは「、」の後でだけ改行する
+  if (st === "landing") fitLanding();
+  centerBrand();
+  phraseBreak();                                          // スマホ: 説明文を文の意味の区切りで改行                                          // PC: 「旅橋 TABIBASHI」を画面左端と「繁」の真ん中に                      // スマホの1ページ目: 余白をなくして写真部分を広げる
   bind();
   if (window.tjSpin) window.tjSpin(0);                     // plan.js が出した「読み込み中」マークを消す（元アプリの SPOFF）
   syncHistory();
+}
+
+// ---------- スマホ表示の調整（静的サイト版で追加） ----------
+// 「台湾へ、心ゆくままに。」などの見出しが語の途中で折り返さないよう、読点ごとにまとめる
+function breakTitles() {
+  for (const h of document.querySelectorAll("#hero h1")) {
+    if (h.dataset.brk || h.children.length) continue;
+    const parts = h.textContent.split(/(?<=[、，,])\s*/).filter(Boolean);
+    if (parts.length < 2) continue;
+    h.dataset.brk = "1";
+    h.innerHTML = parts.map((x) => `<span class="nobr">${x.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c])}</span>`).join("<wbr>");
+  }
+}
+// 「使い方」の高さを測って、残りの高さを TAIWAN / JAPAN の写真に配る（--howh は css/mobile_fix.css が使う）
+function fitLanding() {
+  const set = () => { const h = document.querySelector("#howtoc .howto"); if (h && h.scrollHeight) document.documentElement.style.setProperty("--howh", (h.scrollHeight + 2) + "px"); };
+  set(); requestAnimationFrame(set);
+  if (!fitLanding.on) { fitLanding.on = 1; addEventListener("resize", set); document.addEventListener("toggle", set, true); }
+}
+
+// PC表示で、ヘッダーの「旅橋 TABIBASHI」を画面左端と「繁」ボタンの真ん中に置く（--bx は css/fix.css が使う）
+// 検索欄がヘッダーに出る画面（結果ページなど）では重なるので、元の位置のまま
+function centerBrand() {
+  const set = () => {
+    const tb = $("#topbar"); if (!tb) return;
+    const hs = $("#hsearch"), fan = document.querySelector("#menuhtml .hlang a, #menuhtml .hlang button");
+    const on = S.v === "pc" && fan && !(hs && hs.offsetWidth);
+    tb.classList.toggle("bc", !!on);
+    if (!on) return;
+    tb.style.setProperty("--bx", (fan.getBoundingClientRect().left - tb.getBoundingClientRect().left) + "px");
+    const hm = $("#home"), bl = document.querySelector("#brand .brandlink");      // 幅の狭い画面で「戻る」と重なるなら、元の位置のまま
+    if (hm && hm.offsetWidth && bl && bl.getBoundingClientRect().left < hm.getBoundingClientRect().right + 12) tb.classList.remove("bc");
+  };
+  set();
+  if (!centerBrand.on) { centerBrand.on = 1; addEventListener("resize", set); }
+}
+
+// スマホ表示で、ページの説明文などが語の途中で改行されないよう、文節（意味のまとまり）の切れ目でだけ改行させる（BudouX）
+const PB_SEL = ["p", ".sd", ".evname", ".note", ".info-text", ".trtip > span", ".howto li", "small", ".evlegend li", ".ck > span"].map((x) => "#root " + x).join(",");
+let pbObs = null, pbTimer = 0;
+// 読点・句点（、。，）までをひとまとまりにする。まとまりが行に収まらないときは次の行へ送るので、読点で区切れるところは読点で改行される
+// （まとまりが1行より長いときだけ、その中の文節の切れ目で改行）
+const PUNCT = /[、。，！？]/;
+function clauses(el) {
+  const kids = [...el.childNodes]; let cur = null;
+  const flush = () => { cur = null; };
+  const add = (n) => { if (!cur) { cur = document.createElement("span"); cur.className = "cl"; el.insertBefore(cur, n); } cur.appendChild(n); };
+  for (const n of kids) {
+    if (n.nodeType === 3) {
+      let t = n.nodeValue, i;
+      while ((i = t.search(PUNCT)) >= 0 && i < t.length - 1) {   // 読点の直後で切る
+        add(document.createTextNode(t.slice(0, i + 1))); flush(); t = t.slice(i + 1);
+      }
+      if (t) { const tn = document.createTextNode(t); el.insertBefore(tn, n); add(tn); if (PUNCT.test(t.slice(-1))) flush(); }
+      n.remove();
+    } else if (n.nodeName === "WBR") { if (cur) cur.appendChild(n); }
+    else if (n.nodeName === "BR") flush();
+    else { flush(); if (n.nodeType === 1 && !n.matches("input,textarea,select,button,svg")) clauses(n); }
+  }
+}
+// 「エリアから探す」のような短いかぎかっこの中では改行しない（ボタン名などが2行に割れないように）
+function keepQuotes(e) {
+  const w = document.createTreeWalker(e, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT);
+  let depth = 0, inQ = [], n;
+  while ((n = w.nextNode())) {
+    if (n.nodeType === 3) { for (const ch of n.nodeValue) { if (ch === "「") { depth++; inQ = []; } else if (ch === "」" && depth) { depth--; if (!depth && inQ.len <= 12) inQ.forEach((x) => x.remove()); inQ = []; } else if (depth) inQ.len = (inQ.len || 0) + 1; } }
+    else if (n.tagName === "WBR" && depth) inQ.push(n);
+  }
+}
+function phraseBreak() {
+  const run = () => {
+    const B = window.tjBudoux, mk = B && (S.lang === "ja" ? B.ja : S.lang === "zh" ? B.zh : null);
+    if (S.v !== "mobile" || !mk) return;
+    const P = mk();
+    for (const e of document.querySelectorAll(PB_SEL)) {
+      if (e.dataset.pb === S.lang || e.closest("[data-pb]:not(:scope)") || e.querySelector("input,textarea,select,button")) continue;
+      try { P.applyToElement(e); keepQuotes(e); clauses(e); e.dataset.pb = S.lang; } catch (err) { /* 改行の調整に失敗しても表示はそのまま */ }
+    }
+  };
+  run();
+  if (!pbObs) {                                // あとから描かれる部分（カテゴリの結果・お気に入りなど）にも当てる
+    pbObs = new MutationObserver(() => { clearTimeout(pbTimer); pbTimer = setTimeout(run, 60); });
+    pbObs.observe(document.getElementById("root"), { childList: true, subtree: true });
+  }
 }
 
 // ---------- 入力欄の動き ----------
@@ -247,7 +335,11 @@ async function nav(hist, opt = {}) {
   if (opt.top !== false) window.scrollTo({ top: 0 });
 }
 const pick = (m) => nav(COND.slice(), { m, reset: true });
-function search(q) { q = (q || "").trim(); if (q) nav(S.hist.concat([["list", ["search", q]]])); }       // app.py do_search
+function search(q) {
+  q = (q || "").trim();
+  if (!q) { if (window.tjSpin) window.tjSpin(0); return; }   // 空欄なら何もしない（ぐるぐるマークも出さない）
+  nav(S.hist.concat([["list", ["search", q]]]));
+}       // app.py do_search
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 const pushPage = (e, opt) => nav(same(S.hist[S.hist.length - 1], e) ? S.hist : S.hist.concat([e]), opt);
 
@@ -307,12 +399,16 @@ function syncHistory() {
   saveState();
   if (!curDepth) { history.replaceState({ d, st }, ""); curDepth = d; return; }
   if (d > curDepth) { for (let i = curDepth + 1; i <= d; i++) history.pushState({ d: i, st }, ""); }
-  else if (d < curDepth) { pendingBack++; history.go(d - curDepth); }
+  else if (d < curDepth) {
+    // 画面内の操作で浅い画面へ移るときは、ブラウザの履歴も戻す。そのときブラウザが昔のスクロール位置に戻さないようにする
+    // （戻さないと、メニューの「〇〇旅行を計画する」で検索ページの途中が表示されていた）
+    pendingBack++; if ("scrollRestoration" in history) history.scrollRestoration = "manual"; history.go(d - curDepth);
+  }
   else history.replaceState({ d, st }, "");
   curDepth = d;
 }
 window.addEventListener("popstate", async (e) => {
-  if (pendingBack > 0) { pendingBack--; history.replaceState({ d: S.hist.length, st: snap() }, ""); return; }
+  if (pendingBack > 0) { pendingBack--; history.replaceState({ d: S.hist.length, st: snap() }, ""); if (!pendingBack && "scrollRestoration" in history) history.scrollRestoration = "auto"; return; }
   const s = e.state && e.state.st; if (!s) return;
   curDepth = e.state.d;
   if (s.l !== S.lang) await lang(s.l);
