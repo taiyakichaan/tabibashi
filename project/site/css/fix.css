@@ -17,3 +17,8 @@
 .howto li{margin:1px 0 !important}
 body:has(#navmark[data-stage=landing]) .howto{padding-top:10px !important;padding-bottom:10px !important}
 #topbar>#home{order:-1 !important}   /* 「戻る」はどの画面でも左端 */
+
+/* 結果ページ: 「おすすめの理由」の後で改行し、理由3つはその下に並べる */
+.whym{flex-wrap:wrap !important}
+.whym>span{flex:0 0 100% !important;width:100% !important;margin-bottom:6px !important}
+.whym>ul{flex:1 1 100% !important;margin-left:0 !important}

@@ -16,6 +16,7 @@ site/                 ← Cloudflare Pages にアップロードするフォル�
   js/head.js          元の HEAD のスクリプト（お気に入り★・絞り込み・折りたたみ・コピー）。export_ui.py が書き出す
   js/recommend.js     推薦ロジック（Python版 recommend() の数値部分を移植）
   js/plan.js          元の plan.js（そのまま）
+  js/vendor/budoux.js BudouX（Google, Apache-2.0）。スマホ表示で説明文を文節の切れ目で改行するために使用
   css/fix.css, css/mobile_fix.css  静的サイト版で追加した見た目の調整（mobile_fix はスマホ表示のときだけ有効：ヘッダー・1ページ目・「使い方」）
   data/               model_*.json / spots_*.json / meta.json / ui.json / ui_<言語>.json / search.json / hotel_terms_*.json ＋ 元の data/*.json
   data/pages/<言語>/  元アプリが作るページの HTML（エリア一覧・エリアのホテル/レンタカー/交通・国全体のページ・イベント/準備は12か月分。計990ファイル）

@@ -52,7 +52,8 @@ def box_ov(a, b, pad=2.0):
     return not (a[2] + pad <= b[0] or b[2] + pad <= a[0] or a[3] + pad <= b[1] or b[3] + pad <= a[1])
 
 
-def relayout(svg):
+def relayout(svg, gap=0.0):
+    """gap: 地名どうしの最低限の間隔（文字の大きさに対する割合）。スマホでは指で押しやすいよう広めにする"""
     vb = [float(x) for x in re.search(r'viewBox="([^"]+)"', svg).group(1).split()]
     H = vb[3]
     regs = re.findall(r'<g class="pf"[^>]*><title>([^<]*)</title><path d="([^"]+)"', svg)        # 地域ごとの輪郭（地域名つき）
@@ -105,13 +106,16 @@ def relayout(svg):
         if own not in rid: return True
         X, Y = int(round((x - ox) * S)), int(round(y * S))
         return 0 <= Y < Hpx and 0 <= X < Wpx and A[Y, X] == rid[own]
+    fsm = sorted([q[3] for q in inner_m] + [1.0])[len(inner_m) // 2] if inner_m else 12.0
+    PAD = 2.0 + gap * fsm                        # 地名どうしの間隔
     for qi, (tag, x, y, fs, nm, w) in enumerate(inner_m):
-        if not covers(inner[qi]): continue
+        crowd = any(box_ov(inner[qi], q, PAD - 0.5) for j, q in enumerate(inner) if j != qi)
+        if not covers(inner[qi]) and not crowd: continue
         offs = sorted(((ddx, ddy) for ddx in range(-40, 41, 2) for ddy in range(-30, 31, 2)), key=lambda o: math.hypot(o[0], o[1] * 1.3))
         for ddx, ddy in offs:
             nb = (inner[qi][0] + ddx, inner[qi][1] + ddy, inner[qi][2] + ddx, inner[qi][3] + ddy)
             if covers(nb, 6): continue
-            if any(box_ov(nb, q) for j, q in enumerate(inner) if j != qi): continue
+            if any(box_ov(nb, q, PAD) for j, q in enumerate(inner) if j != qi): continue
             if not in_own(x + ddx, y + ddy - fs * .3, nm): continue
             inner[qi] = nb; inner_new[tag] = tag.replace(f'x="{inner_m[qi][0].split(chr(34))[3]}" y="{inner_m[qi][0].split(chr(34))[5]}"', f'x="{x + ddx:.1f}" y="{y + ddy:.1f}"')
             break
@@ -134,9 +138,9 @@ def relayout(svg):
                     dy = k * fs * .5
                     c = geom(l, side, dx, dy); b = c["box"]
                     if b[1] < 2 or b[3] > H - 2: continue
-                    if any(box_ov(b, q) for q in inner): continue
+                    if any(box_ov(b, q, PAD) for q in inner): continue
                     dlen = math.hypot(c["seg"][1][0] - l["a"][0], c["seg"][1][1] - l["a"][1])
-                    cost = dlen + 0.012 * dlen * dlen                                  # 指す点から遠いほど急に悪くする（遠くの海より、近くの陸地の上を選ぶ）
+                    cost = dlen + 0.02 * dlen * dlen                                  # 指す点から遠いほど急に悪くする（遠くの海より、近くの陸地の上を選ぶ）
                     cost += sum(2e4 for q in inner if seg_box(c["seg"][0], c["seg"][1], q, 0.5))   # 線がエリア内の地名を横切る（指す点がその下にあるときは避けられない）
                     cost += 320 * land_frac(b, l["n"])                                 # 他の地域の上にかかる（自分の地域の上は軽く）
                     over = max(0, minx - 8 - b[0]) + max(0, b[2] - (maxx + 8))
@@ -148,7 +152,7 @@ def relayout(svg):
 
     def pair(c, d):                              # 2つの地名の置き方の相性（大きいほど悪い）
         p = 0.0
-        if box_ov(c["box"], d["box"]): p += 1e5
+        if box_ov(c["box"], d["box"], PAD): p += 1e5
         if seg_x(*c["seg"], *d["seg"]): p += 3e4
         if seg_box(*c["seg"], d["box"]) or seg_box(*d["seg"], c["box"]): p += 3e4
         return p
@@ -219,7 +223,7 @@ def main(site):
             for v in ("pc", "mobile"):
                 svg = U["m"][m]["map"][v]
                 for _ in range(4):                  # ずらした地名がさらに別の点にかかる場合があるので、変わらなくなるまで繰り返す（何度実行しても同じ結果に）
-                    new, info = relayout(svg)
+                    new, info = relayout(svg, (0.2 if m == "taiwan" else 0.0) if v == "mobile" else 0.0)   # 日本は地名が多く詰まっているので控えめに
                     if new == svg: break
                     svg = new
                 U["m"][m]["map"][v] = svg

@@ -40,7 +40,7 @@ const FAIL = { ja: "ページを読み込めませんでした。通信状態を
 // ---------- 入力欄の初期値（app.py ui() の reset=True と同じ） ----------
 function defaultForm(m, l, cur = "USD") {
   const t = LANGS[l].m[m].tx;
-  return { days: 4, party: "couple", first: "first", budget: t.bval, cur, scores: COMMON.all.map(() => 3), acc: false };
+  return { days: 4, party: "solo", first: "first", budget: t.bval, cur, scores: COMMON.all.map(() => 3), acc: false };
 }
 
 // ---------- Gradio と同じ構造の部品 ----------
@@ -189,7 +189,8 @@ async function render() {
   if (st === "list") attachTyphoons($("#root"), S.lang);  // 天気欄に活動中の台風の情報（静的サイト版で追加。台風がなければ何も出さない）
   breakTitles();                                           // 見出しは「、」の後でだけ改行する
   if (st === "landing") fitLanding();
-  centerBrand();                                          // PC: 「旅橋 TABIBASHI」を画面左端と「繁」の真ん中に                      // スマホの1ページ目: 余白をなくして写真部分を広げる
+  centerBrand();
+  phraseBreak();                                          // スマホ: 説明文を文の意味の区切りで改行                                          // PC: 「旅橋 TABIBASHI」を画面左端と「繁」の真ん中に                      // スマホの1ページ目: 余白をなくして写真部分を広げる
   bind();
   if (window.tjSpin) window.tjSpin(0);                     // plan.js が出した「読み込み中」マークを消す（元アプリの SPOFF）
   syncHistory();
@@ -228,6 +229,35 @@ function centerBrand() {
   };
   set();
   if (!centerBrand.on) { centerBrand.on = 1; addEventListener("resize", set); }
+}
+
+// スマホ表示で、ページの説明文などが語の途中で改行されないよう、文節（意味のまとまり）の切れ目でだけ改行させる（BudouX）
+const PB_SEL = ["p", ".sd", ".evname", ".note", ".info-text", ".trtip > span", ".howto li", "small", ".evlegend li", ".ck > span"].map((x) => "#root " + x).join(",");
+let pbObs = null, pbTimer = 0;
+// 「エリアから探す」のような短いかぎかっこの中では改行しない（ボタン名などが2行に割れないように）
+function keepQuotes(e) {
+  const w = document.createTreeWalker(e, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT);
+  let depth = 0, inQ = [], n;
+  while ((n = w.nextNode())) {
+    if (n.nodeType === 3) { for (const ch of n.nodeValue) { if (ch === "「") { depth++; inQ = []; } else if (ch === "」" && depth) { depth--; if (!depth && inQ.len <= 12) inQ.forEach((x) => x.remove()); inQ = []; } else if (depth) inQ.len = (inQ.len || 0) + 1; } }
+    else if (n.tagName === "WBR" && depth) inQ.push(n);
+  }
+}
+function phraseBreak() {
+  const run = () => {
+    const B = window.tjBudoux, mk = B && (S.lang === "ja" ? B.ja : S.lang === "zh" ? B.zh : null);
+    if (S.v !== "mobile" || !mk) return;
+    const P = mk();
+    for (const e of document.querySelectorAll(PB_SEL)) {
+      if (e.dataset.pb === S.lang || e.closest("[data-pb]:not(:scope)") || e.querySelector("input,textarea,select,button")) continue;
+      try { P.applyToElement(e); keepQuotes(e); e.dataset.pb = S.lang; } catch (err) { /* 改行の調整に失敗しても表示はそのまま */ }
+    }
+  };
+  run();
+  if (!pbObs) {                                // あとから描かれる部分（カテゴリの結果・お気に入りなど）にも当てる
+    pbObs = new MutationObserver(() => { clearTimeout(pbTimer); pbTimer = setTimeout(run, 60); });
+    pbObs.observe(document.getElementById("root"), { childList: true, subtree: true });
+  }
 }
 
 // ---------- 入力欄の動き ----------
@@ -349,12 +379,16 @@ function syncHistory() {
   saveState();
   if (!curDepth) { history.replaceState({ d, st }, ""); curDepth = d; return; }
   if (d > curDepth) { for (let i = curDepth + 1; i <= d; i++) history.pushState({ d: i, st }, ""); }
-  else if (d < curDepth) { pendingBack++; history.go(d - curDepth); }
+  else if (d < curDepth) {
+    // 画面内の操作で浅い画面へ移るときは、ブラウザの履歴も戻す。そのときブラウザが昔のスクロール位置に戻さないようにする
+    // （戻さないと、メニューの「〇〇旅行を計画する」で検索ページの途中が表示されていた）
+    pendingBack++; if ("scrollRestoration" in history) history.scrollRestoration = "manual"; history.go(d - curDepth);
+  }
   else history.replaceState({ d, st }, "");
   curDepth = d;
 }
 window.addEventListener("popstate", async (e) => {
-  if (pendingBack > 0) { pendingBack--; history.replaceState({ d: S.hist.length, st: snap() }, ""); return; }
+  if (pendingBack > 0) { pendingBack--; history.replaceState({ d: S.hist.length, st: snap() }, ""); if (!pendingBack && "scrollRestoration" in history) history.scrollRestoration = "auto"; return; }
   const s = e.state && e.state.st; if (!s) return;
   curDepth = e.state.d;
   if (s.l !== S.lang) await lang(s.l);
