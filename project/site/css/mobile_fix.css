@@ -52,4 +52,7 @@ body:has(#navmark[data-stage=landing]) .howto h4{margin:5px 0 2px !important}
 .spot .acts>*{grid-column:auto !important;grid-row:auto !important;min-width:0 !important}
 
 /* 説明文: 読点・句点までのまとまり（js/app.js clauses）。収まらなければ次の行へ。1行より長いときはその中で文節ごとに改行 */
-.cl{display:inline-block;max-width:100%}
+.cl{all:unset !important;display:inline-block !important;max-width:100% !important}   /* 文字の色・大きさは親のまま（他の span 用の指定を受けない） */
+/* 検索結果の「該当スポット」: エリアページのカテゴリ内と同じく、枠の内側に余白を取って並べる */
+.pg.srch .spots{padding:4px 12px 8px !important}
+.pg.srch .spot:last-child{border-bottom:0 !important}
