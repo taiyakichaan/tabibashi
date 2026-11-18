@@ -2,7 +2,7 @@
 使い方: python tools/postprocess.py site
 
   1. 日本語の診断ボタンの文言を「この条件で探す」に（説明文の「診断ボタン」も合わせる）
-  2. スマホ用の地図の地名を、引き出し線が重ならないよう置き直す（tools/map_labels.py）
+  2. 地図（PC・スマホ）の地名を、引き出し線が重ならず指す場所の近くに来るよう置き直す（tools/map_labels.py）
 何度実行しても同じ結果になります。"""
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

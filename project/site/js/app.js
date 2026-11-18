@@ -188,7 +188,8 @@ async function render() {
   if (st === "list") fixMonth($("#root"), monthNow());    // エリアページの「今月」の印
   if (st === "list") attachTyphoons($("#root"), S.lang);  // 天気欄に活動中の台風の情報（静的サイト版で追加。台風がなければ何も出さない）
   breakTitles();                                           // 見出しは「、」の後でだけ改行する
-  if (st === "landing") fitLanding();                      // スマホの1ページ目: 余白をなくして写真部分を広げる
+  if (st === "landing") fitLanding();
+  centerBrand();                                          // PC: 「旅橋 TABIBASHI」を画面左端と「繁」の真ん中に                      // スマホの1ページ目: 余白をなくして写真部分を広げる
   bind();
   if (window.tjSpin) window.tjSpin(0);                     // plan.js が出した「読み込み中」マークを消す（元アプリの SPOFF）
   syncHistory();
@@ -210,6 +211,23 @@ function fitLanding() {
   const set = () => { const h = document.querySelector("#howtoc .howto"); if (h && h.scrollHeight) document.documentElement.style.setProperty("--howh", (h.scrollHeight + 2) + "px"); };
   set(); requestAnimationFrame(set);
   if (!fitLanding.on) { fitLanding.on = 1; addEventListener("resize", set); document.addEventListener("toggle", set, true); }
+}
+
+// PC表示で、ヘッダーの「旅橋 TABIBASHI」を画面左端と「繁」ボタンの真ん中に置く（--bx は css/fix.css が使う）
+// 検索欄がヘッダーに出る画面（結果ページなど）では重なるので、元の位置のまま
+function centerBrand() {
+  const set = () => {
+    const tb = $("#topbar"); if (!tb) return;
+    const hs = $("#hsearch"), fan = document.querySelector("#menuhtml .hlang a, #menuhtml .hlang button");
+    const on = S.v === "pc" && fan && !(hs && hs.offsetWidth);
+    tb.classList.toggle("bc", !!on);
+    if (!on) return;
+    tb.style.setProperty("--bx", (fan.getBoundingClientRect().left - tb.getBoundingClientRect().left) + "px");
+    const hm = $("#home"), bl = document.querySelector("#brand .brandlink");      // 幅の狭い画面で「戻る」と重なるなら、元の位置のまま
+    if (hm && hm.offsetWidth && bl && bl.getBoundingClientRect().left < hm.getBoundingClientRect().right + 12) tb.classList.remove("bc");
+  };
+  set();
+  if (!centerBrand.on) { centerBrand.on = 1; addEventListener("resize", set); }
 }
 
 // ---------- 入力欄の動き ----------

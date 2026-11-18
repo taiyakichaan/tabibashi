@@ -83,10 +83,10 @@ def relayout(svg):
         return frac - 0.85 * mine
 
     # 地図の中の地名（動かさない）
-    inner = []
+    inner = []; inner_m = []
     for m in re.finditer(rf'<text class="lb al" x="({NUM})" y="({NUM})" font-size="({NUM})">([^<]*)</text>', svg):
         x, y, fs, s = float(m.group(1)), float(m.group(2)), float(m.group(3)), m.group(4)
-        w = tw(s, fs); inner.append((x - w / 2, y - fs * .85, x + w / 2, y + fs * .22))
+        w = tw(s, fs); inner.append((x - w / 2, y - fs * .85, x + w / 2, y + fs * .22)); inner_m.append((m.group(0), x, y, fs, s, w))
     # 引き出し線つきの地名
     G = list(re.finditer(r'<g class="pl"[^>]*>.*?</g>', svg, re.S)); L = []
     for g in G:
@@ -96,6 +96,25 @@ def relayout(svg):
         nm = re.search(r'<title>([^<]*)</title>', s).group(1)
         L.append(dict(n=nm, a=(float(c.group(1)), float(c.group(2))), fs=float(t.group(1)), s=t.group(2), w=tw(t.group(2), float(t.group(1)))))
     dots = [l["a"] for l in L]
+
+    # エリア内の地名が、引き出し線つきの地名の「指す点」を覆っているときは、その地名を少しずらす
+    # （覆ったままだと、線がその地名を横切らないよう遠くへ逃げるしかなく、地名と場所が離れてしまう）
+    inner_new = {}
+    def covers(b, pad=4): return [p for p in dots if b[0] - pad <= p[0] <= b[2] + pad and b[1] - pad <= p[1] <= b[3] + pad]
+    def in_own(x, y, own):
+        if own not in rid: return True
+        X, Y = int(round((x - ox) * S)), int(round(y * S))
+        return 0 <= Y < Hpx and 0 <= X < Wpx and A[Y, X] == rid[own]
+    for qi, (tag, x, y, fs, nm, w) in enumerate(inner_m):
+        if not covers(inner[qi]): continue
+        offs = sorted(((ddx, ddy) for ddx in range(-40, 41, 2) for ddy in range(-30, 31, 2)), key=lambda o: math.hypot(o[0], o[1] * 1.3))
+        for ddx, ddy in offs:
+            nb = (inner[qi][0] + ddx, inner[qi][1] + ddy, inner[qi][2] + ddx, inner[qi][3] + ddy)
+            if covers(nb, 6): continue
+            if any(box_ov(nb, q) for j, q in enumerate(inner) if j != qi): continue
+            if not in_own(x + ddx, y + ddy - fs * .3, nm): continue
+            inner[qi] = nb; inner_new[tag] = tag.replace(f'x="{inner_m[qi][0].split(chr(34))[3]}" y="{inner_m[qi][0].split(chr(34))[5]}"', f'x="{x + ddx:.1f}" y="{y + ddy:.1f}"')
+            break
 
     def geom(l, side, dx, dy):
         ax, ay = l["a"]; fs = l["fs"]; ty = ay + dy
@@ -182,9 +201,14 @@ def relayout(svg):
                    f'style="text-anchor:{"end" if c["side"] == "L" else "start"};pointer-events:auto" x="{c["tx"]:.1f}" y="{c["ty"]:.1f}"', s, count=1)
         out.append(svg[pos:g.start()]); out.append(s); pos = g.end(); xs += [c["box"][0], c["box"][2]]
     out.append(svg[pos:]); svg2 = "".join(out)
+    for t0, t1 in inner_new.items():
+        assert svg2.count(t0) == 1; svg2 = svg2.replace(t0, t1)
     x0 = math.floor(min(xs + [q[0] for q in inner]) - 6); x1 = math.ceil(max(xs + [q[2] for q in inner]) + 6)
     svg2 = re.sub(r'viewBox="[^"]+"', f'viewBox="{x0} 0 {x1 - x0} {vb[3]:g}"', svg2, count=1)
     dist = [math.dist(l["a"], l["cands"][k]["seg"][1]) for l, k in zip(L, cur)]
+    if os.environ.get("MAPDBG"):
+        for l, k in zip(L, cur):
+            c = l["cands"][k]; print("   ", l["n"], c["side"], round(math.dist(l["a"], c["seg"][1]), 1), "c0=", round(c["c0"]), "best c0=", round(l["cands"][0]["c0"]), "a=", l["a"])
     return svg2, dict(labels=n, conflicts=bad, mean_leader=round(sum(dist) / max(1, n), 1), max_leader=round(max(dist or [0]), 1))
 
 
@@ -192,8 +216,14 @@ def main(site):
     for lang in ("ja", "zh", "en"):
         p = os.path.join(site, "data", f"ui_{lang}.json"); U = json.load(open(p, encoding="utf-8"))
         for m in ("taiwan", "japan"):
-            U["m"][m]["map"]["mobile"], info = relayout(U["m"][m]["map"]["mobile"])
-            print(lang, m, info)
+            for v in ("pc", "mobile"):
+                svg = U["m"][m]["map"][v]
+                for _ in range(4):                  # ずらした地名がさらに別の点にかかる場合があるので、変わらなくなるまで繰り返す（何度実行しても同じ結果に）
+                    new, info = relayout(svg)
+                    if new == svg: break
+                    svg = new
+                U["m"][m]["map"][v] = svg
+                print(lang, m, v, info)
         json.dump(U, open(p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 

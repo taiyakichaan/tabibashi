@@ -25,8 +25,8 @@ tools/
   export_ui.py        Python版 → 画面部品（HTML・CSS・文言）。site/css/app_*.css, site/data/ui*.json, site/js/plan.js, head.js
   export_pages.py     Python版 → 各ページの HTML（site/data/pages/）、ホテルのひな形・検索語、検索索引、結果画面用の文言
   make_golden.py      Python版で正解データ tests/golden.json を作る
-  postprocess.py      書き出し後の仕上げ（日本語の「この条件で探す」、スマホ地図の地名の置き直し）。export のあとに必ず実行
-  map_labels.py       スマホ地図の地名と引き出し線を、重ならず・指す場所の近くに置き直す（postprocess.py から使う）
+  postprocess.py      書き出し後の仕上げ（日本語の「この条件で探す」、地図の地名の置き直し）。export のあとに必ず実行
+  map_labels.py       地図（PC・スマホ）の地名と引き出し線を、重ならず・指す場所の近くに置き直す（postprocess.py から使う）
   load_app.py         app.py を計算用に読み込む共通処理
   app_stable_sort.patch  app.py への修正（下記）
 python_patched/app.py パッチ適用済みの app.py

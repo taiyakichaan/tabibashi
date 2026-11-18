@@ -8,6 +8,11 @@
 #topbar>#menuhtml{order:2 !important;margin-left:0 !important;position:relative;z-index:1}
 #topbar>#hsearch{order:3 !important}
 .brandlink b{font-size:22px !important;letter-spacing:.08em !important}
+/* 「旅橋」の下にひと回り小さく「-TABIBASHI-」 */
+.brandlink{flex-direction:column !important;align-items:center !important;gap:1px !important;line-height:1 !important}
+.brandlink b{line-height:1.05 !important}
+.brandlink i{display:block !important;font-size:8.5px !important;letter-spacing:.08em !important;font-weight:600 !important;text-transform:uppercase !important;line-height:1 !important;margin-right:-.08em}
+.brandlink i::before,.brandlink i::after{content:"-"}
 
 /* ---- 1ページ目: 「使い方」の下の余りをなくし、TAIWAN / JAPAN の写真を大きく ---- */
 html{--ph:max(146px,calc((100vh - var(--tb,60px) - var(--howh,290px) - 24px) / 2))}
@@ -30,4 +35,9 @@ body:has(#navmark[data-stage=landing]) .howto{top:calc(var(--tb,60px) + var(--ph
 @media (max-width:374px){
   body:not(:has(#navmark[data-stage=landing])) #topbar>#brand{margin:0 -10px 0 0 !important}
   body:not(:has(#navmark[data-stage=landing])) .brandlink b{font-size:18px !important;letter-spacing:.02em !important}
+  body:not(:has(#navmark[data-stage=landing])) .brandlink i{font-size:7.5px !important;letter-spacing:0 !important;margin-right:0 !important}
+  body:not(:has(#navmark[data-stage=landing])) #home{padding:6px 4px !important}
 }
+body:has(#navmark[data-stage=landing]) .howto{padding-top:8px !important;padding-bottom:8px !important}
+body:has(#navmark[data-stage=landing]) .howto ul,body:has(#navmark[data-stage=landing]) .howto ol{line-height:1.4 !important}
+body:has(#navmark[data-stage=landing]) .howto h4{margin:5px 0 2px !important}

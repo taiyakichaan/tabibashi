@@ -2,3 +2,18 @@
 
 /* 見出し「〇〇へ、心ゆくままに。」は「、」の後でだけ改行する（js/app.js breakTitles）。文字の見た目は親の見出しのまま */
 #hero h1 .nobr{all:unset !important;white-space:nowrap !important}
+
+/* PC表示: ヘッダーの「旅橋 TABIBASHI」を画面左端と「繁」ボタンの真ん中に（js/app.js centerBrand が --bx と .bc を付ける）。「戻る」は左端へ */
+#topbar.bc{position:relative}
+#topbar.bc>#brand{position:absolute !important;left:0 !important;top:0 !important;bottom:0 !important;width:var(--bx) !important;margin:0 !important;
+  display:flex !important;align-items:center !important;justify-content:center !important;pointer-events:none}
+#topbar.bc>#brand>*{display:flex !important;align-items:center !important;justify-content:center !important;width:auto !important}
+#topbar.bc .brandlink{pointer-events:auto}
+#topbar.bc>#home{order:-1 !important;margin-left:0 !important}
+
+/* 1ページ目の「使い方」の枠を低く（見出しと項目の間隔を詰める。その分 TAIWAN / JAPAN の写真が広く見える） */
+.howto .hwg{margin-top:4px !important}
+.howto h4{margin:6px 0 3px !important}
+.howto li{margin:1px 0 !important}
+body:has(#navmark[data-stage=landing]) .howto{padding-top:10px !important;padding-bottom:10px !important}
+#topbar>#home{order:-1 !important}   /* 「戻る」はどの画面でも左端 */
