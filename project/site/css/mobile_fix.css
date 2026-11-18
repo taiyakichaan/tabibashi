@@ -41,3 +41,15 @@ body:has(#navmark[data-stage=landing]) .howto{top:calc(var(--tb,60px) + var(--ph
 body:has(#navmark[data-stage=landing]) .howto{padding-top:8px !important;padding-bottom:8px !important}
 body:has(#navmark[data-stage=landing]) .howto ul,body:has(#navmark[data-stage=landing]) .howto ol{line-height:1.4 !important}
 body:has(#navmark[data-stage=landing]) .howto h4{margin:5px 0 2px !important}
+
+/* スポット行（エリアページ・検索結果・お気に入り共通）: スマホ表示では画面の幅によらず、
+   1行目にアイコン・名前と説明・★、2行目にボタン3つを並べる（PC用の横一列の並びにならないように） */
+.spot{display:grid !important;grid-template-columns:40px minmax(0,1fr) 34px !important;column-gap:10px !important;row-gap:10px !important}
+.spot .ic{grid-row:1 !important;grid-column:1 !important}
+.spot .nm{grid-row:1 !important;grid-column:2 !important;min-width:0 !important}
+.spot .star{grid-row:1 !important;grid-column:3 !important}
+.spot .acts{display:grid !important;grid-row:2 !important;grid-column:1/-1 !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:6px !important;max-width:none !important;width:auto !important}
+.spot .acts>*{grid-column:auto !important;grid-row:auto !important;min-width:0 !important}
+
+/* 説明文: 読点・句点までのまとまり（js/app.js clauses）。収まらなければ次の行へ。1行より長いときはその中で文節ごとに改行 */
+.cl{display:inline-block;max-width:100%}

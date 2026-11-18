@@ -22,3 +22,7 @@ body:has(#navmark[data-stage=landing]) .howto{padding-top:10px !important;paddin
 .whym{flex-wrap:wrap !important}
 .whym>span{flex:0 0 100% !important;width:100% !important;margin-bottom:6px !important}
 .whym>ul{flex:1 1 100% !important;margin-left:0 !important}
+
+/* 検索結果・お気に入りなどのスポット一覧も、エリアページと同じく幅が狭いときは「地図・写真・公式」のボタンを説明文の下に並べる
+   （幅に応じた並べ方は「.cat」「.rw」の幅で決まる作りで、これらのページには基準になる枠がなかった） */
+.lux .spots{container-type:inline-size}

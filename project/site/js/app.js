@@ -234,6 +234,26 @@ function centerBrand() {
 // スマホ表示で、ページの説明文などが語の途中で改行されないよう、文節（意味のまとまり）の切れ目でだけ改行させる（BudouX）
 const PB_SEL = ["p", ".sd", ".evname", ".note", ".info-text", ".trtip > span", ".howto li", "small", ".evlegend li", ".ck > span"].map((x) => "#root " + x).join(",");
 let pbObs = null, pbTimer = 0;
+// 読点・句点（、。，）までをひとまとまりにする。まとまりが行に収まらないときは次の行へ送るので、読点で区切れるところは読点で改行される
+// （まとまりが1行より長いときだけ、その中の文節の切れ目で改行）
+const PUNCT = /[、。，！？]/;
+function clauses(el) {
+  const kids = [...el.childNodes]; let cur = null;
+  const flush = () => { cur = null; };
+  const add = (n) => { if (!cur) { cur = document.createElement("span"); cur.className = "cl"; el.insertBefore(cur, n); } cur.appendChild(n); };
+  for (const n of kids) {
+    if (n.nodeType === 3) {
+      let t = n.nodeValue, i;
+      while ((i = t.search(PUNCT)) >= 0 && i < t.length - 1) {   // 読点の直後で切る
+        add(document.createTextNode(t.slice(0, i + 1))); flush(); t = t.slice(i + 1);
+      }
+      if (t) { const tn = document.createTextNode(t); el.insertBefore(tn, n); add(tn); if (PUNCT.test(t.slice(-1))) flush(); }
+      n.remove();
+    } else if (n.nodeName === "WBR") { if (cur) cur.appendChild(n); }
+    else if (n.nodeName === "BR") flush();
+    else { flush(); if (n.nodeType === 1 && !n.matches("input,textarea,select,button,svg")) clauses(n); }
+  }
+}
 // 「エリアから探す」のような短いかぎかっこの中では改行しない（ボタン名などが2行に割れないように）
 function keepQuotes(e) {
   const w = document.createTreeWalker(e, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT);
@@ -250,7 +270,7 @@ function phraseBreak() {
     const P = mk();
     for (const e of document.querySelectorAll(PB_SEL)) {
       if (e.dataset.pb === S.lang || e.closest("[data-pb]:not(:scope)") || e.querySelector("input,textarea,select,button")) continue;
-      try { P.applyToElement(e); keepQuotes(e); e.dataset.pb = S.lang; } catch (err) { /* 改行の調整に失敗しても表示はそのまま */ }
+      try { P.applyToElement(e); keepQuotes(e); clauses(e); e.dataset.pb = S.lang; } catch (err) { /* 改行の調整に失敗しても表示はそのまま */ }
     }
   };
   run();
