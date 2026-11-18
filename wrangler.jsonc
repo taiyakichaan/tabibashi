@@ -6,5 +6,7 @@
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./project/site"
-  }
+  },
+  // main 以外のブランチ（プルリクエスト）は npx wrangler preview でプレビュー版を作る。そのために必要な設定
+  "previews": {}
 }
