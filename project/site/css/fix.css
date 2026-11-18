@@ -1,0 +1,4 @@
+/* 静的サイト版で追加した共通の調整 */
+
+/* 見出し「〇〇へ、心ゆくままに。」は「、」の後でだけ改行する（js/app.js breakTitles）。文字の見た目は親の見出しのまま */
+#hero h1 .nobr{all:unset !important;white-space:nowrap !important}

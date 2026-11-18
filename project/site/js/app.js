@@ -141,7 +141,7 @@ async function render() {
   // 元アプリ（Gradio）は表示言語によらず <html lang="en">。lang を変えると日本語・繁体字の字形（フォントの選ばれ方）が変わるため、同じ表示になるよう合わせる
   document.documentElement.lang = "en";
   $("#cssS").textContent = COMMON.tokens[`${S.m}|${st === "landing" ? 1 : 0}|${S.lang}`] + COMMON.stage[st];
-  $("#cssM").disabled = S.v !== "mobile";
+  $("#cssM").disabled = $("#cssM2").disabled = S.v !== "mobile";
   let h = topbar();
   if (st === "landing") {
     h += html("theme", navmark(Lm.theme.landing)) + bridgeForm();
@@ -187,9 +187,29 @@ async function render() {
   }
   if (st === "list") fixMonth($("#root"), monthNow());    // エリアページの「今月」の印
   if (st === "list") attachTyphoons($("#root"), S.lang);  // 天気欄に活動中の台風の情報（静的サイト版で追加。台風がなければ何も出さない）
+  breakTitles();                                           // 見出しは「、」の後でだけ改行する
+  if (st === "landing") fitLanding();                      // スマホの1ページ目: 余白をなくして写真部分を広げる
   bind();
   if (window.tjSpin) window.tjSpin(0);                     // plan.js が出した「読み込み中」マークを消す（元アプリの SPOFF）
   syncHistory();
+}
+
+// ---------- スマホ表示の調整（静的サイト版で追加） ----------
+// 「台湾へ、心ゆくままに。」などの見出しが語の途中で折り返さないよう、読点ごとにまとめる
+function breakTitles() {
+  for (const h of document.querySelectorAll("#hero h1")) {
+    if (h.dataset.brk || h.children.length) continue;
+    const parts = h.textContent.split(/(?<=[、，,])\s*/).filter(Boolean);
+    if (parts.length < 2) continue;
+    h.dataset.brk = "1";
+    h.innerHTML = parts.map((x) => `<span class="nobr">${x.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c])}</span>`).join("<wbr>");
+  }
+}
+// 「使い方」の高さを測って、残りの高さを TAIWAN / JAPAN の写真に配る（--howh は css/mobile_fix.css が使う）
+function fitLanding() {
+  const set = () => { const h = document.querySelector("#howtoc .howto"); if (h && h.scrollHeight) document.documentElement.style.setProperty("--howh", (h.scrollHeight + 2) + "px"); };
+  set(); requestAnimationFrame(set);
+  if (!fitLanding.on) { fitLanding.on = 1; addEventListener("resize", set); document.addEventListener("toggle", set, true); }
 }
 
 // ---------- 入力欄の動き ----------
@@ -247,7 +267,11 @@ async function nav(hist, opt = {}) {
   if (opt.top !== false) window.scrollTo({ top: 0 });
 }
 const pick = (m) => nav(COND.slice(), { m, reset: true });
-function search(q) { q = (q || "").trim(); if (q) nav(S.hist.concat([["list", ["search", q]]])); }       // app.py do_search
+function search(q) {
+  q = (q || "").trim();
+  if (!q) { if (window.tjSpin) window.tjSpin(0); return; }   // 空欄なら何もしない（ぐるぐるマークも出さない）
+  nav(S.hist.concat([["list", ["search", q]]]));
+}       // app.py do_search
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 const pushPage = (e, opt) => nav(same(S.hist[S.hist.length - 1], e) ? S.hist : S.hist.concat([e]), opt);
 

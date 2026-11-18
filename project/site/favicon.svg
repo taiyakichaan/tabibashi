@@ -1,14 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- 旅橋（TABIBASHI）のアイコン: 深い緑の地に、金の太鼓橋と水面のさざ波、右上に昇る日。サイトの配色（#0b1c1d / #c7a15a / #f1d99b）に合わせたオリジナルの図案 -->
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4a4c"/><stop offset="1" stop-color="#0b1c1d"/></linearGradient>
-    <linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e3ad"/><stop offset="1" stop-color="#c7a15a"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d4a4c"/><stop offset="1" stop-color="#0b1c1d"/></linearGradient>
+    <linearGradient id="au" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e2a8"/><stop offset="1" stop-color="#c7a15a"/></linearGradient>
+    <linearGradient id="mt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fb4c9"/><stop offset="1" stop-color="#4f7d95"/></linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <circle cx="47" cy="16.5" r="4" fill="#f1d99b"/>
-  <path d="M7 42 Q32 13 57 42" fill="none" stroke="url(#gd)" stroke-width="5.4" stroke-linecap="round"/>
-  <path d="M19.5 31.5V42M32 28V42M44.5 31.5V42" stroke="#d9b876" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M6 43H58" stroke="#c7a15a" stroke-width="2.6" stroke-linecap="round"/>
-  <path d="M13 49.5H27M35 49.5H51" stroke="#c7a15a" stroke-width="2.4" stroke-linecap="round" stroke-opacity=".55"/>
-  <path d="M20 55H44" stroke="#c7a15a" stroke-width="2.2" stroke-linecap="round" stroke-opacity=".32"/>
+  <!-- 日本: 赤い太陽と富士山 -->
+  <circle cx="13.5" cy="16" r="6" fill="#d8473a"/>
+  <path d="M3 47 L18.6 26.2 Q20.5 23.8 22.4 26.2 L36 47 Z" fill="url(#mt)"/>
+  <path d="M13.9 32.4 L18.6 26.2 Q20.5 23.8 22.4 26.2 L26.6 32.4 L24.4 30.9 L22.6 33 L20.5 30.6 L18.4 33 L16.3 30.9 Z" fill="#fff"/>
+  <!-- 台湾: 台北101 -->
+  <g fill="url(#au)">
+    <rect x="46.3" y="3.5" width="1.4" height="7"/>
+    <path d="M44.3 10.5 H49.7 L49.2 14 H44.8 Z"/>
+    <path d="M42.6 14.6 H51.4 L49.9 20.4 H44.1 Z"/>
+    <path d="M42.6 20.9 H51.4 L49.9 26.7 H44.1 Z"/>
+    <path d="M42.6 27.2 H51.4 L49.9 33 H44.1 Z"/>
+    <path d="M42.6 33.5 H51.4 L49.9 39.3 H44.1 Z"/>
+    <path d="M44.1 39.8 H49.9 L51.6 47 H42.4 Z"/>
+  </g>
+  <!-- 2つを結ぶ橋 -->
+  <path d="M27 47 Q35 34.5 43 47" fill="none" stroke="url(#au)" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M3.5 47.6 H60.5" stroke="#e8c27a" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M11 53.5 H25 M33 53.5 H51" stroke="#e8c27a" stroke-width="1.8" stroke-linecap="round" opacity=".55"/>
+  <path d="M19 58 H43" stroke="#e8c27a" stroke-width="1.6" stroke-linecap="round" opacity=".35"/>
 </svg>

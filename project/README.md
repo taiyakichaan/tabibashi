@@ -16,6 +16,7 @@ site/                 ← Cloudflare Pages にアップロードするフォル�
   js/head.js          元の HEAD のスクリプト（お気に入り★・絞り込み・折りたたみ・コピー）。export_ui.py が書き出す
   js/recommend.js     推薦ロジック（Python版 recommend() の数値部分を移植）
   js/plan.js          元の plan.js（そのまま）
+  css/fix.css, css/mobile_fix.css  静的サイト版で追加した見た目の調整（mobile_fix はスマホ表示のときだけ有効：ヘッダー・1ページ目・「使い方」）
   data/               model_*.json / spots_*.json / meta.json / ui.json / ui_<言語>.json / search.json / hotel_terms_*.json ＋ 元の data/*.json
   data/pages/<言語>/  元アプリが作るページの HTML（エリア一覧・エリアのホテル/レンタカー/交通・国全体のページ・イベント/準備は12か月分。計990ファイル）
   images/             元の images/ 252枚（構成そのまま）
@@ -24,6 +25,8 @@ tools/
   export_ui.py        Python版 → 画面部品（HTML・CSS・文言）。site/css/app_*.css, site/data/ui*.json, site/js/plan.js, head.js
   export_pages.py     Python版 → 各ページの HTML（site/data/pages/）、ホテルのひな形・検索語、検索索引、結果画面用の文言
   make_golden.py      Python版で正解データ tests/golden.json を作る
+  postprocess.py      書き出し後の仕上げ（日本語の「この条件で探す」、スマホ地図の地名の置き直し）。export のあとに必ず実行
+  map_labels.py       スマホ地図の地名と引き出し線を、重ならず・指す場所の近くに置き直す（postprocess.py から使う）
   load_app.py         app.py を計算用に読み込む共通処理
   app_stable_sort.patch  app.py への修正（下記）
 python_patched/app.py パッチ適用済みの app.py
@@ -42,6 +45,7 @@ tests/
 python tools/export_data.py <元アプリ> site
 python tools/export_ui.py    <元アプリ> site     # この順番で（export_pages が ui*.json に追記する）
 python tools/export_pages.py <元アプリ> site
+python tools/postprocess.py site              # 静的サイト版だけの変更を当て直す（上の2つを実行したら必ず）
 python tools/make_golden.py  <元アプリ> tests/golden.json 400
 npm test        # JS版が Python版と一致するか（全件一致で終了コード0）
 
